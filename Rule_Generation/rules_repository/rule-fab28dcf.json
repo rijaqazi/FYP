@@ -1,0 +1,26 @@
+{
+    "rule_id": "rule-fab28dcf",
+    "created": "2025-10-09T20:50:35Z",
+    "source_alert_id": "68e8199033f17e0f0949365c",
+    "alert_type": "ICMP ADDRESS MASK REQUEST FLOOD",
+    "src_ip": "172.20.10.3",
+    "dst_ip": "172.20.10.4",
+    "protocol": "ICMP",
+    "ports": [],
+    "ports_scanned_count": 0,
+    "duration_": 0.53894,
+    "cvss_score": 6.4,
+    "priority": "Medium",
+    "decision": {
+        "normalized_attack": "ICMP ADDRESS MASK REQUEST FLOOD",
+        "action": "block_ip",
+        "target": "172.20.10.3",
+        "reason": "ICMP Address Mask Request Flood",
+        "confidence": "high",
+        "expiry_seconds": 14400
+    },
+    "suggested_commands": [
+        "iptables -I INPUT -s 172.20.10.3 -j DROP # temp block",
+        "netsh advfirewall firewall add rule name=\"Block_172.20.10.3\" dir=in action=block remoteip=172.20.10.3"
+    ]
+}

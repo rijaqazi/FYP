@@ -1,0 +1,26 @@
+{
+    "rule_id": "rule-10cd6ca4",
+    "created": "2025-10-09T20:50:35Z",
+    "source_alert_id": "68e8199033f17e0f0949366b",
+    "alert_type": "OS_FINGERPRINT",
+    "src_ip": "10.213.236.193",
+    "dst_ip": "10.213.236.252",
+    "protocol": "TCP",
+    "ports": [],
+    "ports_scanned_count": 0,
+    "duration_": 9.413241,
+    "cvss_score": 3.6,
+    "priority": "Low",
+    "decision": {
+        "normalized_attack": "OS_FINGERPRINT",
+        "action": "notify",
+        "target": "10.213.236.193",
+        "reason": "OS_FINGERPRINT detected (low priority - monitoring)",
+        "confidence": "low",
+        "expiry_seconds": 14400
+    },
+    "suggested_commands": [
+        "iptables -I INPUT -s 10.213.236.193 -j DROP # temp block",
+        "netsh advfirewall firewall add rule name=\"Block_10.213.236.193\" dir=in action=block remoteip=10.213.236.193"
+    ]
+}

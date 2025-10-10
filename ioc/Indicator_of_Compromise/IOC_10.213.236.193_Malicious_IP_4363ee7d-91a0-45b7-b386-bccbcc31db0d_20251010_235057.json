@@ -1,0 +1,22 @@
+{
+  "created": "2025-10-10T18:42:33.000Z",
+  "description": "Threats from 10.213.236.193 | Ports: 1009, 1011, 10180, 1022, 1025, 10295, 1041, 1046, 110, 1104, 1105, 111, 1117, 11178, 113, 1130, 1148, 11820, 12120, 135, 13615, 139, 1404, 143, 15174, 15569 | Duration: 42.7s  | Raw Logs: 5 entries attached",
+  "id": "indicator--4363ee7d-91a0-45b7-b386-bccbcc31db0d",
+  "ip_address": "10.213.236.193",
+  "labels": [
+    "malicious-activity"
+  ],
+  "modified": "2025-10-10T18:42:33.000Z",
+  "name": "Malicious IP",
+  "pattern": "[ipv4-addr:value = '10.213.236.193'] AND [mac-addr:value = '08:71:90:49:f6:79']",
+  "pattern_type": "stix",
+  "type": "indicator",
+  "valid_from": "2025-10-10T18:42:33.000Z",
+  "x_raw_logs": [
+    "[ALERT] SPOOFED_SYN_FLOOD from 10.213.236.193 | Target_IP: 10.213.236.252 | SRC_MAC: 08:71:90:49:f6:79 | Claimed_MAC: N/A | Previous_MAC: N/A | Ports:  | Ports Scanned: 0 | Count: 50 | Start: Wed Oct  8 11:48:12 2025 | Duration: 5.631566s",
+    "[ALERT] SYN_SCAN from 10.213.236.193 | Target_IP: 10.213.236.252 | SRC_MAC: 08:71:90:49:f6:79 | Claimed_MAC: N/A | Previous_MAC: N/A | Ports: 1025, 10295, 110, 111, 11178, 113, 11820, 12120, 135, 13615, 139, 1404, 143, 15174, 15569 | Ports Scanned: 15 | Count: 90 | Start: Wed Oct  8 11:48:27 2025 | Duration: 9.413241s",
+    "[ALERT] FULL_PORT_SCAN from 10.213.236.193 | Target_IP: 10.213.236.252 | SRC_MAC: 08:71:90:49:f6:79 | Claimed_MAC: N/A | Previous_MAC: N/A | Ports: 1025, 10295, 110, 111, 11178, 113, 11820, 12120, 135, 13615, 139, 1404, 143, 15174, 15569 | Ports Scanned: 15 | Count: 90 | Start: Wed Oct  8 11:48:27 2025 | Duration: 9.413241s",
+    "[ALERT] OS_FINGERPRINT from 10.213.236.193 | Target_IP: 10.213.236.252 | SRC_MAC: 08:71:90:49:f6:79 | Claimed_MAC: N/A | Previous_MAC: N/A | Ports:  | Ports Scanned: 0 | Count: 90 | Start: Wed Oct  8 11:48:27 2025 | Duration: 9.413241s",
+    "[ALERT] ACK_SCAN from 10.213.236.193 | Target_IP: 10.213.236.252 | SRC_MAC: 08:71:90:49:f6:79 | Claimed_MAC: N/A | Previous_MAC: N/A | Ports: 1009, 1011, 10180, 1022, 1025, 1041, 1046, 110, 1104, 1105, 111, 1117, 113, 1130, 1148 | Ports Scanned: 15 | Count: 80 | Start: Wed Oct  8 11:46:35 2025 | Duration: 8.807519s"
+  ]
+}

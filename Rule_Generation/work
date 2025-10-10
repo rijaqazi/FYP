@@ -1,0 +1,20 @@
+cvss final set acc to the script 
+
+
+add this rijaqazi@rijaqazi-virtual-machine:~/Desktop/Rule_Generation$ python3 report.py --json rules_repository/rule-1c8a9ca8.json   --out reports --hours 48 --ipinfo 634b5042d5a733
+  in rpeport .py 
+  
+  merge rule2. report.py
+  
+
+
+
+
+detection cvss ioc alert rule genrayion of 4 new attacks 
+
+duration work 
+
+count remove form alert 
+agr may phire report generte kron tou kia hrohi ya nhi ---- nhi honi chhaiyeee 
+
+rule download krne wala kam karn ahai 

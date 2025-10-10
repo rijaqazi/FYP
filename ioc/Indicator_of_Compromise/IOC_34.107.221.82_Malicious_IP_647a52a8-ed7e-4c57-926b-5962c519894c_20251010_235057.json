@@ -1,0 +1,25 @@
+{
+  "created": "2025-10-10T18:42:33.000Z",
+  "description": "Threats from 34.107.221.82 | Ports: 35468, 35470, 35904, 36710, 38884, 38894, 38902, 40064, 40068, 40072, 40510, 40512, 40528, 40538, 41022, 41030, 41040, 41046, 41460, 41462, 41470, 43026, 43038, 43054, 43274, 43290, 44736, 44748, 45486, 45500, 45514, 45656, 45662, 46154, 47194, 47208, 54298, 54696, 54698, 54700, 54714, 55250, 56490, 56492, 56790, 56792, 56808, 57430, 57446, 57452, 58304, 58306, 58310, 58314, 58320, 59268 | Duration: 79.2s  | Raw Logs: 8 entries attached",
+  "id": "indicator--647a52a8-ed7e-4c57-926b-5962c519894c",
+  "ip_address": "34.107.221.82",
+  "labels": [
+    "malicious-activity"
+  ],
+  "modified": "2025-10-10T18:42:33.000Z",
+  "name": "Malicious IP",
+  "pattern": "[ipv4-addr:value = '34.107.221.82'] AND [mac-addr:value = '3a:71:de:96:27:64']",
+  "pattern_type": "stix",
+  "type": "indicator",
+  "valid_from": "2025-10-10T18:42:33.000Z",
+  "x_raw_logs": [
+    "[ALERT] NULL_SCAN from 34.107.221.82 | Target_IP: 172.20.10.4 | SRC_MAC: 3a:71:de:96:27:64 | Claimed_MAC: N/A | Previous_MAC: N/A | Ports: 38884, 38894, 38902, 41460, 41462, 41470, 54298, 54696, 56790, 56792, 56808 | Ports Scanned: 11 | Count: 3 | Start: Wed Jul 30 15:24:41 2025 | Duration: 6.530353s",
+    "[ALERT] NULL_SCAN from 34.107.221.82 | Target_IP: 172.20.10.4 | SRC_MAC: 3a:71:de:96:27:64 | Claimed_MAC: N/A | Previous_MAC: N/A | Ports: 36710, 40510, 40512, 40528, 40538, 43274, 43290 | Ports Scanned: 7 | Count: 3 | Start: Wed Jul 30 15:31:57 2025 | Duration: 7.072237s",
+    "[ALERT] ACK_SCAN from 34.107.221.82 | Target_IP: 172.20.10.4 | SRC_MAC: 3a:71:de:96:27:64 | Claimed_MAC: N/A | Previous_MAC: N/A | Ports: 35468, 35470, 41022, 41030, 41040, 41046, 43026, 43038, 43054, 45656, 45662, 46154, 47194, 47208, 59268 | Ports Scanned: 15 | Count: 4 | Start: Wed Jul 30 15:21:40 2025 | Duration: 9.973591s",
+    "[ALERT] ACK_SCAN from 34.107.221.82 | Target_IP: 172.20.10.4 | SRC_MAC: 3a:71:de:96:27:64 | Claimed_MAC: N/A | Previous_MAC: N/A | Ports: 38902, 41460, 41462, 41470, 54696, 54698, 54700, 54714, 56790, 56792, 56808 | Ports Scanned: 11 | Count: 4 | Start: Wed Jul 30 15:24:39 2025 | Duration: 9.475213s",
+    "[ALERT] NULL_SCAN from 34.107.221.82 | Target_IP: 172.20.10.4 | SRC_MAC: 3a:71:de:96:27:64 | Claimed_MAC: N/A | Previous_MAC: N/A | Ports: 35470, 41022, 41030, 41040, 41046, 43026, 43038, 43054, 44736, 44748, 45656, 47194, 47208, 59268 | Ports Scanned: 14 | Count: 3 | Start: Wed Jul 30 15:21:43 2025 | Duration: 6.236623s",
+    "[ALERT] OS_FINGERPRINT from 34.107.221.82 | Target_IP: 172.20.10.4 | SRC_MAC: 3a:71:de:96:27:64 | Claimed_MAC: N/A | Previous_MAC: N/A | Ports:  | Ports Scanned: 0 | Count: 3 | Start: Wed Jul 30 15:21:44 2025 | Duration: 6.492717s",
+    "[ALERT] NULL_SCAN from 34.107.221.82 | Target_IP: 172.20.10.4 | SRC_MAC: 3a:71:de:96:27:64 | Claimed_MAC: N/A | Previous_MAC: N/A | Ports: 45486, 45500, 45514, 56490, 56492, 58304, 58306, 58310, 58314, 58320 | Ports Scanned: 10 | Count: 5 | Start: Wed Jul 30 15:44:04 2025 | Duration: 9.222998s",
+    "[ALERT] NULL_SCAN from 34.107.221.82 | Target_IP: 172.20.10.4 | SRC_MAC: 3a:71:de:96:27:64 | Claimed_MAC: N/A | Previous_MAC: N/A | Ports: 35904, 40064, 40068, 40072, 55250, 57430, 57446, 57452 | Ports Scanned: 8 | Count: 4 | Start: Wed Jul 30 16:11:39 2025 | Duration: 7.485746s"
+  ]
+}

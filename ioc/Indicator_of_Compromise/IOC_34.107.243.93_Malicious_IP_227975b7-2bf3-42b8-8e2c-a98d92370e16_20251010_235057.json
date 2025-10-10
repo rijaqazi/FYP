@@ -1,0 +1,18 @@
+{
+  "created": "2025-10-10T18:42:33.000Z",
+  "description": "Threats from 34.107.243.93 | Ports: None | Duration: 2.2s  | Raw Logs: 1 entries attached",
+  "id": "indicator--227975b7-2bf3-42b8-8e2c-a98d92370e16",
+  "ip_address": "34.107.243.93",
+  "labels": [
+    "malicious-activity"
+  ],
+  "modified": "2025-10-10T18:42:33.000Z",
+  "name": "Malicious IP",
+  "pattern": "[ipv4-addr:value = '34.107.243.93'] AND [mac-addr:value = '52:14:c1:53:64:51']",
+  "pattern_type": "stix",
+  "type": "indicator",
+  "valid_from": "2025-10-10T18:42:33.000Z",
+  "x_raw_logs": [
+    "[ALERT] OS_FINGERPRINT from 34.107.243.93 | Target_IP: 10.238.246.252 | SRC_MAC: 52:14:c1:53:64:51 | Claimed_MAC: N/A | Previous_MAC: N/A | Ports:  | Ports Scanned: 0 | Count: 18 | Start: Thu Oct  9 11:23:51 2025 | Duration: 2.179730s"
+  ]
+}

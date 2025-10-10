@@ -1,0 +1,24 @@
+{
+    "type": "bundle",
+    "id": "bundle--ae0cff85-c7ff-4d2a-a978-53e2aa017f05",
+    "objects": [
+        {
+            "type": "indicator",
+            "id": "indicator--66be4b67-92cf-460b-b99f-88275d70cc35",
+            "created": "2025-10-10T18:42:33.000Z",
+            "modified": "2025-10-10T18:42:33.000Z",
+            "name": "Malicious IP",
+            "ip_address": "10.238.246.193",
+            "description": "Threats from 10.238.246.193 | Ports: None | Duration: 0.0s  | Raw Logs: 1 entries attached",
+            "pattern": "[ipv4-addr:value = '10.238.246.193'] AND [mac-addr:value = '08:71:90:49:f6:79']",
+            "pattern_type": "stix",
+            "valid_from": "2025-10-10T18:42:33.000Z",
+            "labels": [
+                "malicious-activity"
+            ],
+            "x_raw_logs": [
+                "[ALERT] ICMP TIMESTAMP REQUEST FLOOD from 10.238.246.193 | Target_IP: 10.238.246.252 | SRC_MAC: 08:71:90:49:f6:79 | Claimed_MAC: N/A | Previous_MAC: N/A | Ports:  | Ports Scanned: 0 | Count: 20 | Start: Thu Oct  9 11:07:08 2025 | Duration: 0.001594s"
+            ]
+        }
+    ]
+}

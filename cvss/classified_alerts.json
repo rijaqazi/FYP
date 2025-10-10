@@ -1,0 +1,506 @@
+[
+    {
+        "attack_type": "OS_FINGERPRINT",
+        "cvss_vector": "AV:N/AC:H/PR:N/UI:N/S:U/C:L/I:N/A:N",
+        "cvss_score": 3.6,
+        "priority": "Low",
+        "source_ip": "10.213.236.252",
+        "target_ip": "10.213.236.205",
+        "raw_alert": "[ALERT] OS_FINGERPRINT from 10.213.236.252 | Target_IP: 10.213.236.205 | SRC_MAC: f0:d5:bf:24:3b:19 | Claimed_MAC: N/A | Previous_MAC: N/A | Ports:  | Ports Scanned: 0 | Count: 19 | Start: Wed Oct  8 11:46:39 2025 | Duration: 2.659909s"
+    },
+    {
+        "attack_type": "OS_FINGERPRINT",
+        "cvss_vector": "AV:N/AC:H/PR:N/UI:N/S:U/C:L/I:N/A:N",
+        "cvss_score": 3.6,
+        "priority": "Low",
+        "source_ip": "185.125.188.57",
+        "target_ip": "10.213.236.252",
+        "raw_alert": "[ALERT] OS_FINGERPRINT from 185.125.188.57 | Target_IP: 10.213.236.252 | SRC_MAC: 52:a9:fe:0c:85:66 | Claimed_MAC: N/A | Previous_MAC: N/A | Ports:  | Ports Scanned: 0 | Count: 37 | Start: Wed Oct  8 11:46:40 2025 | Duration: 1.743139s"
+    },
+    {
+        "attack_type": "ACK_SCAN",
+        "cvss_vector": "AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L",
+        "cvss_score": 5.3,
+        "priority": "Medium",
+        "source_ip": "10.213.236.193",
+        "target_ip": "10.213.236.252",
+        "raw_alert": "[ALERT] ACK_SCAN from 10.213.236.193 | Target_IP: 10.213.236.252 | SRC_MAC: 08:71:90:49:f6:79 | Claimed_MAC: N/A | Previous_MAC: N/A | Ports: 1009, 1011, 10180, 1022, 1025, 1041, 1046, 110, 1104, 1105, 111, 1117, 113, 1130, 1148 | Ports Scanned: 15 | Count: 80 | Start: Wed Oct  8 11:46:35 2025 | Duration: 8.807519s"
+    },
+    {
+        "attack_type": "ICMP_ADDRESS_MASK_REQUEST_FLOOD",
+        "cvss_vector": "AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:L",
+        "cvss_score": 6.4,
+        "priority": "Medium",
+        "source_ip": "172.20.10.3",
+        "target_ip": "172.20.10.4",
+        "raw_alert": "[ALERT] ICMP ADDRESS MASK REQUEST FLOOD from 172.20.10.3 | Target_IP: 172.20.10.4 | SRC_MAC: 08:71:90:49:f6:79 | Claimed_MAC: N/A | Previous_MAC: N/A | Ports:  | Ports Scanned: 0 | Count: 15 | Start: Wed Jul 30 15:25:17 2025 | Duration: 0.538940s"
+    },
+    {
+        "attack_type": "OS_FINGERPRINT",
+        "cvss_vector": "AV:N/AC:H/PR:N/UI:N/S:U/C:L/I:N/A:N",
+        "cvss_score": 3.6,
+        "priority": "Low",
+        "source_ip": "172.20.10.4",
+        "target_ip": "142.250.200.164",
+        "raw_alert": "[ALERT] OS_FINGERPRINT from 172.20.10.4 | Target_IP: 142.250.200.164 | SRC_MAC: f0:d5:bf:24:3b:19 | Claimed_MAC: N/A | Previous_MAC: N/A | Ports:  | Ports Scanned: 0 | Count: 8 | Start: Wed Jul 30 15:24:42 2025 | Duration: 6.358987s"
+    },
+    {
+        "attack_type": "NULL_SCAN",
+        "cvss_vector": "AV:N/AC:H/PR:N/UI:N/S:U/C:L/I:N/A:N",
+        "cvss_score": 3.6,
+        "priority": "Low",
+        "source_ip": "34.107.221.82",
+        "target_ip": "172.20.10.4",
+        "raw_alert": "[ALERT] NULL_SCAN from 34.107.221.82 | Target_IP: 172.20.10.4 | SRC_MAC: 3a:71:de:96:27:64 | Claimed_MAC: N/A | Previous_MAC: N/A | Ports: 38884, 38894, 38902, 41460, 41462, 41470, 54298, 54696, 56790, 56792, 56808 | Ports Scanned: 11 | Count: 3 | Start: Wed Jul 30 15:24:41 2025 | Duration: 6.530353s"
+    },
+    {
+        "attack_type": "ACK_SCAN",
+        "cvss_vector": "AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L",
+        "cvss_score": 5.3,
+        "priority": "Medium",
+        "source_ip": "34.107.221.82",
+        "target_ip": "172.20.10.4",
+        "raw_alert": "[ALERT] ACK_SCAN from 34.107.221.82 | Target_IP: 172.20.10.4 | SRC_MAC: 3a:71:de:96:27:64 | Claimed_MAC: N/A | Previous_MAC: N/A | Ports: 38902, 41460, 41462, 41470, 54696, 54698, 54700, 54714, 56790, 56792, 56808 | Ports Scanned: 11 | Count: 4 | Start: Wed Jul 30 15:24:39 2025 | Duration: 9.475213s"
+    },
+    {
+        "attack_type": "ICMP_ADDRESS_MASK_REQUEST_FLOOD",
+        "cvss_vector": "AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:L",
+        "cvss_score": 6.4,
+        "priority": "Medium",
+        "source_ip": "172.20.10.3",
+        "target_ip": "172.20.10.4",
+        "raw_alert": "[ALERT] ICMP ADDRESS MASK REQUEST FLOOD from 172.20.10.3 | Target_IP: 172.20.10.4 | SRC_MAC: 08:71:90:49:f6:79 | Claimed_MAC: N/A | Previous_MAC: N/A | Ports:  | Ports Scanned: 0 | Count: 15 | Start: Wed Jul 30 15:24:17 2025 | Duration: 0.816226s"
+    },
+    {
+        "attack_type": "OS_FINGERPRINT",
+        "cvss_vector": "AV:N/AC:H/PR:N/UI:N/S:U/C:L/I:N/A:N",
+        "cvss_score": 3.6,
+        "priority": "Low",
+        "source_ip": "172.20.10.4",
+        "target_ip": "172.20.10.1",
+        "raw_alert": "[ALERT] OS_FINGERPRINT from 172.20.10.4 | Target_IP: 172.20.10.1 | SRC_MAC: f0:d5:bf:24:3b:19 | Claimed_MAC: N/A | Previous_MAC: N/A | Ports:  | Ports Scanned: 0 | Count: 1 | Start: Wed Jul 30 16:01:52 2025 | Duration: N/A"
+    },
+    {
+        "attack_type": "MAC_CONFLICT",
+        "cvss_vector": "AV:A/AC:H/PR:N/UI:N/S:U/C:L/I:N/A:N",
+        "cvss_score": 3.0,
+        "priority": "Low",
+        "source_ip": "172.20.10.1",
+        "target_ip": "172.20.10.4",
+        "raw_alert": "[ALERT] MAC_CONFLICT from 172.20.10.1 | Target_IP: 172.20.10.4 | SRC_MAC: 08:71:90:49:f6:79 | Claimed_MAC: f0:d5:bf:24:3b:19 | Previous_MAC: N/A | Ports:  | Ports Scanned: 0 | Count: 2 | Start: Wed Jul 30 16:01:10 2025 | Duration: N/A"
+    },
+    {
+        "attack_type": "ARP_FLOOD",
+        "cvss_vector": "AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+        "cvss_score": 7.5,
+        "priority": "High",
+        "source_ip": "172.20.10.1",
+        "target_ip": "172.20.10.4",
+        "raw_alert": "[ALERT] ARP_FLOOD from 172.20.10.1 | Target_IP: 172.20.10.4 | SRC_MAC: 08:71:90:49:f6:79 | Claimed_MAC: N/A | Previous_MAC: N/A | Ports:  | Ports Scanned: 0 | Count: 10 | Start: Wed Jul 30 16:01:10 2025 | Duration: 2.439921s"
+    },
+    {
+        "attack_type": "NULL_SCAN",
+        "cvss_vector": "AV:N/AC:H/PR:N/UI:N/S:U/C:L/I:N/A:N",
+        "cvss_score": 3.6,
+        "priority": "Low",
+        "source_ip": "34.107.221.82",
+        "target_ip": "172.20.10.4",
+        "raw_alert": "[ALERT] NULL_SCAN from 34.107.221.82 | Target_IP: 172.20.10.4 | SRC_MAC: 3a:71:de:96:27:64 | Claimed_MAC: N/A | Previous_MAC: N/A | Ports: 45486, 45500, 45514, 56490, 56492, 58304, 58306, 58310, 58314, 58320 | Ports Scanned: 10 | Count: 5 | Start: Wed Jul 30 15:44:04 2025 | Duration: 9.222998s"
+    },
+    {
+        "attack_type": "ARP_MITM",
+        "cvss_vector": "AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+        "cvss_score": 9.8,
+        "priority": "Critical",
+        "source_ip": "172.20.10.4",
+        "target_ip": "172.20.10.3",
+        "raw_alert": "[ALERT] ARP_MITM from 172.20.10.4 | Target_IP: 172.20.10.3 | SRC_MAC: f0:d5:bf:24:3b:19 | Claimed_MAC: 08:71:90:49:f6:79 | Previous_MAC: 08:71:90:49:f6:79 | Ports:  | Ports Scanned: 0 | Count: 5 | Start: Wed Jul 30 15:43:44 2025 | Duration: 4.847410s"
+    },
+    {
+        "attack_type": "ARP_BROADCAST",
+        "cvss_vector": "AV:A/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+        "cvss_score": 6.4,
+        "priority": "Medium",
+        "source_ip": "10.66.201.193",
+        "target_ip": "10.66.201.192",
+        "raw_alert": "[ALERT] BROADCAST_SPOOF from 10.66.201.193 | Target_IP: 10.66.201.192 | SRC_MAC: 08:71:90:49:f6:79 | Claimed_MAC: ff:ff:ff:ff:ff:ff | Previous_MAC: N/A | Ports:  | Ports Scanned: 0 | Count: 5 | Start: Tue Aug  5 13:37:16 2025 | Duration: 4.094149s"
+    },
+    {
+        "attack_type": "FIN_SCAN",
+        "cvss_vector": "AV:N/AC:H/PR:N/UI:N/S:U/C:L/I:N/A:N",
+        "cvss_score": 3.6,
+        "priority": "Low",
+        "source_ip": "10.129.5.193",
+        "target_ip": "10.129.5.252",
+        "raw_alert": "[ALERT] FIN_SCAN from 10.129.5.193 | Target_IP: 10.129.5.252 | SRC_MAC: 08:71:90:49:f6:79 | Claimed_MAC: N/A | Previous_MAC: N/A | Ports: 1025, 110, 111, 113, 135, 139, 143, 1720, 1723, 199, 21, 22, 23, 25, 256 | Ports Scanned: 15 | Count: 60 | Start: Mon Jun  2 13:29:17 2025 | Duration: 7.474451s"
+    },
+    {
+        "attack_type": "SPOOFED_SYN_FLOOD",
+        "cvss_vector": "AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+        "cvss_score": 7.5,
+        "priority": "High",
+        "source_ip": "10.213.236.193",
+        "target_ip": "10.213.236.252",
+        "raw_alert": "[ALERT] SPOOFED_SYN_FLOOD from 10.213.236.193 | Target_IP: 10.213.236.252 | SRC_MAC: 08:71:90:49:f6:79 | Claimed_MAC: N/A | Previous_MAC: N/A | Ports:  | Ports Scanned: 0 | Count: 50 | Start: Wed Oct  8 11:48:12 2025 | Duration: 5.631566s"
+    },
+    {
+        "attack_type": "FULL_PORT_SCAN",
+        "cvss_vector": null,
+        "cvss_score": 0.0,
+        "priority": "None",
+        "source_ip": "10.213.236.193",
+        "target_ip": "10.213.236.252",
+        "raw_alert": "[ALERT] FULL_PORT_SCAN from 10.213.236.193 | Target_IP: 10.213.236.252 | SRC_MAC: 08:71:90:49:f6:79 | Claimed_MAC: N/A | Previous_MAC: N/A | Ports: 1025, 10295, 110, 111, 11178, 113, 11820, 12120, 135, 13615, 139, 1404, 143, 15174, 15569 | Ports Scanned: 15 | Count: 90 | Start: Wed Oct  8 11:48:27 2025 | Duration: 9.413241s"
+    },
+    {
+        "attack_type": "SYN_SCAN",
+        "cvss_vector": "AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:N",
+        "cvss_score": 5.3,
+        "priority": "Medium",
+        "source_ip": "10.213.236.193",
+        "target_ip": "10.213.236.252",
+        "raw_alert": "[ALERT] SYN_SCAN from 10.213.236.193 | Target_IP: 10.213.236.252 | SRC_MAC: 08:71:90:49:f6:79 | Claimed_MAC: N/A | Previous_MAC: N/A | Ports: 1025, 10295, 110, 111, 11178, 113, 11820, 12120, 135, 13615, 139, 1404, 143, 15174, 15569 | Ports Scanned: 15 | Count: 90 | Start: Wed Oct  8 11:48:27 2025 | Duration: 9.413241s"
+    },
+    {
+        "attack_type": "OS_FINGERPRINT",
+        "cvss_vector": "AV:N/AC:H/PR:N/UI:N/S:U/C:L/I:N/A:N",
+        "cvss_score": 3.6,
+        "priority": "Low",
+        "source_ip": "10.213.236.193",
+        "target_ip": "10.213.236.252",
+        "raw_alert": "[ALERT] OS_FINGERPRINT from 10.213.236.193 | Target_IP: 10.213.236.252 | SRC_MAC: 08:71:90:49:f6:79 | Claimed_MAC: N/A | Previous_MAC: N/A | Ports:  | Ports Scanned: 0 | Count: 90 | Start: Wed Oct  8 11:48:27 2025 | Duration: 9.413241s"
+    },
+    {
+        "attack_type": "ARP_BROADCAST",
+        "cvss_vector": "AV:A/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+        "cvss_score": 6.4,
+        "priority": "Medium",
+        "source_ip": "10.66.201.193",
+        "target_ip": "10.66.201.192",
+        "raw_alert": "[ALERT] BROADCAST_SPOOF from 10.66.201.193 | Target_IP: 10.66.201.192 | SRC_MAC: 08:71:90:49:f6:79 | Claimed_MAC: ff:ff:ff:ff:ff:ff | Previous_MAC: N/A | Ports:  | Ports Scanned: 0 | Count: 5 | Start: Tue Aug  5 13:37:16 2025 | Duration: 4.094149s"
+    },
+    {
+        "attack_type": "NULL_SCAN",
+        "cvss_vector": "AV:N/AC:H/PR:N/UI:N/S:U/C:L/I:N/A:N",
+        "cvss_score": 3.6,
+        "priority": "Low",
+        "source_ip": "34.107.221.82",
+        "target_ip": "172.20.10.4",
+        "raw_alert": "[ALERT] NULL_SCAN from 34.107.221.82 | Target_IP: 172.20.10.4 | SRC_MAC: 3a:71:de:96:27:64 | Claimed_MAC: N/A | Previous_MAC: N/A | Ports: 36710, 40510, 40512, 40528, 40538, 43274, 43290 | Ports Scanned: 7 | Count: 3 | Start: Wed Jul 30 15:31:57 2025 | Duration: 7.072237s"
+    },
+    {
+        "attack_type": "ICMP_ECHO_REQUEST_FLOOD",
+        "cvss_vector": "AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+        "cvss_score": 7.5,
+        "priority": "High",
+        "source_ip": "172.20.10.3",
+        "target_ip": "172.20.10.4",
+        "raw_alert": "[ALERT] ICMP ECHO REQUEST FLOOD from 172.20.10.3 | Target_IP: 172.20.10.4 | SRC_MAC: 08:71:90:49:f6:79 | Claimed_MAC: N/A | Previous_MAC: N/A | Ports:  | Ports Scanned: 0 | Count: 50 | Start: Wed Jul 30 15:31:43 2025 | Duration: 0.058920s"
+    },
+    {
+        "attack_type": "MAC_CONFLICT",
+        "cvss_vector": "AV:A/AC:H/PR:N/UI:N/S:U/C:L/I:N/A:N",
+        "cvss_score": 3.0,
+        "priority": "Low",
+        "source_ip": "10.66.201.193",
+        "target_ip": "10.66.201.21",
+        "raw_alert": "[ALERT] MAC_CONFLICT from 10.66.201.193 | Target_IP: 10.66.201.21 | SRC_MAC: 08:71:90:49:f6:79 | Claimed_MAC: 00:00:00:00:00:00 | Previous_MAC: N/A | Ports:  | Ports Scanned: 0 | Count: 2 | Start: Tue Aug  5 13:44:24 2025 | Duration: N/A"
+    },
+    {
+        "attack_type": "MAC_CONFLICT",
+        "cvss_vector": "AV:A/AC:H/PR:N/UI:N/S:U/C:L/I:N/A:N",
+        "cvss_score": 3.0,
+        "priority": "Low",
+        "source_ip": "10.66.201.21",
+        "target_ip": "10.66.201.252",
+        "raw_alert": "[ALERT] MAC_CONFLICT from 10.66.201.21 | Target_IP: 10.66.201.252 | SRC_MAC: 08:71:90:49:f6:79 | Claimed_MAC: f0:d5:bf:24:3b:19 | Previous_MAC: N/A | Ports:  | Ports Scanned: 0 | Count: 2 | Start: Tue Aug  5 13:42:11 2025 | Duration: 133.935904s"
+    },
+    {
+        "attack_type": "NULL_SCAN",
+        "cvss_vector": "AV:N/AC:H/PR:N/UI:N/S:U/C:L/I:N/A:N",
+        "cvss_score": 3.6,
+        "priority": "Low",
+        "source_ip": "34.107.221.82",
+        "target_ip": "172.20.10.4",
+        "raw_alert": "[ALERT] NULL_SCAN from 34.107.221.82 | Target_IP: 172.20.10.4 | SRC_MAC: 3a:71:de:96:27:64 | Claimed_MAC: N/A | Previous_MAC: N/A | Ports: 35904, 40064, 40068, 40072, 55250, 57430, 57446, 57452 | Ports Scanned: 8 | Count: 4 | Start: Wed Jul 30 16:11:39 2025 | Duration: 7.485746s"
+    },
+    {
+        "attack_type": "ARP_FLOOD",
+        "cvss_vector": "AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+        "cvss_score": 7.5,
+        "priority": "High",
+        "source_ip": "172.20.10.3",
+        "target_ip": "172.20.10.4",
+        "raw_alert": "[ALERT] ARP_FLOOD from 172.20.10.3 | Target_IP: 172.20.10.4 | SRC_MAC: 08:71:90:49:f6:79 | Claimed_MAC: N/A | Previous_MAC: N/A | Ports:  | Ports Scanned: 0 | Count: 10 | Start: Wed Jul 30 16:11:36 2025 | Duration: 2.475785s"
+    },
+    {
+        "attack_type": "NULL_SCAN",
+        "cvss_vector": "AV:N/AC:H/PR:N/UI:N/S:U/C:L/I:N/A:N",
+        "cvss_score": 3.6,
+        "priority": "Low",
+        "source_ip": "10.129.5.193",
+        "target_ip": "10.129.5.252",
+        "raw_alert": "[ALERT] NULL_SCAN from 10.129.5.193 | Target_IP: 10.129.5.252 | SRC_MAC: 08:71:90:49:f6:79 | Claimed_MAC: N/A | Previous_MAC: N/A | Ports: 1007, 1025, 1088, 110, 111, 1110, 113, 1141, 135, 139, 143, 1720, 1723, 18101, 1840 | Ports Scanned: 15 | Count: 90 | Start: Mon Jun  2 13:29:51 2025 | Duration: 9.419182s"
+    },
+    {
+        "attack_type": "SPOOFED_SYN_FLOOD",
+        "cvss_vector": "AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+        "cvss_score": 7.5,
+        "priority": "High",
+        "source_ip": "10.129.5.193",
+        "target_ip": "10.129.5.252",
+        "raw_alert": "[ALERT] SPOOFED_SYN_FLOOD from 10.129.5.193 | Target_IP: 10.129.5.252 | SRC_MAC: 08:71:90:49:f6:79 | Claimed_MAC: N/A | Previous_MAC: N/A | Ports:  | Ports Scanned: 0 | Count: 50 | Start: Mon Jun  2 13:32:41 2025 | Duration: 3.583795s"
+    },
+    {
+        "attack_type": "FULL_PORT_SCAN",
+        "cvss_vector": null,
+        "cvss_score": 0.0,
+        "priority": "None",
+        "source_ip": "10.129.5.193",
+        "target_ip": "10.129.5.252",
+        "raw_alert": "[ALERT] FULL_PORT_SCAN from 10.129.5.193 | Target_IP: 10.129.5.252 | SRC_MAC: 08:71:90:49:f6:79 | Claimed_MAC: N/A | Previous_MAC: N/A | Ports: 10000, 10001, 10002, 10009, 1007, 10180, 1022, 1024, 1025, 1035, 1037, 10566, 1077, 10778, 110 | Ports Scanned: 15 | Count: 160 | Start: Mon Jun  2 13:32:45 2025 | Duration: 9.625149s"
+    },
+    {
+        "attack_type": "SYN_SCAN",
+        "cvss_vector": "AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:N",
+        "cvss_score": 5.3,
+        "priority": "Medium",
+        "source_ip": "10.129.5.193",
+        "target_ip": "10.129.5.252",
+        "raw_alert": "[ALERT] SYN_SCAN from 10.129.5.193 | Target_IP: 10.129.5.252 | SRC_MAC: 08:71:90:49:f6:79 | Claimed_MAC: N/A | Previous_MAC: N/A | Ports: 10000, 10001, 10002, 10009, 1007, 10180, 1022, 1024, 1025, 1035, 1037, 10566, 1077, 10778, 110 | Ports Scanned: 15 | Count: 160 | Start: Mon Jun  2 13:32:45 2025 | Duration: 9.625149s"
+    },
+    {
+        "attack_type": "OS_FINGERPRINT",
+        "cvss_vector": "AV:N/AC:H/PR:N/UI:N/S:U/C:L/I:N/A:N",
+        "cvss_score": 3.6,
+        "priority": "Low",
+        "source_ip": "10.129.5.193",
+        "target_ip": "10.129.5.252",
+        "raw_alert": "[ALERT] OS_FINGERPRINT from 10.129.5.193 | Target_IP: 10.129.5.252 | SRC_MAC: 08:71:90:49:f6:79 | Claimed_MAC: N/A | Previous_MAC: N/A | Ports:  | Ports Scanned: 0 | Count: 160 | Start: Mon Jun  2 13:32:45 2025 | Duration: 9.625149s"
+    },
+    {
+        "attack_type": "ICMP_SMURF_ATTACK",
+        "cvss_vector": "AV:N/AC:L/PR:N/UI:N/S:C/C:N/I:N/A:H",
+        "cvss_score": 8.7,
+        "priority": "High",
+        "source_ip": "10.107.158.193",
+        "target_ip": "10.107.158.255",
+        "raw_alert": "[ALERT] SMURF ATTACK from 10.107.158.193 | Target_IP: 10.107.158.255 | SRC_MAC: 08:71:90:49:f6:79 | Claimed_MAC: N/A | Previous_MAC: N/A | Ports:  | Ports Scanned: 0 | Count: 20 | Start: Mon Sep 29 15:16:05 2025 | Duration: 0.002552s"
+    },
+    {
+        "attack_type": "ICMP_ECHO_REQUEST_FLOOD",
+        "cvss_vector": "AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+        "cvss_score": 7.5,
+        "priority": "High",
+        "source_ip": "10.107.158.193",
+        "target_ip": "10.107.158.255",
+        "raw_alert": "[ALERT] ICMP ECHO REQUEST FLOOD from 10.107.158.193 | Target_IP: 10.107.158.255 | SRC_MAC: 08:71:90:49:f6:79 | Claimed_MAC: N/A | Previous_MAC: N/A | Ports:  | Ports Scanned: 0 | Count: 50 | Start: Mon Sep 29 15:16:05 2025 | Duration: 0.009151s"
+    },
+    {
+        "attack_type": "SPOOFED_SYN_FLOOD",
+        "cvss_vector": "AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+        "cvss_score": 7.5,
+        "priority": "High",
+        "source_ip": "10.73.188.92",
+        "target_ip": "10.73.188.252",
+        "raw_alert": "[ALERT] SPOOFED_SYN_FLOOD from 10.73.188.92 | Target_IP: 10.73.188.252 | SRC_MAC: 08:71:90:49:f6:79 | Claimed_MAC: N/A | Previous_MAC: N/A | Ports:  | Ports Scanned: 0 | Count: 50 | Start: Mon Oct  6 13:54:06 2025 | Duration: 0.006200s"
+    },
+    {
+        "attack_type": "SPOOFED_SYN_FLOOD",
+        "cvss_vector": "AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+        "cvss_score": 7.5,
+        "priority": "High",
+        "source_ip": "10.129.5.193",
+        "target_ip": "10.129.5.252",
+        "raw_alert": "[ALERT] SPOOFED_SYN_FLOOD from 10.129.5.193 | Target_IP: 10.129.5.252 | SRC_MAC: 08:71:90:49:f6:79 | Claimed_MAC: N/A | Previous_MAC: N/A | Ports:  | Ports Scanned: 0 | Count: 50 | Start: Mon Jun  2 13:27:36 2025 | Duration: 7.064509s"
+    },
+    {
+        "attack_type": "SYN_SCAN",
+        "cvss_vector": "AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:N",
+        "cvss_score": 5.3,
+        "priority": "Medium",
+        "source_ip": "10.129.5.193",
+        "target_ip": "10.129.5.252",
+        "raw_alert": "[ALERT] SYN_SCAN from 10.129.5.193 | Target_IP: 10.129.5.252 | SRC_MAC: 08:71:90:49:f6:79 | Claimed_MAC: N/A | Previous_MAC: N/A | Ports: 10000, 1025, 1053, 10566, 110, 111, 113, 12174, 1311, 135, 139, 143, 1720, 1723, 199 | Ports Scanned: 15 | Count: 70 | Start: Mon Jun  2 13:27:36 2025 | Duration: 9.801395s"
+    },
+    {
+        "attack_type": "OS_FINGERPRINT",
+        "cvss_vector": "AV:N/AC:H/PR:N/UI:N/S:U/C:L/I:N/A:N",
+        "cvss_score": 3.6,
+        "priority": "Low",
+        "source_ip": "10.129.5.193",
+        "target_ip": "10.129.5.252",
+        "raw_alert": "[ALERT] OS_FINGERPRINT from 10.129.5.193 | Target_IP: 10.129.5.252 | SRC_MAC: 08:71:90:49:f6:79 | Claimed_MAC: N/A | Previous_MAC: N/A | Ports:  | Ports Scanned: 0 | Count: 70 | Start: Mon Jun  2 13:27:36 2025 | Duration: 9.801395s"
+    },
+    {
+        "attack_type": "NULL_SCAN",
+        "cvss_vector": "AV:N/AC:H/PR:N/UI:N/S:U/C:L/I:N/A:N",
+        "cvss_score": 3.6,
+        "priority": "Low",
+        "source_ip": "34.107.221.82",
+        "target_ip": "172.20.10.4",
+        "raw_alert": "[ALERT] NULL_SCAN from 34.107.221.82 | Target_IP: 172.20.10.4 | SRC_MAC: 3a:71:de:96:27:64 | Claimed_MAC: N/A | Previous_MAC: N/A | Ports: 35470, 41022, 41030, 41040, 41046, 43026, 43038, 43054, 44736, 44748, 45656, 47194, 47208, 59268 | Ports Scanned: 14 | Count: 3 | Start: Wed Jul 30 15:21:43 2025 | Duration: 6.236623s"
+    },
+    {
+        "attack_type": "ACK_SCAN",
+        "cvss_vector": "AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L",
+        "cvss_score": 5.3,
+        "priority": "Medium",
+        "source_ip": "34.107.221.82",
+        "target_ip": "172.20.10.4",
+        "raw_alert": "[ALERT] ACK_SCAN from 34.107.221.82 | Target_IP: 172.20.10.4 | SRC_MAC: 3a:71:de:96:27:64 | Claimed_MAC: N/A | Previous_MAC: N/A | Ports: 35468, 35470, 41022, 41030, 41040, 41046, 43026, 43038, 43054, 45656, 45662, 46154, 47194, 47208, 59268 | Ports Scanned: 15 | Count: 4 | Start: Wed Jul 30 15:21:40 2025 | Duration: 9.973591s"
+    },
+    {
+        "attack_type": "OS_FINGERPRINT",
+        "cvss_vector": "AV:N/AC:H/PR:N/UI:N/S:U/C:L/I:N/A:N",
+        "cvss_score": 3.6,
+        "priority": "Low",
+        "source_ip": "34.107.221.82",
+        "target_ip": "172.20.10.4",
+        "raw_alert": "[ALERT] OS_FINGERPRINT from 34.107.221.82 | Target_IP: 172.20.10.4 | SRC_MAC: 3a:71:de:96:27:64 | Claimed_MAC: N/A | Previous_MAC: N/A | Ports:  | Ports Scanned: 0 | Count: 3 | Start: Wed Jul 30 15:21:44 2025 | Duration: 6.492717s"
+    },
+    {
+        "attack_type": "OS_FINGERPRINT",
+        "cvss_vector": "AV:N/AC:H/PR:N/UI:N/S:U/C:L/I:N/A:N",
+        "cvss_score": 3.6,
+        "priority": "Low",
+        "source_ip": "172.20.10.4",
+        "target_ip": "142.250.181.138",
+        "raw_alert": "[ALERT] OS_FINGERPRINT from 172.20.10.4 | Target_IP: 142.250.181.138 | SRC_MAC: f0:d5:bf:24:3b:19 | Claimed_MAC: N/A | Previous_MAC: N/A | Ports:  | Ports Scanned: 0 | Count: 4 | Start: Wed Jul 30 15:21:43 2025 | Duration: 6.852272s"
+    },
+    {
+        "attack_type": "ICMP_TIMESTAMP_REQUEST_FLOOD",
+        "cvss_vector": "AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:H",
+        "cvss_score": 8.1,
+        "priority": "High",
+        "source_ip": "172.20.10.3",
+        "target_ip": "172.20.10.4",
+        "raw_alert": "[ALERT] ICMP TIMESTAMP REQUEST FLOOD from 172.20.10.3 | Target_IP: 172.20.10.4 | SRC_MAC: 08:71:90:49:f6:79 | Claimed_MAC: N/A | Previous_MAC: N/A | Ports:  | Ports Scanned: 0 | Count: 20 | Start: Wed Jul 30 15:21:03 2025 | Duration: 1.141793s"
+    },
+    {
+        "attack_type": "UDP_SCAN",
+        "cvss_vector": "AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:N",
+        "cvss_score": 5.3,
+        "priority": "Medium",
+        "source_ip": "10.129.5.193",
+        "target_ip": "10.129.5.252",
+        "raw_alert": "[ALERT] UDP_SCAN from 10.129.5.193 | Target_IP: 10.129.5.252 | SRC_MAC: 08:71:90:49:f6:79 | Claimed_MAC: N/A | Previous_MAC: N/A | Ports: 1041, 1049, 1065, 1068, 16896, 17185, 18683, 20360, 20445, 20540, 20791, 21360, 22053, 24644, 28547 | Ports Scanned: 15 | Count: 50 | Start: Mon Jun  2 13:31:00 2025 | Duration: 8.497581s"
+    },
+    {
+        "attack_type": "XMAS_SCAN",
+        "cvss_vector": "AV:N/AC:H/PR:N/UI:N/S:U/C:L/I:N/A:N",
+        "cvss_score": 3.6,
+        "priority": "Low",
+        "source_ip": "10.129.5.193",
+        "target_ip": "10.129.5.252",
+        "raw_alert": "[ALERT] XMAS_SCAN from 10.129.5.193 | Target_IP: 10.129.5.252 | SRC_MAC: 08:71:90:49:f6:79 | Claimed_MAC: N/A | Previous_MAC: N/A | Ports: 1011, 1025, 1042, 1093, 110, 111, 11110, 1124, 113, 1271, 135, 139, 143, 1500, 15004 | Ports Scanned: 15 | Count: 80 | Start: Mon Jun  2 13:30:23 2025 | Duration: 8.805160s"
+    },
+    {
+        "attack_type": "OS_FINGERPRINT",
+        "cvss_vector": "AV:N/AC:H/PR:N/UI:N/S:U/C:L/I:N/A:N",
+        "cvss_score": 3.6,
+        "priority": "Low",
+        "source_ip": "10.238.246.252",
+        "target_ip": "172.64.148.235",
+        "raw_alert": "[ALERT] OS_FINGERPRINT from 10.238.246.252 | Target_IP: 172.64.148.235 | SRC_MAC: f0:d5:bf:24:3b:19 | Claimed_MAC: N/A | Previous_MAC: N/A | Ports:  | Ports Scanned: 0 | Count: 38 | Start: Thu Oct  9 11:28:27 2025 | Duration: 9.932876s"
+    },
+    {
+        "attack_type": "OS_FINGERPRINT",
+        "cvss_vector": "AV:N/AC:H/PR:N/UI:N/S:U/C:L/I:N/A:N",
+        "cvss_score": 3.6,
+        "priority": "Low",
+        "source_ip": "142.250.187.78",
+        "target_ip": "10.238.246.252",
+        "raw_alert": "[ALERT] OS_FINGERPRINT from 142.250.187.78 | Target_IP: 10.238.246.252 | SRC_MAC: 52:14:c1:53:64:51 | Claimed_MAC: N/A | Previous_MAC: N/A | Ports:  | Ports Scanned: 0 | Count: 3 | Start: Thu Oct  9 11:28:26 2025 | Duration: 0.204132s"
+    },
+    {
+        "attack_type": "OS_FINGERPRINT",
+        "cvss_vector": "AV:N/AC:H/PR:N/UI:N/S:U/C:L/I:N/A:N",
+        "cvss_score": 3.6,
+        "priority": "Low",
+        "source_ip": "142.250.202.170",
+        "target_ip": "10.238.246.252",
+        "raw_alert": "[ALERT] OS_FINGERPRINT from 142.250.202.170 | Target_IP: 10.238.246.252 | SRC_MAC: 52:14:c1:53:64:51 | Claimed_MAC: N/A | Previous_MAC: N/A | Ports:  | Ports Scanned: 0 | Count: 14 | Start: Thu Oct  9 11:28:27 2025 | Duration: 9.932405s"
+    },
+    {
+        "attack_type": "OS_FINGERPRINT",
+        "cvss_vector": "AV:N/AC:H/PR:N/UI:N/S:U/C:L/I:N/A:N",
+        "cvss_score": 3.6,
+        "priority": "Low",
+        "source_ip": "34.107.243.93",
+        "target_ip": "10.238.246.252",
+        "raw_alert": "[ALERT] OS_FINGERPRINT from 34.107.243.93 | Target_IP: 10.238.246.252 | SRC_MAC: 52:14:c1:53:64:51 | Claimed_MAC: N/A | Previous_MAC: N/A | Ports:  | Ports Scanned: 0 | Count: 18 | Start: Thu Oct  9 11:23:51 2025 | Duration: 2.179730s"
+    },
+    {
+        "attack_type": "OS_FINGERPRINT",
+        "cvss_vector": "AV:N/AC:H/PR:N/UI:N/S:U/C:L/I:N/A:N",
+        "cvss_score": 3.6,
+        "priority": "Low",
+        "source_ip": "10.238.246.252",
+        "target_ip": "172.64.148.235",
+        "raw_alert": "[ALERT] OS_FINGERPRINT from 10.238.246.252 | Target_IP: 172.64.148.235 | SRC_MAC: f0:d5:bf:24:3b:19 | Claimed_MAC: N/A | Previous_MAC: N/A | Ports:  | Ports Scanned: 0 | Count: 23 | Start: Thu Oct  9 11:23:51 2025 | Duration: 2.469099s"
+    },
+    {
+        "attack_type": "ICMP_TIMESTAMP_REQUEST_FLOOD",
+        "cvss_vector": "AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:H",
+        "cvss_score": 8.1,
+        "priority": "High",
+        "source_ip": "10.238.246.193",
+        "target_ip": "10.238.246.252",
+        "raw_alert": "[ALERT] ICMP TIMESTAMP REQUEST FLOOD from 10.238.246.193 | Target_IP: 10.238.246.252 | SRC_MAC: 08:71:90:49:f6:79 | Claimed_MAC: N/A | Previous_MAC: N/A | Ports:  | Ports Scanned: 0 | Count: 20 | Start: Thu Oct  9 11:07:08 2025 | Duration: 0.001594s"
+    },
+    {
+        "attack_type": "NULL_SCAN",
+        "cvss_vector": "AV:N/AC:H/PR:N/UI:N/S:U/C:L/I:N/A:N",
+        "cvss_score": 3.6,
+        "priority": "Low",
+        "source_ip": "34.107.221.82",
+        "target_ip": "172.20.10.4",
+        "raw_alert": "[ALERT] NULL_SCAN from 34.107.221.82 | Target_IP: 172.20.10.4 | SRC_MAC: 3a:71:de:96:27:64 | Claimed_MAC: N/A | Previous_MAC: N/A | Ports: 45486, 45500, 45514, 56490, 56492, 58304, 58306, 58310, 58314, 58320 | Ports Scanned: 10 | Count: 5 | Start: Wed Jul 30 15:44:04 2025 | Duration: 9.222998s"
+    },
+    {
+        "attack_type": "ARP_MITM",
+        "cvss_vector": "AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+        "cvss_score": 9.8,
+        "priority": "Critical",
+        "source_ip": "172.20.10.4",
+        "target_ip": "172.20.10.3",
+        "raw_alert": "[ALERT] ARP_MITM from 172.20.10.4 | Target_IP: 172.20.10.3 | SRC_MAC: f0:d5:bf:24:3b:19 | Claimed_MAC: 08:71:90:49:f6:79 | Previous_MAC: 08:71:90:49:f6:79 | Ports:  | Ports Scanned: 0 | Count: 5 | Start: Wed Jul 30 15:43:44 2025 | Duration: 4.847410s"
+    },
+    {
+        "attack_type": "NULL_SCAN",
+        "cvss_vector": "AV:N/AC:H/PR:N/UI:N/S:U/C:L/I:N/A:N",
+        "cvss_score": 3.6,
+        "priority": "Low",
+        "source_ip": "34.107.221.82",
+        "target_ip": "172.20.10.4",
+        "raw_alert": "[ALERT] NULL_SCAN from 34.107.221.82 | Target_IP: 172.20.10.4 | SRC_MAC: 3a:71:de:96:27:64 | Claimed_MAC: N/A | Previous_MAC: N/A | Ports: 35904, 40064, 40068, 40072, 55250, 57430, 57446, 57452 | Ports Scanned: 8 | Count: 4 | Start: Wed Jul 30 16:11:39 2025 | Duration: 7.485746s"
+    },
+    {
+        "attack_type": "ARP_FLOOD",
+        "cvss_vector": "AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+        "cvss_score": 7.5,
+        "priority": "High",
+        "source_ip": "172.20.10.3",
+        "target_ip": "172.20.10.4",
+        "raw_alert": "[ALERT] ARP_FLOOD from 172.20.10.3 | Target_IP: 172.20.10.4 | SRC_MAC: 08:71:90:49:f6:79 | Claimed_MAC: N/A | Previous_MAC: N/A | Ports:  | Ports Scanned: 0 | Count: 10 | Start: Wed Jul 30 16:11:36 2025 | Duration: 2.475785s"
+    },
+    {
+        "attack_type": "OS_FINGERPRINT",
+        "cvss_vector": "AV:N/AC:H/PR:N/UI:N/S:U/C:L/I:N/A:N",
+        "cvss_score": 3.6,
+        "priority": "Low",
+        "source_ip": "10.73.188.252",
+        "target_ip": "34.160.144.191",
+        "raw_alert": "[ALERT] OS_FINGERPRINT from 10.73.188.252 | Target_IP: 34.160.144.191 | SRC_MAC: f0:d5:bf:24:3b:19 | Claimed_MAC: N/A | Previous_MAC: N/A | Ports:  | Ports Scanned: 0 | Count: 1 | Start: Mon Oct  6 13:02:53 2025 | Duration: N/A"
+    },
+    {
+        "attack_type": "UDP_SCAN",
+        "cvss_vector": "AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:N",
+        "cvss_score": 5.3,
+        "priority": "Medium",
+        "source_ip": "10.73.188.193",
+        "target_ip": "10.73.188.252",
+        "raw_alert": "[ALERT] UDP_SCAN from 10.73.188.193 | Target_IP: 10.73.188.252 | SRC_MAC: 08:71:90:49:f6:79 | Claimed_MAC: N/A | Previous_MAC: N/A | Ports: 1, 10, 100, 11, 13, 14, 17, 19, 2, 20, 22, 23, 26, 28, 31 | Ports Scanned: 15 | Count: 138 | Start: Mon Oct  6 13:02:54 2025 | Duration: 7.141880s"
+    }
+]

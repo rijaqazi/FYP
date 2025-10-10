@@ -1,0 +1,42 @@
+{
+    "rule_id": "rule-a8a0592b",
+    "created": "2025-10-09T20:50:35Z",
+    "source_alert_id": "68e8199033f17e0f0949365b",
+    "alert_type": "ACK_SCAN",
+    "src_ip": "10.213.236.193",
+    "dst_ip": "10.213.236.252",
+    "protocol": "TCP",
+    "ports": [
+        "1009",
+        "1011",
+        "10180",
+        "1022",
+        "1025",
+        "1041",
+        "1046",
+        "110",
+        "1104",
+        "1105",
+        "111",
+        "1117",
+        "113",
+        "1130",
+        "1148"
+    ],
+    "ports_scanned_count": 15,
+    "duration_": 8.807519,
+    "cvss_score": 5.3,
+    "priority": "Medium",
+    "decision": {
+        "normalized_attack": "ACK_SCAN",
+        "action": "block_ip",
+        "target": "10.213.236.193",
+        "reason": "ACK Scan detected",
+        "confidence": "medium",
+        "expiry_seconds": 14400
+    },
+    "suggested_commands": [
+        "iptables -I INPUT -s 10.213.236.193 -j DROP # temp block",
+        "netsh advfirewall firewall add rule name=\"Block_10.213.236.193\" dir=in action=block remoteip=10.213.236.193"
+    ]
+}

@@ -1,0 +1,42 @@
+{
+    "rule_id": "rule-00bc2cb8",
+    "created": "2025-10-09T20:50:35Z",
+    "source_alert_id": "68e8199033f17e0f09493669",
+    "alert_type": "FULL_PORT_SCAN",
+    "src_ip": "10.213.236.193",
+    "dst_ip": "10.213.236.252",
+    "protocol": "TCP/UDP",
+    "ports": [
+        "1025",
+        "10295",
+        "110",
+        "111",
+        "11178",
+        "113",
+        "11820",
+        "12120",
+        "135",
+        "13615",
+        "139",
+        "1404",
+        "143",
+        "15174",
+        "15569"
+    ],
+    "ports_scanned_count": 15,
+    "duration_": 9.413241,
+    "cvss_score": 0.0,
+    "priority": "None",
+    "decision": {
+        "normalized_attack": "FULL_PORT_SCAN",
+        "action": "notify",
+        "target": "10.213.236.193",
+        "reason": "FULL_PORT_SCAN detected (low priority - monitoring)",
+        "confidence": "low",
+        "expiry_seconds": 14400
+    },
+    "suggested_commands": [
+        "iptables -I INPUT -s 10.213.236.193 -j DROP # temp block",
+        "netsh advfirewall firewall add rule name=\"Block_10.213.236.193\" dir=in action=block remoteip=10.213.236.193"
+    ]
+}

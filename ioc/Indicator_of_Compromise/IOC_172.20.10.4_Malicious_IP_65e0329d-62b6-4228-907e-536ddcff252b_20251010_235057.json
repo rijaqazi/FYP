@@ -1,0 +1,21 @@
+{
+  "created": "2025-10-10T18:42:33.000Z",
+  "description": "Threats from 172.20.10.4 | Ports: None | Duration: 22.9s  | Raw Logs: 4 entries attached",
+  "id": "indicator--65e0329d-62b6-4228-907e-536ddcff252b",
+  "ip_address": "172.20.10.4",
+  "labels": [
+    "malicious-activity"
+  ],
+  "modified": "2025-10-10T18:42:33.000Z",
+  "name": "Malicious IP",
+  "pattern": "[ipv4-addr:value = '172.20.10.4'] AND [mac-addr:value = '08:71:90:49:f6:79'] AND [mac-addr:value = 'f0:d5:bf:24:3b:19']",
+  "pattern_type": "stix",
+  "type": "indicator",
+  "valid_from": "2025-10-10T18:42:33.000Z",
+  "x_raw_logs": [
+    "[ALERT] OS_FINGERPRINT from 172.20.10.4 | Target_IP: 142.250.181.138 | SRC_MAC: f0:d5:bf:24:3b:19 | Claimed_MAC: N/A | Previous_MAC: N/A | Ports:  | Ports Scanned: 0 | Count: 4 | Start: Wed Jul 30 15:21:43 2025 | Duration: 6.852272s",
+    "[ALERT] OS_FINGERPRINT from 172.20.10.4 | Target_IP: 142.250.200.164 | SRC_MAC: f0:d5:bf:24:3b:19 | Claimed_MAC: N/A | Previous_MAC: N/A | Ports:  | Ports Scanned: 0 | Count: 8 | Start: Wed Jul 30 15:24:42 2025 | Duration: 6.358987s",
+    "[ALERT] OS_FINGERPRINT from 172.20.10.4 | Target_IP: 172.20.10.1 | SRC_MAC: f0:d5:bf:24:3b:19 | Claimed_MAC: N/A | Previous_MAC: N/A | Ports:  | Ports Scanned: 0 | Count: 1 | Start: Wed Jul 30 16:01:52 2025 | Duration: N/A",
+    "[ALERT] ARP_MITM from 172.20.10.4 | Target_IP: 172.20.10.3 | SRC_MAC: f0:d5:bf:24:3b:19 | Claimed_MAC: 08:71:90:49:f6:79 | Previous_MAC: 08:71:90:49:f6:79 | Ports:  | Ports Scanned: 0 | Count: 5 | Start: Wed Jul 30 15:43:44 2025 | Duration: 4.847410s"
+  ]
+}

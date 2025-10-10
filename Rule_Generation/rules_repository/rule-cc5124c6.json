@@ -1,0 +1,26 @@
+{
+    "rule_id": "rule-cc5124c6",
+    "created": "2025-10-09T20:50:35Z",
+    "source_alert_id": "68e8199033f17e0f09493678",
+    "alert_type": "SMURF ATTACK",
+    "src_ip": "10.107.158.193",
+    "dst_ip": "10.107.158.255",
+    "protocol": "TCP",
+    "ports": [],
+    "ports_scanned_count": 0,
+    "duration_": 0.002552,
+    "cvss_score": 8.7,
+    "priority": "High",
+    "decision": {
+        "normalized_attack": "SMURF ATTACK",
+        "action": "block_ip",
+        "target": "10.107.158.193",
+        "reason": "ICMP Smurf Attack detected",
+        "confidence": "high",
+        "expiry_seconds": 14400
+    },
+    "suggested_commands": [
+        "iptables -I INPUT -s 10.107.158.193 -j DROP # temp block",
+        "netsh advfirewall firewall add rule name=\"Block_10.107.158.193\" dir=in action=block remoteip=10.107.158.193"
+    ]
+}

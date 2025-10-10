@@ -1,0 +1,25 @@
+{
+    "type": "bundle",
+    "id": "bundle--abcaf0e3-4a74-49c2-90ca-63c3c991e861",
+    "objects": [
+        {
+            "type": "indicator",
+            "id": "indicator--66a6a8a3-7637-43f9-836a-f2bbd9d83a41",
+            "created": "2025-10-10T18:42:33.000Z",
+            "modified": "2025-10-10T18:42:33.000Z",
+            "name": "Malicious IP",
+            "ip_address": "10.107.158.193",
+            "description": "Threats from 10.107.158.193 | Ports: None | Duration: 0.0s  | Raw Logs: 2 entries attached",
+            "pattern": "[ipv4-addr:value = '10.107.158.193'] AND [mac-addr:value = '08:71:90:49:f6:79']",
+            "pattern_type": "stix",
+            "valid_from": "2025-10-10T18:42:33.000Z",
+            "labels": [
+                "malicious-activity"
+            ],
+            "x_raw_logs": [
+                "[ALERT] SMURF ATTACK from 10.107.158.193 | Target_IP: 10.107.158.255 | SRC_MAC: 08:71:90:49:f6:79 | Claimed_MAC: N/A | Previous_MAC: N/A | Ports:  | Ports Scanned: 0 | Count: 20 | Start: Mon Sep 29 15:16:05 2025 | Duration: 0.002552s",
+                "[ALERT] ICMP ECHO REQUEST FLOOD from 10.107.158.193 | Target_IP: 10.107.158.255 | SRC_MAC: 08:71:90:49:f6:79 | Claimed_MAC: N/A | Previous_MAC: N/A | Ports:  | Ports Scanned: 0 | Count: 50 | Start: Mon Sep 29 15:16:05 2025 | Duration: 0.009151s"
+            ]
+        }
+    ]
+}

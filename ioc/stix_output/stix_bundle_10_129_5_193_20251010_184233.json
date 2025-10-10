@@ -1,0 +1,34 @@
+{
+    "type": "bundle",
+    "id": "bundle--74f0f092-6972-423f-8e08-4f68abdbf0f8",
+    "objects": [
+        {
+            "type": "indicator",
+            "id": "indicator--2a2a1355-1dae-4577-9695-61837a8faa81",
+            "created": "2025-10-10T18:42:33.000Z",
+            "modified": "2025-10-10T18:42:33.000Z",
+            "name": "Malicious IP",
+            "ip_address": "10.129.5.193",
+            "description": "Threats from 10.129.5.193 | Ports: 10000, 10001, 10002, 10009, 1007, 1011, 10180, 1022, 1024, 1025, 1035, 1037, 1041, 1042, 1049, 1053, 10566, 1065, 1068, 1077, 10778, 1088, 1093, 110, 111, 1110, 11110, 1124, 113, 1141, 12174, 1271, 1311, 135, 139, 143, 1500, 15004, 16896, 17185, 1720, 1723, 18101, 1840, 18683, 199, 20360, 20445, 20540, 20791, 21, 21360, 22, 22053, 23, 24644, 25, 256, 28547 | Duration: 93.3s  | Raw Logs: 11 entries attached",
+            "pattern": "[ipv4-addr:value = '10.129.5.193'] AND [mac-addr:value = '08:71:90:49:f6:79']",
+            "pattern_type": "stix",
+            "valid_from": "2025-10-10T18:42:33.000Z",
+            "labels": [
+                "malicious-activity"
+            ],
+            "x_raw_logs": [
+                "[ALERT] SYN_SCAN from 10.129.5.193 | Target_IP: 10.129.5.252 | SRC_MAC: 08:71:90:49:f6:79 | Claimed_MAC: N/A | Previous_MAC: N/A | Ports: 10000, 10001, 10002, 10009, 1007, 10180, 1022, 1024, 1025, 1035, 1037, 10566, 1077, 10778, 110 | Ports Scanned: 15 | Count: 160 | Start: Mon Jun  2 13:32:45 2025 | Duration: 9.625149s",
+                "[ALERT] NULL_SCAN from 10.129.5.193 | Target_IP: 10.129.5.252 | SRC_MAC: 08:71:90:49:f6:79 | Claimed_MAC: N/A | Previous_MAC: N/A | Ports: 1007, 1025, 1088, 110, 111, 1110, 113, 1141, 135, 139, 143, 1720, 1723, 18101, 1840 | Ports Scanned: 15 | Count: 90 | Start: Mon Jun  2 13:29:51 2025 | Duration: 9.419182s",
+                "[ALERT] FULL_PORT_SCAN from 10.129.5.193 | Target_IP: 10.129.5.252 | SRC_MAC: 08:71:90:49:f6:79 | Claimed_MAC: N/A | Previous_MAC: N/A | Ports: 10000, 10001, 10002, 10009, 1007, 10180, 1022, 1024, 1025, 1035, 1037, 10566, 1077, 10778, 110 | Ports Scanned: 15 | Count: 160 | Start: Mon Jun  2 13:32:45 2025 | Duration: 9.625149s",
+                "[ALERT] SPOOFED_SYN_FLOOD from 10.129.5.193 | Target_IP: 10.129.5.252 | SRC_MAC: 08:71:90:49:f6:79 | Claimed_MAC: N/A | Previous_MAC: N/A | Ports:  | Ports Scanned: 0 | Count: 50 | Start: Mon Jun  2 13:32:41 2025 | Duration: 3.583795s",
+                "[ALERT] OS_FINGERPRINT from 10.129.5.193 | Target_IP: 10.129.5.252 | SRC_MAC: 08:71:90:49:f6:79 | Claimed_MAC: N/A | Previous_MAC: N/A | Ports:  | Ports Scanned: 0 | Count: 70 | Start: Mon Jun  2 13:27:36 2025 | Duration: 9.801395s",
+                "[ALERT] XMAS_SCAN from 10.129.5.193 | Target_IP: 10.129.5.252 | SRC_MAC: 08:71:90:49:f6:79 | Claimed_MAC: N/A | Previous_MAC: N/A | Ports: 1011, 1025, 1042, 1093, 110, 111, 11110, 1124, 113, 1271, 135, 139, 143, 1500, 15004 | Ports Scanned: 15 | Count: 80 | Start: Mon Jun  2 13:30:23 2025 | Duration: 8.805160s",
+                "[ALERT] UDP_SCAN from 10.129.5.193 | Target_IP: 10.129.5.252 | SRC_MAC: 08:71:90:49:f6:79 | Claimed_MAC: N/A | Previous_MAC: N/A | Ports: 1041, 1049, 1065, 1068, 16896, 17185, 18683, 20360, 20445, 20540, 20791, 21360, 22053, 24644, 28547 | Ports Scanned: 15 | Count: 50 | Start: Mon Jun  2 13:31:00 2025 | Duration: 8.497581s",
+                "[ALERT] SPOOFED_SYN_FLOOD from 10.129.5.193 | Target_IP: 10.129.5.252 | SRC_MAC: 08:71:90:49:f6:79 | Claimed_MAC: N/A | Previous_MAC: N/A | Ports:  | Ports Scanned: 0 | Count: 50 | Start: Mon Jun  2 13:27:36 2025 | Duration: 7.064509s",
+                "[ALERT] SYN_SCAN from 10.129.5.193 | Target_IP: 10.129.5.252 | SRC_MAC: 08:71:90:49:f6:79 | Claimed_MAC: N/A | Previous_MAC: N/A | Ports: 10000, 1025, 1053, 10566, 110, 111, 113, 12174, 1311, 135, 139, 143, 1720, 1723, 199 | Ports Scanned: 15 | Count: 70 | Start: Mon Jun  2 13:27:36 2025 | Duration: 9.801395s",
+                "[ALERT] OS_FINGERPRINT from 10.129.5.193 | Target_IP: 10.129.5.252 | SRC_MAC: 08:71:90:49:f6:79 | Claimed_MAC: N/A | Previous_MAC: N/A | Ports:  | Ports Scanned: 0 | Count: 160 | Start: Mon Jun  2 13:32:45 2025 | Duration: 9.625149s",
+                "[ALERT] FIN_SCAN from 10.129.5.193 | Target_IP: 10.129.5.252 | SRC_MAC: 08:71:90:49:f6:79 | Claimed_MAC: N/A | Previous_MAC: N/A | Ports: 1025, 110, 111, 113, 135, 139, 143, 1720, 1723, 199, 21, 22, 23, 25, 256 | Ports Scanned: 15 | Count: 60 | Start: Mon Jun  2 13:29:17 2025 | Duration: 7.474451s"
+            ]
+        }
+    ]
+}

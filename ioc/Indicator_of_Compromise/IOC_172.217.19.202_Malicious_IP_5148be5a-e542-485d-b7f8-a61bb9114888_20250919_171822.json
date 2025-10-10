@@ -1,0 +1,18 @@
+{
+  "created": "2025-09-19T09:15:12.000Z",
+  "description": "Threats from 172.217.19.202 | Ports: 33500 | Duration: 0.0s  | Raw Logs: 1 entries attached",
+  "id": "indicator--5148be5a-e542-485d-b7f8-a61bb9114888",
+  "ip_address": "172.217.19.202",
+  "labels": [
+    "malicious-activity"
+  ],
+  "modified": "2025-09-19T09:15:12.000Z",
+  "name": "Malicious IP",
+  "pattern": "[ipv4-addr:value = '172.217.19.202'] AND [mac-addr:value = '6e:24:d0:51:b4:15']",
+  "pattern_type": "stix",
+  "type": "indicator",
+  "valid_from": "2025-09-19T09:15:12.000Z",
+  "x_raw_logs": [
+    "[ALERT] SERVICE_PROBE from 172.217.19.202 | Target_IP: N/A | SRC_MAC: 6e:24:d0:51:b4:15 | Claimed_MAC: N/A | Previous_MAC: N/A | Ports: 33500 | Ports Scanned: 1 | Start: Mon Jun  2 13:32:48 2025 | Duration: 0.0s"
+  ]
+}

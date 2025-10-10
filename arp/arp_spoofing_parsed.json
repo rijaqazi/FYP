@@ -1,0 +1,3017 @@
+[
+  {
+    "_index": "packets-2025-08-05",
+    "_type": "doc",
+    "_score": null,
+    "_source": {
+      "layers": {
+        "frame": {
+          "frame.encap_type": "1",
+          "frame.time": "Aug  5, 2025 13:34:25.168208000 PKT",
+          "frame.offset_shift": "0.000000000",
+          "frame.time_epoch": "1754382865.168208000",
+          "frame.time_delta": "0.000000000",
+          "frame.time_delta_displayed": "0.000000000",
+          "frame.time_relative": "0.000000000",
+          "frame.number": "1",
+          "frame.len": "42",
+          "frame.cap_len": "42",
+          "frame.marked": "0",
+          "frame.ignored": "0",
+          "frame.protocols": "eth:ethertype:arp"
+        },
+        "eth": {
+          "eth.dst": "f0:d5:bf:24:3b:19",
+          "eth.dst_tree": {
+            "eth.dst_resolved": "IntelCor_24:3b:19",
+            "eth.dst.oui": "15783359",
+            "eth.dst.oui_resolved": "Intel Corporate",
+            "eth.addr": "f0:d5:bf:24:3b:19",
+            "eth.addr_resolved": "IntelCor_24:3b:19",
+            "eth.addr.oui": "15783359",
+            "eth.addr.oui_resolved": "Intel Corporate",
+            "eth.dst.lg": "0",
+            "eth.lg": "0",
+            "eth.dst.ig": "0",
+            "eth.ig": "0"
+          },
+          "eth.src": "08:71:90:49:f6:79",
+          "eth.src_tree": {
+            "eth.src_resolved": "IntelCor_49:f6:79",
+            "eth.src.oui": "553360",
+            "eth.src.oui_resolved": "Intel Corporate",
+            "eth.addr": "08:71:90:49:f6:79",
+            "eth.addr_resolved": "IntelCor_49:f6:79",
+            "eth.addr.oui": "553360",
+            "eth.addr.oui_resolved": "Intel Corporate",
+            "eth.src.lg": "0",
+            "eth.lg": "0",
+            "eth.src.ig": "0",
+            "eth.ig": "0"
+          },
+          "eth.type": "0x0806"
+        },
+        "arp": {
+          "arp.hw.type": "1",
+          "arp.proto.type": "0x0800",
+          "arp.hw.size": "6",
+          "arp.proto.size": "4",
+          "arp.opcode": "2",
+          "arp.src.hw_mac": "08:71:90:49:f6:79",
+          "arp.src.proto_ipv4": "10.66.201.232",
+          "arp.dst.hw_mac": "f0:d5:bf:24:3b:19",
+          "arp.dst.proto_ipv4": "10.66.201.252"
+        }
+      }
+    }
+  },
+  {
+    "_index": "packets-2025-08-05",
+    "_type": "doc",
+    "_score": null,
+    "_source": {
+      "layers": {
+        "frame": {
+          "frame.encap_type": "1",
+          "frame.time": "Aug  5, 2025 13:34:27.216762000 PKT",
+          "frame.offset_shift": "0.000000000",
+          "frame.time_epoch": "1754382867.216762000",
+          "frame.time_delta": "2.048554000",
+          "frame.time_delta_displayed": "2.048554000",
+          "frame.time_relative": "2.048554000",
+          "frame.number": "2",
+          "frame.len": "42",
+          "frame.cap_len": "42",
+          "frame.marked": "0",
+          "frame.ignored": "0",
+          "frame.protocols": "eth:ethertype:arp"
+        },
+        "eth": {
+          "eth.dst": "f0:d5:bf:24:3b:19",
+          "eth.dst_tree": {
+            "eth.dst_resolved": "IntelCor_24:3b:19",
+            "eth.dst.oui": "15783359",
+            "eth.dst.oui_resolved": "Intel Corporate",
+            "eth.addr": "f0:d5:bf:24:3b:19",
+            "eth.addr_resolved": "IntelCor_24:3b:19",
+            "eth.addr.oui": "15783359",
+            "eth.addr.oui_resolved": "Intel Corporate",
+            "eth.dst.lg": "0",
+            "eth.lg": "0",
+            "eth.dst.ig": "0",
+            "eth.ig": "0"
+          },
+          "eth.src": "08:71:90:49:f6:79",
+          "eth.src_tree": {
+            "eth.src_resolved": "IntelCor_49:f6:79",
+            "eth.src.oui": "553360",
+            "eth.src.oui_resolved": "Intel Corporate",
+            "eth.addr": "08:71:90:49:f6:79",
+            "eth.addr_resolved": "IntelCor_49:f6:79",
+            "eth.addr.oui": "553360",
+            "eth.addr.oui_resolved": "Intel Corporate",
+            "eth.src.lg": "0",
+            "eth.lg": "0",
+            "eth.src.ig": "0",
+            "eth.ig": "0"
+          },
+          "eth.type": "0x0806"
+        },
+        "arp": {
+          "arp.hw.type": "1",
+          "arp.proto.type": "0x0800",
+          "arp.hw.size": "6",
+          "arp.proto.size": "4",
+          "arp.opcode": "2",
+          "arp.src.hw_mac": "08:71:90:49:f6:79",
+          "arp.src.proto_ipv4": "10.66.201.232",
+          "arp.dst.hw_mac": "f0:d5:bf:24:3b:19",
+          "arp.dst.proto_ipv4": "10.66.201.252"
+        }
+      }
+    }
+  },
+  {
+    "_index": "packets-2025-08-05",
+    "_type": "doc",
+    "_score": null,
+    "_source": {
+      "layers": {
+        "frame": {
+          "frame.encap_type": "1",
+          "frame.time": "Aug  5, 2025 13:34:29.266204000 PKT",
+          "frame.offset_shift": "0.000000000",
+          "frame.time_epoch": "1754382869.266204000",
+          "frame.time_delta": "2.049442000",
+          "frame.time_delta_displayed": "2.049442000",
+          "frame.time_relative": "4.097996000",
+          "frame.number": "3",
+          "frame.len": "42",
+          "frame.cap_len": "42",
+          "frame.marked": "0",
+          "frame.ignored": "0",
+          "frame.protocols": "eth:ethertype:arp"
+        },
+        "eth": {
+          "eth.dst": "f0:d5:bf:24:3b:19",
+          "eth.dst_tree": {
+            "eth.dst_resolved": "IntelCor_24:3b:19",
+            "eth.dst.oui": "15783359",
+            "eth.dst.oui_resolved": "Intel Corporate",
+            "eth.addr": "f0:d5:bf:24:3b:19",
+            "eth.addr_resolved": "IntelCor_24:3b:19",
+            "eth.addr.oui": "15783359",
+            "eth.addr.oui_resolved": "Intel Corporate",
+            "eth.dst.lg": "0",
+            "eth.lg": "0",
+            "eth.dst.ig": "0",
+            "eth.ig": "0"
+          },
+          "eth.src": "08:71:90:49:f6:79",
+          "eth.src_tree": {
+            "eth.src_resolved": "IntelCor_49:f6:79",
+            "eth.src.oui": "553360",
+            "eth.src.oui_resolved": "Intel Corporate",
+            "eth.addr": "08:71:90:49:f6:79",
+            "eth.addr_resolved": "IntelCor_49:f6:79",
+            "eth.addr.oui": "553360",
+            "eth.addr.oui_resolved": "Intel Corporate",
+            "eth.src.lg": "0",
+            "eth.lg": "0",
+            "eth.src.ig": "0",
+            "eth.ig": "0"
+          },
+          "eth.type": "0x0806"
+        },
+        "arp": {
+          "arp.hw.type": "1",
+          "arp.proto.type": "0x0800",
+          "arp.hw.size": "6",
+          "arp.proto.size": "4",
+          "arp.opcode": "2",
+          "arp.src.hw_mac": "08:71:90:49:f6:79",
+          "arp.src.proto_ipv4": "10.66.201.232",
+          "arp.dst.hw_mac": "f0:d5:bf:24:3b:19",
+          "arp.dst.proto_ipv4": "10.66.201.252"
+        }
+      }
+    }
+  },
+  {
+    "_index": "packets-2025-08-05",
+    "_type": "doc",
+    "_score": null,
+    "_source": {
+      "layers": {
+        "frame": {
+          "frame.encap_type": "1",
+          "frame.time": "Aug  5, 2025 13:34:31.107679000 PKT",
+          "frame.offset_shift": "0.000000000",
+          "frame.time_epoch": "1754382871.107679000",
+          "frame.time_delta": "1.841475000",
+          "frame.time_delta_displayed": "1.841475000",
+          "frame.time_relative": "5.939471000",
+          "frame.number": "4",
+          "frame.len": "42",
+          "frame.cap_len": "42",
+          "frame.marked": "0",
+          "frame.ignored": "0",
+          "frame.protocols": "eth:ethertype:arp"
+        },
+        "eth": {
+          "eth.dst": "f0:d5:bf:24:3b:19",
+          "eth.dst_tree": {
+            "eth.dst_resolved": "IntelCor_24:3b:19",
+            "eth.dst.oui": "15783359",
+            "eth.dst.oui_resolved": "Intel Corporate",
+            "eth.addr": "f0:d5:bf:24:3b:19",
+            "eth.addr_resolved": "IntelCor_24:3b:19",
+            "eth.addr.oui": "15783359",
+            "eth.addr.oui_resolved": "Intel Corporate",
+            "eth.dst.lg": "0",
+            "eth.lg": "0",
+            "eth.dst.ig": "0",
+            "eth.ig": "0"
+          },
+          "eth.src": "08:71:90:49:f6:79",
+          "eth.src_tree": {
+            "eth.src_resolved": "IntelCor_49:f6:79",
+            "eth.src.oui": "553360",
+            "eth.src.oui_resolved": "Intel Corporate",
+            "eth.addr": "08:71:90:49:f6:79",
+            "eth.addr_resolved": "IntelCor_49:f6:79",
+            "eth.addr.oui": "553360",
+            "eth.addr.oui_resolved": "Intel Corporate",
+            "eth.src.lg": "0",
+            "eth.lg": "0",
+            "eth.src.ig": "0",
+            "eth.ig": "0"
+          },
+          "eth.type": "0x0806"
+        },
+        "arp": {
+          "arp.hw.type": "1",
+          "arp.proto.type": "0x0800",
+          "arp.hw.size": "6",
+          "arp.proto.size": "4",
+          "arp.opcode": "2",
+          "arp.src.hw_mac": "08:71:90:49:f6:79",
+          "arp.src.proto_ipv4": "10.66.201.232",
+          "arp.dst.hw_mac": "f0:d5:bf:24:3b:19",
+          "arp.dst.proto_ipv4": "10.66.201.252"
+        }
+      }
+    }
+  },
+  {
+    "_index": "packets-2025-08-05",
+    "_type": "doc",
+    "_score": null,
+    "_source": {
+      "layers": {
+        "frame": {
+          "frame.encap_type": "1",
+          "frame.time": "Aug  5, 2025 13:34:33.155906000 PKT",
+          "frame.offset_shift": "0.000000000",
+          "frame.time_epoch": "1754382873.155906000",
+          "frame.time_delta": "2.048227000",
+          "frame.time_delta_displayed": "2.048227000",
+          "frame.time_relative": "7.987698000",
+          "frame.number": "5",
+          "frame.len": "42",
+          "frame.cap_len": "42",
+          "frame.marked": "0",
+          "frame.ignored": "0",
+          "frame.protocols": "eth:ethertype:arp"
+        },
+        "eth": {
+          "eth.dst": "f0:d5:bf:24:3b:19",
+          "eth.dst_tree": {
+            "eth.dst_resolved": "IntelCor_24:3b:19",
+            "eth.dst.oui": "15783359",
+            "eth.dst.oui_resolved": "Intel Corporate",
+            "eth.addr": "f0:d5:bf:24:3b:19",
+            "eth.addr_resolved": "IntelCor_24:3b:19",
+            "eth.addr.oui": "15783359",
+            "eth.addr.oui_resolved": "Intel Corporate",
+            "eth.dst.lg": "0",
+            "eth.lg": "0",
+            "eth.dst.ig": "0",
+            "eth.ig": "0"
+          },
+          "eth.src": "08:71:90:49:f6:79",
+          "eth.src_tree": {
+            "eth.src_resolved": "IntelCor_49:f6:79",
+            "eth.src.oui": "553360",
+            "eth.src.oui_resolved": "Intel Corporate",
+            "eth.addr": "08:71:90:49:f6:79",
+            "eth.addr_resolved": "IntelCor_49:f6:79",
+            "eth.addr.oui": "553360",
+            "eth.addr.oui_resolved": "Intel Corporate",
+            "eth.src.lg": "0",
+            "eth.lg": "0",
+            "eth.src.ig": "0",
+            "eth.ig": "0"
+          },
+          "eth.type": "0x0806"
+        },
+        "arp": {
+          "arp.hw.type": "1",
+          "arp.proto.type": "0x0800",
+          "arp.hw.size": "6",
+          "arp.proto.size": "4",
+          "arp.opcode": "2",
+          "arp.src.hw_mac": "08:71:90:49:f6:79",
+          "arp.src.proto_ipv4": "10.66.201.232",
+          "arp.dst.hw_mac": "f0:d5:bf:24:3b:19",
+          "arp.dst.proto_ipv4": "10.66.201.252"
+        }
+      }
+    }
+  },
+  {
+    "_index": "packets-2025-08-05",
+    "_type": "doc",
+    "_score": null,
+    "_source": {
+      "layers": {
+        "frame": {
+          "frame.encap_type": "1",
+          "frame.time": "Aug  5, 2025 13:34:35.203938000 PKT",
+          "frame.offset_shift": "0.000000000",
+          "frame.time_epoch": "1754382875.203938000",
+          "frame.time_delta": "2.048032000",
+          "frame.time_delta_displayed": "2.048032000",
+          "frame.time_relative": "10.035730000",
+          "frame.number": "6",
+          "frame.len": "42",
+          "frame.cap_len": "42",
+          "frame.marked": "0",
+          "frame.ignored": "0",
+          "frame.protocols": "eth:ethertype:arp"
+        },
+        "eth": {
+          "eth.dst": "f0:d5:bf:24:3b:19",
+          "eth.dst_tree": {
+            "eth.dst_resolved": "IntelCor_24:3b:19",
+            "eth.dst.oui": "15783359",
+            "eth.dst.oui_resolved": "Intel Corporate",
+            "eth.addr": "f0:d5:bf:24:3b:19",
+            "eth.addr_resolved": "IntelCor_24:3b:19",
+            "eth.addr.oui": "15783359",
+            "eth.addr.oui_resolved": "Intel Corporate",
+            "eth.dst.lg": "0",
+            "eth.lg": "0",
+            "eth.dst.ig": "0",
+            "eth.ig": "0"
+          },
+          "eth.src": "08:71:90:49:f6:79",
+          "eth.src_tree": {
+            "eth.src_resolved": "IntelCor_49:f6:79",
+            "eth.src.oui": "553360",
+            "eth.src.oui_resolved": "Intel Corporate",
+            "eth.addr": "08:71:90:49:f6:79",
+            "eth.addr_resolved": "IntelCor_49:f6:79",
+            "eth.addr.oui": "553360",
+            "eth.addr.oui_resolved": "Intel Corporate",
+            "eth.src.lg": "0",
+            "eth.lg": "0",
+            "eth.src.ig": "0",
+            "eth.ig": "0"
+          },
+          "eth.type": "0x0806"
+        },
+        "arp": {
+          "arp.hw.type": "1",
+          "arp.proto.type": "0x0800",
+          "arp.hw.size": "6",
+          "arp.proto.size": "4",
+          "arp.opcode": "2",
+          "arp.src.hw_mac": "08:71:90:49:f6:79",
+          "arp.src.proto_ipv4": "10.66.201.232",
+          "arp.dst.hw_mac": "f0:d5:bf:24:3b:19",
+          "arp.dst.proto_ipv4": "10.66.201.252"
+        }
+      }
+    }
+  },
+  {
+    "_index": "packets-2025-08-05",
+    "_type": "doc",
+    "_score": null,
+    "_source": {
+      "layers": {
+        "frame": {
+          "frame.encap_type": "1",
+          "frame.time": "Aug  5, 2025 13:34:37.253889000 PKT",
+          "frame.offset_shift": "0.000000000",
+          "frame.time_epoch": "1754382877.253889000",
+          "frame.time_delta": "2.049951000",
+          "frame.time_delta_displayed": "2.049951000",
+          "frame.time_relative": "12.085681000",
+          "frame.number": "7",
+          "frame.len": "42",
+          "frame.cap_len": "42",
+          "frame.marked": "0",
+          "frame.ignored": "0",
+          "frame.protocols": "eth:ethertype:arp"
+        },
+        "eth": {
+          "eth.dst": "f0:d5:bf:24:3b:19",
+          "eth.dst_tree": {
+            "eth.dst_resolved": "IntelCor_24:3b:19",
+            "eth.dst.oui": "15783359",
+            "eth.dst.oui_resolved": "Intel Corporate",
+            "eth.addr": "f0:d5:bf:24:3b:19",
+            "eth.addr_resolved": "IntelCor_24:3b:19",
+            "eth.addr.oui": "15783359",
+            "eth.addr.oui_resolved": "Intel Corporate",
+            "eth.dst.lg": "0",
+            "eth.lg": "0",
+            "eth.dst.ig": "0",
+            "eth.ig": "0"
+          },
+          "eth.src": "08:71:90:49:f6:79",
+          "eth.src_tree": {
+            "eth.src_resolved": "IntelCor_49:f6:79",
+            "eth.src.oui": "553360",
+            "eth.src.oui_resolved": "Intel Corporate",
+            "eth.addr": "08:71:90:49:f6:79",
+            "eth.addr_resolved": "IntelCor_49:f6:79",
+            "eth.addr.oui": "553360",
+            "eth.addr.oui_resolved": "Intel Corporate",
+            "eth.src.lg": "0",
+            "eth.lg": "0",
+            "eth.src.ig": "0",
+            "eth.ig": "0"
+          },
+          "eth.type": "0x0806"
+        },
+        "arp": {
+          "arp.hw.type": "1",
+          "arp.proto.type": "0x0800",
+          "arp.hw.size": "6",
+          "arp.proto.size": "4",
+          "arp.opcode": "2",
+          "arp.src.hw_mac": "08:71:90:49:f6:79",
+          "arp.src.proto_ipv4": "10.66.201.232",
+          "arp.dst.hw_mac": "f0:d5:bf:24:3b:19",
+          "arp.dst.proto_ipv4": "10.66.201.252"
+        }
+      }
+    }
+  },
+  {
+    "_index": "packets-2025-08-05",
+    "_type": "doc",
+    "_score": null,
+    "_source": {
+      "layers": {
+        "frame": {
+          "frame.encap_type": "1",
+          "frame.time": "Aug  5, 2025 13:34:39.097235000 PKT",
+          "frame.offset_shift": "0.000000000",
+          "frame.time_epoch": "1754382879.097235000",
+          "frame.time_delta": "1.843346000",
+          "frame.time_delta_displayed": "1.843346000",
+          "frame.time_relative": "13.929027000",
+          "frame.number": "8",
+          "frame.len": "42",
+          "frame.cap_len": "42",
+          "frame.marked": "0",
+          "frame.ignored": "0",
+          "frame.protocols": "eth:ethertype:arp"
+        },
+        "eth": {
+          "eth.dst": "f0:d5:bf:24:3b:19",
+          "eth.dst_tree": {
+            "eth.dst_resolved": "IntelCor_24:3b:19",
+            "eth.dst.oui": "15783359",
+            "eth.dst.oui_resolved": "Intel Corporate",
+            "eth.addr": "f0:d5:bf:24:3b:19",
+            "eth.addr_resolved": "IntelCor_24:3b:19",
+            "eth.addr.oui": "15783359",
+            "eth.addr.oui_resolved": "Intel Corporate",
+            "eth.dst.lg": "0",
+            "eth.lg": "0",
+            "eth.dst.ig": "0",
+            "eth.ig": "0"
+          },
+          "eth.src": "08:71:90:49:f6:79",
+          "eth.src_tree": {
+            "eth.src_resolved": "IntelCor_49:f6:79",
+            "eth.src.oui": "553360",
+            "eth.src.oui_resolved": "Intel Corporate",
+            "eth.addr": "08:71:90:49:f6:79",
+            "eth.addr_resolved": "IntelCor_49:f6:79",
+            "eth.addr.oui": "553360",
+            "eth.addr.oui_resolved": "Intel Corporate",
+            "eth.src.lg": "0",
+            "eth.lg": "0",
+            "eth.src.ig": "0",
+            "eth.ig": "0"
+          },
+          "eth.type": "0x0806"
+        },
+        "arp": {
+          "arp.hw.type": "1",
+          "arp.proto.type": "0x0800",
+          "arp.hw.size": "6",
+          "arp.proto.size": "4",
+          "arp.opcode": "2",
+          "arp.src.hw_mac": "08:71:90:49:f6:79",
+          "arp.src.proto_ipv4": "10.66.201.232",
+          "arp.dst.hw_mac": "f0:d5:bf:24:3b:19",
+          "arp.dst.proto_ipv4": "10.66.201.252"
+        }
+      }
+    }
+  },
+  {
+    "_index": "packets-2025-08-05",
+    "_type": "doc",
+    "_score": null,
+    "_source": {
+      "layers": {
+        "frame": {
+          "frame.encap_type": "1",
+          "frame.time": "Aug  5, 2025 13:34:40.531047000 PKT",
+          "frame.offset_shift": "0.000000000",
+          "frame.time_epoch": "1754382880.531047000",
+          "frame.time_delta": "1.433812000",
+          "frame.time_delta_displayed": "1.433812000",
+          "frame.time_relative": "15.362839000",
+          "frame.number": "9",
+          "frame.len": "42",
+          "frame.cap_len": "42",
+          "frame.marked": "0",
+          "frame.ignored": "0",
+          "frame.protocols": "eth:ethertype:arp"
+        },
+        "eth": {
+          "eth.dst": "f0:d5:bf:24:3b:19",
+          "eth.dst_tree": {
+            "eth.dst_resolved": "IntelCor_24:3b:19",
+            "eth.dst.oui": "15783359",
+            "eth.dst.oui_resolved": "Intel Corporate",
+            "eth.addr": "f0:d5:bf:24:3b:19",
+            "eth.addr_resolved": "IntelCor_24:3b:19",
+            "eth.addr.oui": "15783359",
+            "eth.addr.oui_resolved": "Intel Corporate",
+            "eth.dst.lg": "0",
+            "eth.lg": "0",
+            "eth.dst.ig": "0",
+            "eth.ig": "0"
+          },
+          "eth.src": "08:71:90:49:f6:79",
+          "eth.src_tree": {
+            "eth.src_resolved": "IntelCor_49:f6:79",
+            "eth.src.oui": "553360",
+            "eth.src.oui_resolved": "Intel Corporate",
+            "eth.addr": "08:71:90:49:f6:79",
+            "eth.addr_resolved": "IntelCor_49:f6:79",
+            "eth.addr.oui": "553360",
+            "eth.addr.oui_resolved": "Intel Corporate",
+            "eth.src.lg": "0",
+            "eth.lg": "0",
+            "eth.src.ig": "0",
+            "eth.ig": "0"
+          },
+          "eth.type": "0x0806"
+        },
+        "arp": {
+          "arp.hw.type": "1",
+          "arp.proto.type": "0x0800",
+          "arp.hw.size": "6",
+          "arp.proto.size": "4",
+          "arp.opcode": "2",
+          "arp.src.hw_mac": "36:30:2a:ea:7c:ab",
+          "arp.src.proto_ipv4": "10.66.201.232",
+          "arp.dst.hw_mac": "f0:d5:bf:24:3b:19",
+          "arp.dst.proto_ipv4": "10.66.201.252"
+        },
+        "Duplicate IP address detected for 10.66.201.232 (36:30:2a:ea:7c:ab) - also in use by 08:71:90:49:f6:79 (frame 8)": {
+          "arp.duplicate-address-frame": "8",
+          "arp.duplicate-address-frame_tree": {
+            "_ws.expert": {
+              "arp.duplicate-address-detected": "",
+              "_ws.expert.message": "Duplicate IP address configured (10.66.201.232)",
+              "_ws.expert.severity": "6291456",
+              "_ws.expert.group": "33554432"
+            }
+          },
+          "arp.seconds-since-duplicate-address-frame": "1"
+        }
+      }
+    }
+  },
+  {
+    "_index": "packets-2025-08-05",
+    "_type": "doc",
+    "_score": null,
+    "_source": {
+      "layers": {
+        "frame": {
+          "frame.encap_type": "1",
+          "frame.time": "Aug  5, 2025 13:34:41.553021000 PKT",
+          "frame.offset_shift": "0.000000000",
+          "frame.time_epoch": "1754382881.553021000",
+          "frame.time_delta": "1.021974000",
+          "frame.time_delta_displayed": "1.021974000",
+          "frame.time_relative": "16.384813000",
+          "frame.number": "10",
+          "frame.len": "42",
+          "frame.cap_len": "42",
+          "frame.marked": "0",
+          "frame.ignored": "0",
+          "frame.protocols": "eth:ethertype:arp"
+        },
+        "eth": {
+          "eth.dst": "f0:d5:bf:24:3b:19",
+          "eth.dst_tree": {
+            "eth.dst_resolved": "IntelCor_24:3b:19",
+            "eth.dst.oui": "15783359",
+            "eth.dst.oui_resolved": "Intel Corporate",
+            "eth.addr": "f0:d5:bf:24:3b:19",
+            "eth.addr_resolved": "IntelCor_24:3b:19",
+            "eth.addr.oui": "15783359",
+            "eth.addr.oui_resolved": "Intel Corporate",
+            "eth.dst.lg": "0",
+            "eth.lg": "0",
+            "eth.dst.ig": "0",
+            "eth.ig": "0"
+          },
+          "eth.src": "08:71:90:49:f6:79",
+          "eth.src_tree": {
+            "eth.src_resolved": "IntelCor_49:f6:79",
+            "eth.src.oui": "553360",
+            "eth.src.oui_resolved": "Intel Corporate",
+            "eth.addr": "08:71:90:49:f6:79",
+            "eth.addr_resolved": "IntelCor_49:f6:79",
+            "eth.addr.oui": "553360",
+            "eth.addr.oui_resolved": "Intel Corporate",
+            "eth.src.lg": "0",
+            "eth.lg": "0",
+            "eth.src.ig": "0",
+            "eth.ig": "0"
+          },
+          "eth.type": "0x0806"
+        },
+        "arp": {
+          "arp.hw.type": "1",
+          "arp.proto.type": "0x0800",
+          "arp.hw.size": "6",
+          "arp.proto.size": "4",
+          "arp.opcode": "2",
+          "arp.src.hw_mac": "36:30:2a:ea:7c:ab",
+          "arp.src.proto_ipv4": "10.66.201.232",
+          "arp.dst.hw_mac": "f0:d5:bf:24:3b:19",
+          "arp.dst.proto_ipv4": "10.66.201.252"
+        },
+        "Duplicate IP address detected for 10.66.201.232 (36:30:2a:ea:7c:ab) - also in use by 08:71:90:49:f6:79 (frame 8)": {
+          "arp.duplicate-address-frame": "8",
+          "arp.duplicate-address-frame_tree": {
+            "_ws.expert": {
+              "arp.duplicate-address-detected": "",
+              "_ws.expert.message": "Duplicate IP address configured (10.66.201.232)",
+              "_ws.expert.severity": "6291456",
+              "_ws.expert.group": "33554432"
+            }
+          },
+          "arp.seconds-since-duplicate-address-frame": "2"
+        }
+      }
+    }
+  },
+  {
+    "_index": "packets-2025-08-05",
+    "_type": "doc",
+    "_score": null,
+    "_source": {
+      "layers": {
+        "frame": {
+          "frame.encap_type": "1",
+          "frame.time": "Aug  5, 2025 13:34:42.577197000 PKT",
+          "frame.offset_shift": "0.000000000",
+          "frame.time_epoch": "1754382882.577197000",
+          "frame.time_delta": "1.024176000",
+          "frame.time_delta_displayed": "1.024176000",
+          "frame.time_relative": "17.408989000",
+          "frame.number": "11",
+          "frame.len": "42",
+          "frame.cap_len": "42",
+          "frame.marked": "0",
+          "frame.ignored": "0",
+          "frame.protocols": "eth:ethertype:arp"
+        },
+        "eth": {
+          "eth.dst": "f0:d5:bf:24:3b:19",
+          "eth.dst_tree": {
+            "eth.dst_resolved": "IntelCor_24:3b:19",
+            "eth.dst.oui": "15783359",
+            "eth.dst.oui_resolved": "Intel Corporate",
+            "eth.addr": "f0:d5:bf:24:3b:19",
+            "eth.addr_resolved": "IntelCor_24:3b:19",
+            "eth.addr.oui": "15783359",
+            "eth.addr.oui_resolved": "Intel Corporate",
+            "eth.dst.lg": "0",
+            "eth.lg": "0",
+            "eth.dst.ig": "0",
+            "eth.ig": "0"
+          },
+          "eth.src": "08:71:90:49:f6:79",
+          "eth.src_tree": {
+            "eth.src_resolved": "IntelCor_49:f6:79",
+            "eth.src.oui": "553360",
+            "eth.src.oui_resolved": "Intel Corporate",
+            "eth.addr": "08:71:90:49:f6:79",
+            "eth.addr_resolved": "IntelCor_49:f6:79",
+            "eth.addr.oui": "553360",
+            "eth.addr.oui_resolved": "Intel Corporate",
+            "eth.src.lg": "0",
+            "eth.lg": "0",
+            "eth.src.ig": "0",
+            "eth.ig": "0"
+          },
+          "eth.type": "0x0806"
+        },
+        "arp": {
+          "arp.hw.type": "1",
+          "arp.proto.type": "0x0800",
+          "arp.hw.size": "6",
+          "arp.proto.size": "4",
+          "arp.opcode": "2",
+          "arp.src.hw_mac": "36:30:2a:ea:7c:ab",
+          "arp.src.proto_ipv4": "10.66.201.232",
+          "arp.dst.hw_mac": "f0:d5:bf:24:3b:19",
+          "arp.dst.proto_ipv4": "10.66.201.252"
+        },
+        "Duplicate IP address detected for 10.66.201.232 (36:30:2a:ea:7c:ab) - also in use by 08:71:90:49:f6:79 (frame 8)": {
+          "arp.duplicate-address-frame": "8",
+          "arp.duplicate-address-frame_tree": {
+            "_ws.expert": {
+              "arp.duplicate-address-detected": "",
+              "_ws.expert.message": "Duplicate IP address configured (10.66.201.232)",
+              "_ws.expert.severity": "6291456",
+              "_ws.expert.group": "33554432"
+            }
+          },
+          "arp.seconds-since-duplicate-address-frame": "3"
+        }
+      }
+    }
+  },
+  {
+    "_index": "packets-2025-08-05",
+    "_type": "doc",
+    "_score": null,
+    "_source": {
+      "layers": {
+        "frame": {
+          "frame.encap_type": "1",
+          "frame.time": "Aug  5, 2025 13:34:43.603102000 PKT",
+          "frame.offset_shift": "0.000000000",
+          "frame.time_epoch": "1754382883.603102000",
+          "frame.time_delta": "1.025905000",
+          "frame.time_delta_displayed": "1.025905000",
+          "frame.time_relative": "18.434894000",
+          "frame.number": "12",
+          "frame.len": "42",
+          "frame.cap_len": "42",
+          "frame.marked": "0",
+          "frame.ignored": "0",
+          "frame.protocols": "eth:ethertype:arp"
+        },
+        "eth": {
+          "eth.dst": "f0:d5:bf:24:3b:19",
+          "eth.dst_tree": {
+            "eth.dst_resolved": "IntelCor_24:3b:19",
+            "eth.dst.oui": "15783359",
+            "eth.dst.oui_resolved": "Intel Corporate",
+            "eth.addr": "f0:d5:bf:24:3b:19",
+            "eth.addr_resolved": "IntelCor_24:3b:19",
+            "eth.addr.oui": "15783359",
+            "eth.addr.oui_resolved": "Intel Corporate",
+            "eth.dst.lg": "0",
+            "eth.lg": "0",
+            "eth.dst.ig": "0",
+            "eth.ig": "0"
+          },
+          "eth.src": "08:71:90:49:f6:79",
+          "eth.src_tree": {
+            "eth.src_resolved": "IntelCor_49:f6:79",
+            "eth.src.oui": "553360",
+            "eth.src.oui_resolved": "Intel Corporate",
+            "eth.addr": "08:71:90:49:f6:79",
+            "eth.addr_resolved": "IntelCor_49:f6:79",
+            "eth.addr.oui": "553360",
+            "eth.addr.oui_resolved": "Intel Corporate",
+            "eth.src.lg": "0",
+            "eth.lg": "0",
+            "eth.src.ig": "0",
+            "eth.ig": "0"
+          },
+          "eth.type": "0x0806"
+        },
+        "arp": {
+          "arp.hw.type": "1",
+          "arp.proto.type": "0x0800",
+          "arp.hw.size": "6",
+          "arp.proto.size": "4",
+          "arp.opcode": "2",
+          "arp.src.hw_mac": "36:30:2a:ea:7c:ab",
+          "arp.src.proto_ipv4": "10.66.201.232",
+          "arp.dst.hw_mac": "f0:d5:bf:24:3b:19",
+          "arp.dst.proto_ipv4": "10.66.201.252"
+        },
+        "Duplicate IP address detected for 10.66.201.232 (36:30:2a:ea:7c:ab) - also in use by 08:71:90:49:f6:79 (frame 8)": {
+          "arp.duplicate-address-frame": "8",
+          "arp.duplicate-address-frame_tree": {
+            "_ws.expert": {
+              "arp.duplicate-address-detected": "",
+              "_ws.expert.message": "Duplicate IP address configured (10.66.201.232)",
+              "_ws.expert.severity": "6291456",
+              "_ws.expert.group": "33554432"
+            }
+          },
+          "arp.seconds-since-duplicate-address-frame": "4"
+        }
+      }
+    }
+  },
+  {
+    "_index": "packets-2025-08-05",
+    "_type": "doc",
+    "_score": null,
+    "_source": {
+      "layers": {
+        "frame": {
+          "frame.encap_type": "1",
+          "frame.time": "Aug  5, 2025 13:34:44.627155000 PKT",
+          "frame.offset_shift": "0.000000000",
+          "frame.time_epoch": "1754382884.627155000",
+          "frame.time_delta": "1.024053000",
+          "frame.time_delta_displayed": "1.024053000",
+          "frame.time_relative": "19.458947000",
+          "frame.number": "13",
+          "frame.len": "42",
+          "frame.cap_len": "42",
+          "frame.marked": "0",
+          "frame.ignored": "0",
+          "frame.protocols": "eth:ethertype:arp"
+        },
+        "eth": {
+          "eth.dst": "f0:d5:bf:24:3b:19",
+          "eth.dst_tree": {
+            "eth.dst_resolved": "IntelCor_24:3b:19",
+            "eth.dst.oui": "15783359",
+            "eth.dst.oui_resolved": "Intel Corporate",
+            "eth.addr": "f0:d5:bf:24:3b:19",
+            "eth.addr_resolved": "IntelCor_24:3b:19",
+            "eth.addr.oui": "15783359",
+            "eth.addr.oui_resolved": "Intel Corporate",
+            "eth.dst.lg": "0",
+            "eth.lg": "0",
+            "eth.dst.ig": "0",
+            "eth.ig": "0"
+          },
+          "eth.src": "08:71:90:49:f6:79",
+          "eth.src_tree": {
+            "eth.src_resolved": "IntelCor_49:f6:79",
+            "eth.src.oui": "553360",
+            "eth.src.oui_resolved": "Intel Corporate",
+            "eth.addr": "08:71:90:49:f6:79",
+            "eth.addr_resolved": "IntelCor_49:f6:79",
+            "eth.addr.oui": "553360",
+            "eth.addr.oui_resolved": "Intel Corporate",
+            "eth.src.lg": "0",
+            "eth.lg": "0",
+            "eth.src.ig": "0",
+            "eth.ig": "0"
+          },
+          "eth.type": "0x0806"
+        },
+        "arp": {
+          "arp.hw.type": "1",
+          "arp.proto.type": "0x0800",
+          "arp.hw.size": "6",
+          "arp.proto.size": "4",
+          "arp.opcode": "2",
+          "arp.src.hw_mac": "36:30:2a:ea:7c:ab",
+          "arp.src.proto_ipv4": "10.66.201.232",
+          "arp.dst.hw_mac": "f0:d5:bf:24:3b:19",
+          "arp.dst.proto_ipv4": "10.66.201.252"
+        },
+        "Duplicate IP address detected for 10.66.201.232 (36:30:2a:ea:7c:ab) - also in use by 08:71:90:49:f6:79 (frame 8)": {
+          "arp.duplicate-address-frame": "8",
+          "arp.duplicate-address-frame_tree": {
+            "_ws.expert": {
+              "arp.duplicate-address-detected": "",
+              "_ws.expert.message": "Duplicate IP address configured (10.66.201.232)",
+              "_ws.expert.severity": "6291456",
+              "_ws.expert.group": "33554432"
+            }
+          },
+          "arp.seconds-since-duplicate-address-frame": "5"
+        }
+      }
+    }
+  },
+  {
+    "_index": "packets-2025-08-05",
+    "_type": "doc",
+    "_score": null,
+    "_source": {
+      "layers": {
+        "frame": {
+          "frame.encap_type": "1",
+          "frame.time": "Aug  5, 2025 13:34:46.465692000 PKT",
+          "frame.offset_shift": "0.000000000",
+          "frame.time_epoch": "1754382886.465692000",
+          "frame.time_delta": "1.838537000",
+          "frame.time_delta_displayed": "1.838537000",
+          "frame.time_relative": "21.297484000",
+          "frame.number": "14",
+          "frame.len": "152",
+          "frame.cap_len": "152",
+          "frame.marked": "0",
+          "frame.ignored": "0",
+          "frame.protocols": "eth:ethertype:ip:udp:mdns"
+        },
+        "eth": {
+          "eth.dst": "01:00:5e:00:00:fb",
+          "eth.dst_tree": {
+            "eth.dst_resolved": "IPv4mcast_fb",
+            "eth.dst.oui": "65630",
+            "eth.addr": "01:00:5e:00:00:fb",
+            "eth.addr_resolved": "IPv4mcast_fb",
+            "eth.addr.oui": "65630",
+            "eth.dst.lg": "0",
+            "eth.lg": "0",
+            "eth.dst.ig": "1",
+            "eth.ig": "1"
+          },
+          "eth.src": "62:ba:75:76:aa:b7",
+          "eth.src_tree": {
+            "eth.src_resolved": "62:ba:75:76:aa:b7",
+            "eth.src.oui": "6470261",
+            "eth.addr": "62:ba:75:76:aa:b7",
+            "eth.addr_resolved": "62:ba:75:76:aa:b7",
+            "eth.addr.oui": "6470261",
+            "eth.src.lg": "1",
+            "eth.lg": "1",
+            "eth.src.ig": "0",
+            "eth.ig": "0"
+          },
+          "eth.type": "0x0800"
+        },
+        "ip": {
+          "ip.version": "4",
+          "ip.hdr_len": "20",
+          "ip.dsfield": "0x00",
+          "ip.dsfield_tree": {
+            "ip.dsfield.dscp": "0",
+            "ip.dsfield.ecn": "0"
+          },
+          "ip.len": "138",
+          "ip.id": "0x032c",
+          "ip.flags": "0x00",
+          "ip.flags_tree": {
+            "ip.flags.rb": "0",
+            "ip.flags.df": "0",
+            "ip.flags.mf": "0"
+          },
+          "ip.frag_offset": "0",
+          "ip.ttl": "255",
+          "ip.proto": "17",
+          "ip.checksum": "0x0391",
+          "ip.checksum.status": "2",
+          "ip.src": "10.66.201.104",
+          "ip.addr": "10.66.201.104",
+          "ip.src_host": "10.66.201.104",
+          "ip.host": "10.66.201.104",
+          "ip.dst": "224.0.0.251",
+          "ip.addr": "224.0.0.251",
+          "ip.dst_host": "224.0.0.251",
+          "ip.host": "224.0.0.251"
+        },
+        "udp": {
+          "udp.srcport": "5353",
+          "udp.dstport": "5353",
+          "udp.port": "5353",
+          "udp.port": "5353",
+          "udp.length": "118",
+          "udp.checksum": "0x47b5",
+          "udp.checksum.status": "2",
+          "udp.stream": "0",
+          "Timestamps": {
+            "udp.time_relative": "0.000000000",
+            "udp.time_delta": "0.000000000"
+          },
+          "udp.payload": "00:00:00:00:00:03:00:00:00:00:00:01:02:6c:62:07:5f:64:6e:73:2d:73:64:04:5f:75:64:70:05:6c:6f:63:61:6c:00:00:0c:00:01:0f:5f:63:6f:6d:70:61:6e:69:6f:6e:2d:6c:69:6e:6b:04:5f:74:63:70:c0:1c:00:0c:00:01:08:5f:68:6f:6d:65:6b:69:74:c0:37:00:0c:00:01:00:00:29:05:a0:00:00:11:94:00:12:00:04:00:0e:00:02:52:b7:b7:c9:24:9b:62:ba:75:76:aa:b7"
+        },
+        "mdns": {
+          "dns.id": "0x0000",
+          "dns.flags": "0x0000",
+          "dns.flags_tree": {
+            "dns.flags.response": "0",
+            "dns.flags.opcode": "0",
+            "dns.flags.truncated": "0",
+            "dns.flags.recdesired": "0",
+            "dns.flags.z": "0",
+            "dns.flags.checkdisable": "0"
+          },
+          "dns.count.queries": "3",
+          "dns.count.answers": "0",
+          "dns.count.auth_rr": "0",
+          "dns.count.add_rr": "1",
+          "Queries": {
+            "lb._dns-sd._udp.local: type PTR, class IN, \"QM\" question": {
+              "dns.qry.name": "lb._dns-sd._udp.local",
+              "dns.qry.name.len": "21",
+              "dns.count.labels": "4",
+              "dns.qry.type": "12",
+              "dns.qry.class": "0x0001",
+              "dns.qry.qu": "0"
+            },
+            "_companion-link._tcp.local: type PTR, class IN, \"QM\" question": {
+              "dns.qry.name": "_companion-link._tcp.local",
+              "dns.qry.name.len": "26",
+              "dns.count.labels": "3",
+              "dns.qry.type": "12",
+              "dns.qry.class": "0x0001",
+              "dns.qry.qu": "0"
+            },
+            "_homekit._tcp.local: type PTR, class IN, \"QM\" question": {
+              "dns.qry.name": "_homekit._tcp.local",
+              "dns.qry.name.len": "19",
+              "dns.count.labels": "3",
+              "dns.qry.type": "12",
+              "dns.qry.class": "0x0001",
+              "dns.qry.qu": "0"
+            }
+          },
+          "Additional records": {
+            "<Root>: type OPT": {
+              "dns.resp.name": "<Root>",
+              "dns.resp.type": "41",
+              "dns.rr.udp_payload_size": "0x05a0",
+              "dns.resp.cache_flush": "0",
+              "dns.resp.ext_rcode": "0x00",
+              "dns.resp.edns0_version": "0",
+              "dns.resp.z": "0x1194",
+              "dns.resp.z_tree": {
+                "dns.resp.z.do": "0",
+                "dns.resp.z.reserved": "0x1194"
+              },
+              "dns.resp.len": "18",
+              "dns.opt": {
+                "dns.opt.code": "4",
+                "dns.opt.len": "14",
+                "dns.opt.data": "00:02:52:b7:b7:c9:24:9b:62:ba:75:76:aa:b7"
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  {
+    "_index": "packets-2025-08-05",
+    "_type": "doc",
+    "_score": null,
+    "_source": {
+      "layers": {
+        "frame": {
+          "frame.encap_type": "1",
+          "frame.time": "Aug  5, 2025 13:34:46.465692000 PKT",
+          "frame.offset_shift": "0.000000000",
+          "frame.time_epoch": "1754382886.465692000",
+          "frame.time_delta": "0.000000000",
+          "frame.time_delta_displayed": "0.000000000",
+          "frame.time_relative": "21.297484000",
+          "frame.number": "15",
+          "frame.len": "172",
+          "frame.cap_len": "172",
+          "frame.marked": "0",
+          "frame.ignored": "0",
+          "frame.protocols": "eth:ethertype:ipv6:udp:mdns"
+        },
+        "eth": {
+          "eth.dst": "33:33:00:00:00:fb",
+          "eth.dst_tree": {
+            "eth.dst_resolved": "IPv6mcast_fb",
+            "eth.dst.oui": "3355392",
+            "eth.addr": "33:33:00:00:00:fb",
+            "eth.addr_resolved": "IPv6mcast_fb",
+            "eth.addr.oui": "3355392",
+            "eth.dst.lg": "1",
+            "eth.lg": "1",
+            "eth.dst.ig": "1",
+            "eth.ig": "1"
+          },
+          "eth.src": "62:ba:75:76:aa:b7",
+          "eth.src_tree": {
+            "eth.src_resolved": "62:ba:75:76:aa:b7",
+            "eth.src.oui": "6470261",
+            "eth.addr": "62:ba:75:76:aa:b7",
+            "eth.addr_resolved": "62:ba:75:76:aa:b7",
+            "eth.addr.oui": "6470261",
+            "eth.src.lg": "1",
+            "eth.lg": "1",
+            "eth.src.ig": "0",
+            "eth.ig": "0"
+          },
+          "eth.type": "0x86dd"
+        },
+        "ipv6": {
+          "ipv6.version": "6",
+          "ip.version": "6",
+          "ipv6.tclass": "0x00000000",
+          "ipv6.tclass_tree": {
+            "ipv6.tclass.dscp": "0",
+            "ipv6.tclass.ecn": "0"
+          },
+          "ipv6.flow": "0x000d00",
+          "ipv6.plen": "118",
+          "ipv6.nxt": "17",
+          "ipv6.hlim": "255",
+          "ipv6.src": "fe80::184d:ed99:b15c:9629",
+          "ipv6.addr": "fe80::184d:ed99:b15c:9629",
+          "ipv6.src_host": "fe80::184d:ed99:b15c:9629",
+          "ipv6.host": "fe80::184d:ed99:b15c:9629",
+          "ipv6.dst": "ff02::fb",
+          "ipv6.addr": "ff02::fb",
+          "ipv6.dst_host": "ff02::fb",
+          "ipv6.host": "ff02::fb"
+        },
+        "udp": {
+          "udp.srcport": "5353",
+          "udp.dstport": "5353",
+          "udp.port": "5353",
+          "udp.port": "5353",
+          "udp.length": "118",
+          "udp.checksum": "0xb06f",
+          "udp.checksum.status": "2",
+          "udp.stream": "1",
+          "Timestamps": {
+            "udp.time_relative": "0.000000000",
+            "udp.time_delta": "0.000000000"
+          },
+          "udp.payload": "00:00:00:00:00:03:00:00:00:00:00:01:02:6c:62:07:5f:64:6e:73:2d:73:64:04:5f:75:64:70:05:6c:6f:63:61:6c:00:00:0c:00:01:0f:5f:63:6f:6d:70:61:6e:69:6f:6e:2d:6c:69:6e:6b:04:5f:74:63:70:c0:1c:00:0c:00:01:08:5f:68:6f:6d:65:6b:69:74:c0:37:00:0c:00:01:00:00:29:05:a0:00:00:11:94:00:12:00:04:00:0e:00:02:52:b7:b7:c9:24:9b:62:ba:75:76:aa:b7"
+        },
+        "mdns": {
+          "dns.id": "0x0000",
+          "dns.flags": "0x0000",
+          "dns.flags_tree": {
+            "dns.flags.response": "0",
+            "dns.flags.opcode": "0",
+            "dns.flags.truncated": "0",
+            "dns.flags.recdesired": "0",
+            "dns.flags.z": "0",
+            "dns.flags.checkdisable": "0"
+          },
+          "dns.count.queries": "3",
+          "dns.count.answers": "0",
+          "dns.count.auth_rr": "0",
+          "dns.count.add_rr": "1",
+          "Queries": {
+            "lb._dns-sd._udp.local: type PTR, class IN, \"QM\" question": {
+              "dns.qry.name": "lb._dns-sd._udp.local",
+              "dns.qry.name.len": "21",
+              "dns.count.labels": "4",
+              "dns.qry.type": "12",
+              "dns.qry.class": "0x0001",
+              "dns.qry.qu": "0"
+            },
+            "_companion-link._tcp.local: type PTR, class IN, \"QM\" question": {
+              "dns.qry.name": "_companion-link._tcp.local",
+              "dns.qry.name.len": "26",
+              "dns.count.labels": "3",
+              "dns.qry.type": "12",
+              "dns.qry.class": "0x0001",
+              "dns.qry.qu": "0"
+            },
+            "_homekit._tcp.local: type PTR, class IN, \"QM\" question": {
+              "dns.qry.name": "_homekit._tcp.local",
+              "dns.qry.name.len": "19",
+              "dns.count.labels": "3",
+              "dns.qry.type": "12",
+              "dns.qry.class": "0x0001",
+              "dns.qry.qu": "0"
+            }
+          },
+          "Additional records": {
+            "<Root>: type OPT": {
+              "dns.resp.name": "<Root>",
+              "dns.resp.type": "41",
+              "dns.rr.udp_payload_size": "0x05a0",
+              "dns.resp.cache_flush": "0",
+              "dns.resp.ext_rcode": "0x00",
+              "dns.resp.edns0_version": "0",
+              "dns.resp.z": "0x1194",
+              "dns.resp.z_tree": {
+                "dns.resp.z.do": "0",
+                "dns.resp.z.reserved": "0x1194"
+              },
+              "dns.resp.len": "18",
+              "dns.opt": {
+                "dns.opt.code": "4",
+                "dns.opt.len": "14",
+                "dns.opt.data": "00:02:52:b7:b7:c9:24:9b:62:ba:75:76:aa:b7"
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  {
+    "_index": "packets-2025-08-05",
+    "_type": "doc",
+    "_score": null,
+    "_source": {
+      "layers": {
+        "frame": {
+          "frame.encap_type": "1",
+          "frame.time": "Aug  5, 2025 13:34:57.528675000 PKT",
+          "frame.offset_shift": "0.000000000",
+          "frame.time_epoch": "1754382897.528675000",
+          "frame.time_delta": "11.062983000",
+          "frame.time_delta_displayed": "11.062983000",
+          "frame.time_relative": "32.360467000",
+          "frame.number": "16",
+          "frame.len": "42",
+          "frame.cap_len": "42",
+          "frame.marked": "0",
+          "frame.ignored": "0",
+          "frame.protocols": "eth:ethertype:arp"
+        },
+        "eth": {
+          "eth.dst": "f0:d5:bf:24:3b:19",
+          "eth.dst_tree": {
+            "eth.dst_resolved": "IntelCor_24:3b:19",
+            "eth.dst.oui": "15783359",
+            "eth.dst.oui_resolved": "Intel Corporate",
+            "eth.addr": "f0:d5:bf:24:3b:19",
+            "eth.addr_resolved": "IntelCor_24:3b:19",
+            "eth.addr.oui": "15783359",
+            "eth.addr.oui_resolved": "Intel Corporate",
+            "eth.dst.lg": "0",
+            "eth.lg": "0",
+            "eth.dst.ig": "0",
+            "eth.ig": "0"
+          },
+          "eth.src": "08:71:90:49:f6:79",
+          "eth.src_tree": {
+            "eth.src_resolved": "IntelCor_49:f6:79",
+            "eth.src.oui": "553360",
+            "eth.src.oui_resolved": "Intel Corporate",
+            "eth.addr": "08:71:90:49:f6:79",
+            "eth.addr_resolved": "IntelCor_49:f6:79",
+            "eth.addr.oui": "553360",
+            "eth.addr.oui_resolved": "Intel Corporate",
+            "eth.src.lg": "0",
+            "eth.lg": "0",
+            "eth.src.ig": "0",
+            "eth.ig": "0"
+          },
+          "eth.type": "0x0806"
+        },
+        "arp": {
+          "arp.hw.type": "1",
+          "arp.proto.type": "0x0800",
+          "arp.hw.size": "6",
+          "arp.proto.size": "4",
+          "arp.opcode": "2",
+          "arp.src.hw_mac": "08:71:90:49:f6:79",
+          "arp.src.proto_ipv4": "10.66.201.232",
+          "arp.dst.hw_mac": "f0:d5:bf:24:3b:19",
+          "arp.dst.proto_ipv4": "10.66.201.252"
+        }
+      }
+    }
+  },
+  {
+    "_index": "packets-2025-08-05",
+    "_type": "doc",
+    "_score": null,
+    "_source": {
+      "layers": {
+        "frame": {
+          "frame.encap_type": "1",
+          "frame.time": "Aug  5, 2025 13:34:59.578503000 PKT",
+          "frame.offset_shift": "0.000000000",
+          "frame.time_epoch": "1754382899.578503000",
+          "frame.time_delta": "2.049828000",
+          "frame.time_delta_displayed": "2.049828000",
+          "frame.time_relative": "34.410295000",
+          "frame.number": "17",
+          "frame.len": "42",
+          "frame.cap_len": "42",
+          "frame.marked": "0",
+          "frame.ignored": "0",
+          "frame.protocols": "eth:ethertype:arp"
+        },
+        "eth": {
+          "eth.dst": "f0:d5:bf:24:3b:19",
+          "eth.dst_tree": {
+            "eth.dst_resolved": "IntelCor_24:3b:19",
+            "eth.dst.oui": "15783359",
+            "eth.dst.oui_resolved": "Intel Corporate",
+            "eth.addr": "f0:d5:bf:24:3b:19",
+            "eth.addr_resolved": "IntelCor_24:3b:19",
+            "eth.addr.oui": "15783359",
+            "eth.addr.oui_resolved": "Intel Corporate",
+            "eth.dst.lg": "0",
+            "eth.lg": "0",
+            "eth.dst.ig": "0",
+            "eth.ig": "0"
+          },
+          "eth.src": "08:71:90:49:f6:79",
+          "eth.src_tree": {
+            "eth.src_resolved": "IntelCor_49:f6:79",
+            "eth.src.oui": "553360",
+            "eth.src.oui_resolved": "Intel Corporate",
+            "eth.addr": "08:71:90:49:f6:79",
+            "eth.addr_resolved": "IntelCor_49:f6:79",
+            "eth.addr.oui": "553360",
+            "eth.addr.oui_resolved": "Intel Corporate",
+            "eth.src.lg": "0",
+            "eth.lg": "0",
+            "eth.src.ig": "0",
+            "eth.ig": "0"
+          },
+          "eth.type": "0x0806"
+        },
+        "arp": {
+          "arp.hw.type": "1",
+          "arp.proto.type": "0x0800",
+          "arp.hw.size": "6",
+          "arp.proto.size": "4",
+          "arp.opcode": "2",
+          "arp.src.hw_mac": "08:71:90:49:f6:79",
+          "arp.src.proto_ipv4": "10.66.201.232",
+          "arp.dst.hw_mac": "f0:d5:bf:24:3b:19",
+          "arp.dst.proto_ipv4": "10.66.201.252"
+        }
+      }
+    }
+  },
+  {
+    "_index": "packets-2025-08-05",
+    "_type": "doc",
+    "_score": null,
+    "_source": {
+      "layers": {
+        "frame": {
+          "frame.encap_type": "1",
+          "frame.time": "Aug  5, 2025 13:35:01.626843000 PKT",
+          "frame.offset_shift": "0.000000000",
+          "frame.time_epoch": "1754382901.626843000",
+          "frame.time_delta": "2.048340000",
+          "frame.time_delta_displayed": "2.048340000",
+          "frame.time_relative": "36.458635000",
+          "frame.number": "18",
+          "frame.len": "42",
+          "frame.cap_len": "42",
+          "frame.marked": "0",
+          "frame.ignored": "0",
+          "frame.protocols": "eth:ethertype:arp"
+        },
+        "eth": {
+          "eth.dst": "f0:d5:bf:24:3b:19",
+          "eth.dst_tree": {
+            "eth.dst_resolved": "IntelCor_24:3b:19",
+            "eth.dst.oui": "15783359",
+            "eth.dst.oui_resolved": "Intel Corporate",
+            "eth.addr": "f0:d5:bf:24:3b:19",
+            "eth.addr_resolved": "IntelCor_24:3b:19",
+            "eth.addr.oui": "15783359",
+            "eth.addr.oui_resolved": "Intel Corporate",
+            "eth.dst.lg": "0",
+            "eth.lg": "0",
+            "eth.dst.ig": "0",
+            "eth.ig": "0"
+          },
+          "eth.src": "08:71:90:49:f6:79",
+          "eth.src_tree": {
+            "eth.src_resolved": "IntelCor_49:f6:79",
+            "eth.src.oui": "553360",
+            "eth.src.oui_resolved": "Intel Corporate",
+            "eth.addr": "08:71:90:49:f6:79",
+            "eth.addr_resolved": "IntelCor_49:f6:79",
+            "eth.addr.oui": "553360",
+            "eth.addr.oui_resolved": "Intel Corporate",
+            "eth.src.lg": "0",
+            "eth.lg": "0",
+            "eth.src.ig": "0",
+            "eth.ig": "0"
+          },
+          "eth.type": "0x0806"
+        },
+        "arp": {
+          "arp.hw.type": "1",
+          "arp.proto.type": "0x0800",
+          "arp.hw.size": "6",
+          "arp.proto.size": "4",
+          "arp.opcode": "2",
+          "arp.src.hw_mac": "08:71:90:49:f6:79",
+          "arp.src.proto_ipv4": "10.66.201.232",
+          "arp.dst.hw_mac": "f0:d5:bf:24:3b:19",
+          "arp.dst.proto_ipv4": "10.66.201.252"
+        }
+      }
+    }
+  },
+  {
+    "_index": "packets-2025-08-05",
+    "_type": "doc",
+    "_score": null,
+    "_source": {
+      "layers": {
+        "frame": {
+          "frame.encap_type": "1",
+          "frame.time": "Aug  5, 2025 13:35:03.673041000 PKT",
+          "frame.offset_shift": "0.000000000",
+          "frame.time_epoch": "1754382903.673041000",
+          "frame.time_delta": "2.046198000",
+          "frame.time_delta_displayed": "2.046198000",
+          "frame.time_relative": "38.504833000",
+          "frame.number": "19",
+          "frame.len": "42",
+          "frame.cap_len": "42",
+          "frame.marked": "0",
+          "frame.ignored": "0",
+          "frame.protocols": "eth:ethertype:arp"
+        },
+        "eth": {
+          "eth.dst": "f0:d5:bf:24:3b:19",
+          "eth.dst_tree": {
+            "eth.dst_resolved": "IntelCor_24:3b:19",
+            "eth.dst.oui": "15783359",
+            "eth.dst.oui_resolved": "Intel Corporate",
+            "eth.addr": "f0:d5:bf:24:3b:19",
+            "eth.addr_resolved": "IntelCor_24:3b:19",
+            "eth.addr.oui": "15783359",
+            "eth.addr.oui_resolved": "Intel Corporate",
+            "eth.dst.lg": "0",
+            "eth.lg": "0",
+            "eth.dst.ig": "0",
+            "eth.ig": "0"
+          },
+          "eth.src": "08:71:90:49:f6:79",
+          "eth.src_tree": {
+            "eth.src_resolved": "IntelCor_49:f6:79",
+            "eth.src.oui": "553360",
+            "eth.src.oui_resolved": "Intel Corporate",
+            "eth.addr": "08:71:90:49:f6:79",
+            "eth.addr_resolved": "IntelCor_49:f6:79",
+            "eth.addr.oui": "553360",
+            "eth.addr.oui_resolved": "Intel Corporate",
+            "eth.src.lg": "0",
+            "eth.lg": "0",
+            "eth.src.ig": "0",
+            "eth.ig": "0"
+          },
+          "eth.type": "0x0806"
+        },
+        "arp": {
+          "arp.hw.type": "1",
+          "arp.proto.type": "0x0800",
+          "arp.hw.size": "6",
+          "arp.proto.size": "4",
+          "arp.opcode": "2",
+          "arp.src.hw_mac": "08:71:90:49:f6:79",
+          "arp.src.proto_ipv4": "10.66.201.232",
+          "arp.dst.hw_mac": "f0:d5:bf:24:3b:19",
+          "arp.dst.proto_ipv4": "10.66.201.252"
+        }
+      }
+    }
+  },
+  {
+    "_index": "packets-2025-08-05",
+    "_type": "doc",
+    "_score": null,
+    "_source": {
+      "layers": {
+        "frame": {
+          "frame.encap_type": "1",
+          "frame.time": "Aug  5, 2025 13:35:05.518155000 PKT",
+          "frame.offset_shift": "0.000000000",
+          "frame.time_epoch": "1754382905.518155000",
+          "frame.time_delta": "1.845114000",
+          "frame.time_delta_displayed": "1.845114000",
+          "frame.time_relative": "40.349947000",
+          "frame.number": "20",
+          "frame.len": "42",
+          "frame.cap_len": "42",
+          "frame.marked": "0",
+          "frame.ignored": "0",
+          "frame.protocols": "eth:ethertype:arp"
+        },
+        "eth": {
+          "eth.dst": "f0:d5:bf:24:3b:19",
+          "eth.dst_tree": {
+            "eth.dst_resolved": "IntelCor_24:3b:19",
+            "eth.dst.oui": "15783359",
+            "eth.dst.oui_resolved": "Intel Corporate",
+            "eth.addr": "f0:d5:bf:24:3b:19",
+            "eth.addr_resolved": "IntelCor_24:3b:19",
+            "eth.addr.oui": "15783359",
+            "eth.addr.oui_resolved": "Intel Corporate",
+            "eth.dst.lg": "0",
+            "eth.lg": "0",
+            "eth.dst.ig": "0",
+            "eth.ig": "0"
+          },
+          "eth.src": "08:71:90:49:f6:79",
+          "eth.src_tree": {
+            "eth.src_resolved": "IntelCor_49:f6:79",
+            "eth.src.oui": "553360",
+            "eth.src.oui_resolved": "Intel Corporate",
+            "eth.addr": "08:71:90:49:f6:79",
+            "eth.addr_resolved": "IntelCor_49:f6:79",
+            "eth.addr.oui": "553360",
+            "eth.addr.oui_resolved": "Intel Corporate",
+            "eth.src.lg": "0",
+            "eth.lg": "0",
+            "eth.src.ig": "0",
+            "eth.ig": "0"
+          },
+          "eth.type": "0x0806"
+        },
+        "arp": {
+          "arp.hw.type": "1",
+          "arp.proto.type": "0x0800",
+          "arp.hw.size": "6",
+          "arp.proto.size": "4",
+          "arp.opcode": "2",
+          "arp.src.hw_mac": "08:71:90:49:f6:79",
+          "arp.src.proto_ipv4": "10.66.201.232",
+          "arp.dst.hw_mac": "f0:d5:bf:24:3b:19",
+          "arp.dst.proto_ipv4": "10.66.201.252"
+        }
+      }
+    }
+  },
+  {
+    "_index": "packets-2025-08-05",
+    "_type": "doc",
+    "_score": null,
+    "_source": {
+      "layers": {
+        "frame": {
+          "frame.encap_type": "1",
+          "frame.time": "Aug  5, 2025 13:35:07.565612000 PKT",
+          "frame.offset_shift": "0.000000000",
+          "frame.time_epoch": "1754382907.565612000",
+          "frame.time_delta": "2.047457000",
+          "frame.time_delta_displayed": "2.047457000",
+          "frame.time_relative": "42.397404000",
+          "frame.number": "21",
+          "frame.len": "42",
+          "frame.cap_len": "42",
+          "frame.marked": "0",
+          "frame.ignored": "0",
+          "frame.protocols": "eth:ethertype:arp"
+        },
+        "eth": {
+          "eth.dst": "f0:d5:bf:24:3b:19",
+          "eth.dst_tree": {
+            "eth.dst_resolved": "IntelCor_24:3b:19",
+            "eth.dst.oui": "15783359",
+            "eth.dst.oui_resolved": "Intel Corporate",
+            "eth.addr": "f0:d5:bf:24:3b:19",
+            "eth.addr_resolved": "IntelCor_24:3b:19",
+            "eth.addr.oui": "15783359",
+            "eth.addr.oui_resolved": "Intel Corporate",
+            "eth.dst.lg": "0",
+            "eth.lg": "0",
+            "eth.dst.ig": "0",
+            "eth.ig": "0"
+          },
+          "eth.src": "08:71:90:49:f6:79",
+          "eth.src_tree": {
+            "eth.src_resolved": "IntelCor_49:f6:79",
+            "eth.src.oui": "553360",
+            "eth.src.oui_resolved": "Intel Corporate",
+            "eth.addr": "08:71:90:49:f6:79",
+            "eth.addr_resolved": "IntelCor_49:f6:79",
+            "eth.addr.oui": "553360",
+            "eth.addr.oui_resolved": "Intel Corporate",
+            "eth.src.lg": "0",
+            "eth.lg": "0",
+            "eth.src.ig": "0",
+            "eth.ig": "0"
+          },
+          "eth.type": "0x0806"
+        },
+        "arp": {
+          "arp.hw.type": "1",
+          "arp.proto.type": "0x0800",
+          "arp.hw.size": "6",
+          "arp.proto.size": "4",
+          "arp.opcode": "2",
+          "arp.src.hw_mac": "08:71:90:49:f6:79",
+          "arp.src.proto_ipv4": "10.66.201.232",
+          "arp.dst.hw_mac": "f0:d5:bf:24:3b:19",
+          "arp.dst.proto_ipv4": "10.66.201.252"
+        }
+      }
+    }
+  },
+  {
+    "_index": "packets-2025-08-05",
+    "_type": "doc",
+    "_score": null,
+    "_source": {
+      "layers": {
+        "frame": {
+          "frame.encap_type": "1",
+          "frame.time": "Aug  5, 2025 13:35:09.614503000 PKT",
+          "frame.offset_shift": "0.000000000",
+          "frame.time_epoch": "1754382909.614503000",
+          "frame.time_delta": "2.048891000",
+          "frame.time_delta_displayed": "2.048891000",
+          "frame.time_relative": "44.446295000",
+          "frame.number": "22",
+          "frame.len": "42",
+          "frame.cap_len": "42",
+          "frame.marked": "0",
+          "frame.ignored": "0",
+          "frame.protocols": "eth:ethertype:arp"
+        },
+        "eth": {
+          "eth.dst": "f0:d5:bf:24:3b:19",
+          "eth.dst_tree": {
+            "eth.dst_resolved": "IntelCor_24:3b:19",
+            "eth.dst.oui": "15783359",
+            "eth.dst.oui_resolved": "Intel Corporate",
+            "eth.addr": "f0:d5:bf:24:3b:19",
+            "eth.addr_resolved": "IntelCor_24:3b:19",
+            "eth.addr.oui": "15783359",
+            "eth.addr.oui_resolved": "Intel Corporate",
+            "eth.dst.lg": "0",
+            "eth.lg": "0",
+            "eth.dst.ig": "0",
+            "eth.ig": "0"
+          },
+          "eth.src": "08:71:90:49:f6:79",
+          "eth.src_tree": {
+            "eth.src_resolved": "IntelCor_49:f6:79",
+            "eth.src.oui": "553360",
+            "eth.src.oui_resolved": "Intel Corporate",
+            "eth.addr": "08:71:90:49:f6:79",
+            "eth.addr_resolved": "IntelCor_49:f6:79",
+            "eth.addr.oui": "553360",
+            "eth.addr.oui_resolved": "Intel Corporate",
+            "eth.src.lg": "0",
+            "eth.lg": "0",
+            "eth.src.ig": "0",
+            "eth.ig": "0"
+          },
+          "eth.type": "0x0806"
+        },
+        "arp": {
+          "arp.hw.type": "1",
+          "arp.proto.type": "0x0800",
+          "arp.hw.size": "6",
+          "arp.proto.size": "4",
+          "arp.opcode": "2",
+          "arp.src.hw_mac": "08:71:90:49:f6:79",
+          "arp.src.proto_ipv4": "10.66.201.232",
+          "arp.dst.hw_mac": "f0:d5:bf:24:3b:19",
+          "arp.dst.proto_ipv4": "10.66.201.252"
+        }
+      }
+    }
+  },
+  {
+    "_index": "packets-2025-08-05",
+    "_type": "doc",
+    "_score": null,
+    "_source": {
+      "layers": {
+        "frame": {
+          "frame.encap_type": "1",
+          "frame.time": "Aug  5, 2025 13:35:11.660818000 PKT",
+          "frame.offset_shift": "0.000000000",
+          "frame.time_epoch": "1754382911.660818000",
+          "frame.time_delta": "2.046315000",
+          "frame.time_delta_displayed": "2.046315000",
+          "frame.time_relative": "46.492610000",
+          "frame.number": "23",
+          "frame.len": "42",
+          "frame.cap_len": "42",
+          "frame.marked": "0",
+          "frame.ignored": "0",
+          "frame.protocols": "eth:ethertype:arp"
+        },
+        "eth": {
+          "eth.dst": "f0:d5:bf:24:3b:19",
+          "eth.dst_tree": {
+            "eth.dst_resolved": "IntelCor_24:3b:19",
+            "eth.dst.oui": "15783359",
+            "eth.dst.oui_resolved": "Intel Corporate",
+            "eth.addr": "f0:d5:bf:24:3b:19",
+            "eth.addr_resolved": "IntelCor_24:3b:19",
+            "eth.addr.oui": "15783359",
+            "eth.addr.oui_resolved": "Intel Corporate",
+            "eth.dst.lg": "0",
+            "eth.lg": "0",
+            "eth.dst.ig": "0",
+            "eth.ig": "0"
+          },
+          "eth.src": "08:71:90:49:f6:79",
+          "eth.src_tree": {
+            "eth.src_resolved": "IntelCor_49:f6:79",
+            "eth.src.oui": "553360",
+            "eth.src.oui_resolved": "Intel Corporate",
+            "eth.addr": "08:71:90:49:f6:79",
+            "eth.addr_resolved": "IntelCor_49:f6:79",
+            "eth.addr.oui": "553360",
+            "eth.addr.oui_resolved": "Intel Corporate",
+            "eth.src.lg": "0",
+            "eth.lg": "0",
+            "eth.src.ig": "0",
+            "eth.ig": "0"
+          },
+          "eth.type": "0x0806"
+        },
+        "arp": {
+          "arp.hw.type": "1",
+          "arp.proto.type": "0x0800",
+          "arp.hw.size": "6",
+          "arp.proto.size": "4",
+          "arp.opcode": "2",
+          "arp.src.hw_mac": "08:71:90:49:f6:79",
+          "arp.src.proto_ipv4": "10.66.201.232",
+          "arp.dst.hw_mac": "f0:d5:bf:24:3b:19",
+          "arp.dst.proto_ipv4": "10.66.201.252"
+        }
+      }
+    }
+  },
+  {
+    "_index": "packets-2025-08-05",
+    "_type": "doc",
+    "_score": null,
+    "_source": {
+      "layers": {
+        "frame": {
+          "frame.encap_type": "1",
+          "frame.time": "Aug  5, 2025 13:35:13.710819000 PKT",
+          "frame.offset_shift": "0.000000000",
+          "frame.time_epoch": "1754382913.710819000",
+          "frame.time_delta": "2.050001000",
+          "frame.time_delta_displayed": "2.050001000",
+          "frame.time_relative": "48.542611000",
+          "frame.number": "24",
+          "frame.len": "42",
+          "frame.cap_len": "42",
+          "frame.marked": "0",
+          "frame.ignored": "0",
+          "frame.protocols": "eth:ethertype:arp"
+        },
+        "eth": {
+          "eth.dst": "f0:d5:bf:24:3b:19",
+          "eth.dst_tree": {
+            "eth.dst_resolved": "IntelCor_24:3b:19",
+            "eth.dst.oui": "15783359",
+            "eth.dst.oui_resolved": "Intel Corporate",
+            "eth.addr": "f0:d5:bf:24:3b:19",
+            "eth.addr_resolved": "IntelCor_24:3b:19",
+            "eth.addr.oui": "15783359",
+            "eth.addr.oui_resolved": "Intel Corporate",
+            "eth.dst.lg": "0",
+            "eth.lg": "0",
+            "eth.dst.ig": "0",
+            "eth.ig": "0"
+          },
+          "eth.src": "08:71:90:49:f6:79",
+          "eth.src_tree": {
+            "eth.src_resolved": "IntelCor_49:f6:79",
+            "eth.src.oui": "553360",
+            "eth.src.oui_resolved": "Intel Corporate",
+            "eth.addr": "08:71:90:49:f6:79",
+            "eth.addr_resolved": "IntelCor_49:f6:79",
+            "eth.addr.oui": "553360",
+            "eth.addr.oui_resolved": "Intel Corporate",
+            "eth.src.lg": "0",
+            "eth.lg": "0",
+            "eth.src.ig": "0",
+            "eth.ig": "0"
+          },
+          "eth.type": "0x0806"
+        },
+        "arp": {
+          "arp.hw.type": "1",
+          "arp.proto.type": "0x0800",
+          "arp.hw.size": "6",
+          "arp.proto.size": "4",
+          "arp.opcode": "2",
+          "arp.src.hw_mac": "08:71:90:49:f6:79",
+          "arp.src.proto_ipv4": "10.66.201.232",
+          "arp.dst.hw_mac": "f0:d5:bf:24:3b:19",
+          "arp.dst.proto_ipv4": "10.66.201.252"
+        }
+      }
+    }
+  },
+  {
+    "_index": "packets-2025-08-05",
+    "_type": "doc",
+    "_score": null,
+    "_source": {
+      "layers": {
+        "frame": {
+          "frame.encap_type": "1",
+          "frame.time": "Aug  5, 2025 13:35:15.552184000 PKT",
+          "frame.offset_shift": "0.000000000",
+          "frame.time_epoch": "1754382915.552184000",
+          "frame.time_delta": "1.841365000",
+          "frame.time_delta_displayed": "1.841365000",
+          "frame.time_relative": "50.383976000",
+          "frame.number": "25",
+          "frame.len": "42",
+          "frame.cap_len": "42",
+          "frame.marked": "0",
+          "frame.ignored": "0",
+          "frame.protocols": "eth:ethertype:arp"
+        },
+        "eth": {
+          "eth.dst": "f0:d5:bf:24:3b:19",
+          "eth.dst_tree": {
+            "eth.dst_resolved": "IntelCor_24:3b:19",
+            "eth.dst.oui": "15783359",
+            "eth.dst.oui_resolved": "Intel Corporate",
+            "eth.addr": "f0:d5:bf:24:3b:19",
+            "eth.addr_resolved": "IntelCor_24:3b:19",
+            "eth.addr.oui": "15783359",
+            "eth.addr.oui_resolved": "Intel Corporate",
+            "eth.dst.lg": "0",
+            "eth.lg": "0",
+            "eth.dst.ig": "0",
+            "eth.ig": "0"
+          },
+          "eth.src": "08:71:90:49:f6:79",
+          "eth.src_tree": {
+            "eth.src_resolved": "IntelCor_49:f6:79",
+            "eth.src.oui": "553360",
+            "eth.src.oui_resolved": "Intel Corporate",
+            "eth.addr": "08:71:90:49:f6:79",
+            "eth.addr_resolved": "IntelCor_49:f6:79",
+            "eth.addr.oui": "553360",
+            "eth.addr.oui_resolved": "Intel Corporate",
+            "eth.src.lg": "0",
+            "eth.lg": "0",
+            "eth.src.ig": "0",
+            "eth.ig": "0"
+          },
+          "eth.type": "0x0806"
+        },
+        "arp": {
+          "arp.hw.type": "1",
+          "arp.proto.type": "0x0800",
+          "arp.hw.size": "6",
+          "arp.proto.size": "4",
+          "arp.opcode": "2",
+          "arp.src.hw_mac": "08:71:90:49:f6:79",
+          "arp.src.proto_ipv4": "10.66.201.232",
+          "arp.dst.hw_mac": "f0:d5:bf:24:3b:19",
+          "arp.dst.proto_ipv4": "10.66.201.252"
+        }
+      }
+    }
+  },
+  {
+    "_index": "packets-2025-08-05",
+    "_type": "doc",
+    "_score": null,
+    "_source": {
+      "layers": {
+        "frame": {
+          "frame.encap_type": "1",
+          "frame.time": "Aug  5, 2025 13:35:17.602171000 PKT",
+          "frame.offset_shift": "0.000000000",
+          "frame.time_epoch": "1754382917.602171000",
+          "frame.time_delta": "2.049987000",
+          "frame.time_delta_displayed": "2.049987000",
+          "frame.time_relative": "52.433963000",
+          "frame.number": "26",
+          "frame.len": "42",
+          "frame.cap_len": "42",
+          "frame.marked": "0",
+          "frame.ignored": "0",
+          "frame.protocols": "eth:ethertype:arp"
+        },
+        "eth": {
+          "eth.dst": "f0:d5:bf:24:3b:19",
+          "eth.dst_tree": {
+            "eth.dst_resolved": "IntelCor_24:3b:19",
+            "eth.dst.oui": "15783359",
+            "eth.dst.oui_resolved": "Intel Corporate",
+            "eth.addr": "f0:d5:bf:24:3b:19",
+            "eth.addr_resolved": "IntelCor_24:3b:19",
+            "eth.addr.oui": "15783359",
+            "eth.addr.oui_resolved": "Intel Corporate",
+            "eth.dst.lg": "0",
+            "eth.lg": "0",
+            "eth.dst.ig": "0",
+            "eth.ig": "0"
+          },
+          "eth.src": "08:71:90:49:f6:79",
+          "eth.src_tree": {
+            "eth.src_resolved": "IntelCor_49:f6:79",
+            "eth.src.oui": "553360",
+            "eth.src.oui_resolved": "Intel Corporate",
+            "eth.addr": "08:71:90:49:f6:79",
+            "eth.addr_resolved": "IntelCor_49:f6:79",
+            "eth.addr.oui": "553360",
+            "eth.addr.oui_resolved": "Intel Corporate",
+            "eth.src.lg": "0",
+            "eth.lg": "0",
+            "eth.src.ig": "0",
+            "eth.ig": "0"
+          },
+          "eth.type": "0x0806"
+        },
+        "arp": {
+          "arp.hw.type": "1",
+          "arp.proto.type": "0x0800",
+          "arp.hw.size": "6",
+          "arp.proto.size": "4",
+          "arp.opcode": "2",
+          "arp.src.hw_mac": "08:71:90:49:f6:79",
+          "arp.src.proto_ipv4": "10.66.201.232",
+          "arp.dst.hw_mac": "f0:d5:bf:24:3b:19",
+          "arp.dst.proto_ipv4": "10.66.201.252"
+        }
+      }
+    }
+  },
+  {
+    "_index": "packets-2025-08-05",
+    "_type": "doc",
+    "_score": null,
+    "_source": {
+      "layers": {
+        "frame": {
+          "frame.encap_type": "1",
+          "frame.time": "Aug  5, 2025 13:35:19.650302000 PKT",
+          "frame.offset_shift": "0.000000000",
+          "frame.time_epoch": "1754382919.650302000",
+          "frame.time_delta": "2.048131000",
+          "frame.time_delta_displayed": "2.048131000",
+          "frame.time_relative": "54.482094000",
+          "frame.number": "27",
+          "frame.len": "42",
+          "frame.cap_len": "42",
+          "frame.marked": "0",
+          "frame.ignored": "0",
+          "frame.protocols": "eth:ethertype:arp"
+        },
+        "eth": {
+          "eth.dst": "f0:d5:bf:24:3b:19",
+          "eth.dst_tree": {
+            "eth.dst_resolved": "IntelCor_24:3b:19",
+            "eth.dst.oui": "15783359",
+            "eth.dst.oui_resolved": "Intel Corporate",
+            "eth.addr": "f0:d5:bf:24:3b:19",
+            "eth.addr_resolved": "IntelCor_24:3b:19",
+            "eth.addr.oui": "15783359",
+            "eth.addr.oui_resolved": "Intel Corporate",
+            "eth.dst.lg": "0",
+            "eth.lg": "0",
+            "eth.dst.ig": "0",
+            "eth.ig": "0"
+          },
+          "eth.src": "08:71:90:49:f6:79",
+          "eth.src_tree": {
+            "eth.src_resolved": "IntelCor_49:f6:79",
+            "eth.src.oui": "553360",
+            "eth.src.oui_resolved": "Intel Corporate",
+            "eth.addr": "08:71:90:49:f6:79",
+            "eth.addr_resolved": "IntelCor_49:f6:79",
+            "eth.addr.oui": "553360",
+            "eth.addr.oui_resolved": "Intel Corporate",
+            "eth.src.lg": "0",
+            "eth.lg": "0",
+            "eth.src.ig": "0",
+            "eth.ig": "0"
+          },
+          "eth.type": "0x0806"
+        },
+        "arp": {
+          "arp.hw.type": "1",
+          "arp.proto.type": "0x0800",
+          "arp.hw.size": "6",
+          "arp.proto.size": "4",
+          "arp.opcode": "2",
+          "arp.src.hw_mac": "08:71:90:49:f6:79",
+          "arp.src.proto_ipv4": "10.66.201.232",
+          "arp.dst.hw_mac": "f0:d5:bf:24:3b:19",
+          "arp.dst.proto_ipv4": "10.66.201.252"
+        }
+      }
+    }
+  },
+  {
+    "_index": "packets-2025-08-05",
+    "_type": "doc",
+    "_score": null,
+    "_source": {
+      "layers": {
+        "frame": {
+          "frame.encap_type": "1",
+          "frame.time": "Aug  5, 2025 13:35:21.698431000 PKT",
+          "frame.offset_shift": "0.000000000",
+          "frame.time_epoch": "1754382921.698431000",
+          "frame.time_delta": "2.048129000",
+          "frame.time_delta_displayed": "2.048129000",
+          "frame.time_relative": "56.530223000",
+          "frame.number": "28",
+          "frame.len": "42",
+          "frame.cap_len": "42",
+          "frame.marked": "0",
+          "frame.ignored": "0",
+          "frame.protocols": "eth:ethertype:arp"
+        },
+        "eth": {
+          "eth.dst": "f0:d5:bf:24:3b:19",
+          "eth.dst_tree": {
+            "eth.dst_resolved": "IntelCor_24:3b:19",
+            "eth.dst.oui": "15783359",
+            "eth.dst.oui_resolved": "Intel Corporate",
+            "eth.addr": "f0:d5:bf:24:3b:19",
+            "eth.addr_resolved": "IntelCor_24:3b:19",
+            "eth.addr.oui": "15783359",
+            "eth.addr.oui_resolved": "Intel Corporate",
+            "eth.dst.lg": "0",
+            "eth.lg": "0",
+            "eth.dst.ig": "0",
+            "eth.ig": "0"
+          },
+          "eth.src": "08:71:90:49:f6:79",
+          "eth.src_tree": {
+            "eth.src_resolved": "IntelCor_49:f6:79",
+            "eth.src.oui": "553360",
+            "eth.src.oui_resolved": "Intel Corporate",
+            "eth.addr": "08:71:90:49:f6:79",
+            "eth.addr_resolved": "IntelCor_49:f6:79",
+            "eth.addr.oui": "553360",
+            "eth.addr.oui_resolved": "Intel Corporate",
+            "eth.src.lg": "0",
+            "eth.lg": "0",
+            "eth.src.ig": "0",
+            "eth.ig": "0"
+          },
+          "eth.type": "0x0806"
+        },
+        "arp": {
+          "arp.hw.type": "1",
+          "arp.proto.type": "0x0800",
+          "arp.hw.size": "6",
+          "arp.proto.size": "4",
+          "arp.opcode": "2",
+          "arp.src.hw_mac": "08:71:90:49:f6:79",
+          "arp.src.proto_ipv4": "10.66.201.232",
+          "arp.dst.hw_mac": "f0:d5:bf:24:3b:19",
+          "arp.dst.proto_ipv4": "10.66.201.252"
+        }
+      }
+    }
+  },
+  {
+    "_index": "packets-2025-08-05",
+    "_type": "doc",
+    "_score": null,
+    "_source": {
+      "layers": {
+        "frame": {
+          "frame.encap_type": "1",
+          "frame.time": "Aug  5, 2025 13:35:23.541940000 PKT",
+          "frame.offset_shift": "0.000000000",
+          "frame.time_epoch": "1754382923.541940000",
+          "frame.time_delta": "1.843509000",
+          "frame.time_delta_displayed": "1.843509000",
+          "frame.time_relative": "58.373732000",
+          "frame.number": "29",
+          "frame.len": "42",
+          "frame.cap_len": "42",
+          "frame.marked": "0",
+          "frame.ignored": "0",
+          "frame.protocols": "eth:ethertype:arp"
+        },
+        "eth": {
+          "eth.dst": "f0:d5:bf:24:3b:19",
+          "eth.dst_tree": {
+            "eth.dst_resolved": "IntelCor_24:3b:19",
+            "eth.dst.oui": "15783359",
+            "eth.dst.oui_resolved": "Intel Corporate",
+            "eth.addr": "f0:d5:bf:24:3b:19",
+            "eth.addr_resolved": "IntelCor_24:3b:19",
+            "eth.addr.oui": "15783359",
+            "eth.addr.oui_resolved": "Intel Corporate",
+            "eth.dst.lg": "0",
+            "eth.lg": "0",
+            "eth.dst.ig": "0",
+            "eth.ig": "0"
+          },
+          "eth.src": "08:71:90:49:f6:79",
+          "eth.src_tree": {
+            "eth.src_resolved": "IntelCor_49:f6:79",
+            "eth.src.oui": "553360",
+            "eth.src.oui_resolved": "Intel Corporate",
+            "eth.addr": "08:71:90:49:f6:79",
+            "eth.addr_resolved": "IntelCor_49:f6:79",
+            "eth.addr.oui": "553360",
+            "eth.addr.oui_resolved": "Intel Corporate",
+            "eth.src.lg": "0",
+            "eth.lg": "0",
+            "eth.src.ig": "0",
+            "eth.ig": "0"
+          },
+          "eth.type": "0x0806"
+        },
+        "arp": {
+          "arp.hw.type": "1",
+          "arp.proto.type": "0x0800",
+          "arp.hw.size": "6",
+          "arp.proto.size": "4",
+          "arp.opcode": "2",
+          "arp.src.hw_mac": "08:71:90:49:f6:79",
+          "arp.src.proto_ipv4": "10.66.201.232",
+          "arp.dst.hw_mac": "f0:d5:bf:24:3b:19",
+          "arp.dst.proto_ipv4": "10.66.201.252"
+        }
+      }
+    }
+  },
+  {
+    "_index": "packets-2025-08-05",
+    "_type": "doc",
+    "_score": null,
+    "_source": {
+      "layers": {
+        "frame": {
+          "frame.encap_type": "1",
+          "frame.time": "Aug  5, 2025 13:35:25.589639000 PKT",
+          "frame.offset_shift": "0.000000000",
+          "frame.time_epoch": "1754382925.589639000",
+          "frame.time_delta": "2.047699000",
+          "frame.time_delta_displayed": "2.047699000",
+          "frame.time_relative": "60.421431000",
+          "frame.number": "30",
+          "frame.len": "42",
+          "frame.cap_len": "42",
+          "frame.marked": "0",
+          "frame.ignored": "0",
+          "frame.protocols": "eth:ethertype:arp"
+        },
+        "eth": {
+          "eth.dst": "f0:d5:bf:24:3b:19",
+          "eth.dst_tree": {
+            "eth.dst_resolved": "IntelCor_24:3b:19",
+            "eth.dst.oui": "15783359",
+            "eth.dst.oui_resolved": "Intel Corporate",
+            "eth.addr": "f0:d5:bf:24:3b:19",
+            "eth.addr_resolved": "IntelCor_24:3b:19",
+            "eth.addr.oui": "15783359",
+            "eth.addr.oui_resolved": "Intel Corporate",
+            "eth.dst.lg": "0",
+            "eth.lg": "0",
+            "eth.dst.ig": "0",
+            "eth.ig": "0"
+          },
+          "eth.src": "08:71:90:49:f6:79",
+          "eth.src_tree": {
+            "eth.src_resolved": "IntelCor_49:f6:79",
+            "eth.src.oui": "553360",
+            "eth.src.oui_resolved": "Intel Corporate",
+            "eth.addr": "08:71:90:49:f6:79",
+            "eth.addr_resolved": "IntelCor_49:f6:79",
+            "eth.addr.oui": "553360",
+            "eth.addr.oui_resolved": "Intel Corporate",
+            "eth.src.lg": "0",
+            "eth.lg": "0",
+            "eth.src.ig": "0",
+            "eth.ig": "0"
+          },
+          "eth.type": "0x0806"
+        },
+        "arp": {
+          "arp.hw.type": "1",
+          "arp.proto.type": "0x0800",
+          "arp.hw.size": "6",
+          "arp.proto.size": "4",
+          "arp.opcode": "2",
+          "arp.src.hw_mac": "08:71:90:49:f6:79",
+          "arp.src.proto_ipv4": "10.66.201.232",
+          "arp.dst.hw_mac": "f0:d5:bf:24:3b:19",
+          "arp.dst.proto_ipv4": "10.66.201.252"
+        }
+      }
+    }
+  },
+  {
+    "_index": "packets-2025-08-05",
+    "_type": "doc",
+    "_score": null,
+    "_source": {
+      "layers": {
+        "frame": {
+          "frame.encap_type": "1",
+          "frame.time": "Aug  5, 2025 13:35:27.638166000 PKT",
+          "frame.offset_shift": "0.000000000",
+          "frame.time_epoch": "1754382927.638166000",
+          "frame.time_delta": "2.048527000",
+          "frame.time_delta_displayed": "2.048527000",
+          "frame.time_relative": "62.469958000",
+          "frame.number": "31",
+          "frame.len": "42",
+          "frame.cap_len": "42",
+          "frame.marked": "0",
+          "frame.ignored": "0",
+          "frame.protocols": "eth:ethertype:arp"
+        },
+        "eth": {
+          "eth.dst": "f0:d5:bf:24:3b:19",
+          "eth.dst_tree": {
+            "eth.dst_resolved": "IntelCor_24:3b:19",
+            "eth.dst.oui": "15783359",
+            "eth.dst.oui_resolved": "Intel Corporate",
+            "eth.addr": "f0:d5:bf:24:3b:19",
+            "eth.addr_resolved": "IntelCor_24:3b:19",
+            "eth.addr.oui": "15783359",
+            "eth.addr.oui_resolved": "Intel Corporate",
+            "eth.dst.lg": "0",
+            "eth.lg": "0",
+            "eth.dst.ig": "0",
+            "eth.ig": "0"
+          },
+          "eth.src": "08:71:90:49:f6:79",
+          "eth.src_tree": {
+            "eth.src_resolved": "IntelCor_49:f6:79",
+            "eth.src.oui": "553360",
+            "eth.src.oui_resolved": "Intel Corporate",
+            "eth.addr": "08:71:90:49:f6:79",
+            "eth.addr_resolved": "IntelCor_49:f6:79",
+            "eth.addr.oui": "553360",
+            "eth.addr.oui_resolved": "Intel Corporate",
+            "eth.src.lg": "0",
+            "eth.lg": "0",
+            "eth.src.ig": "0",
+            "eth.ig": "0"
+          },
+          "eth.type": "0x0806"
+        },
+        "arp": {
+          "arp.hw.type": "1",
+          "arp.proto.type": "0x0800",
+          "arp.hw.size": "6",
+          "arp.proto.size": "4",
+          "arp.opcode": "2",
+          "arp.src.hw_mac": "08:71:90:49:f6:79",
+          "arp.src.proto_ipv4": "10.66.201.232",
+          "arp.dst.hw_mac": "f0:d5:bf:24:3b:19",
+          "arp.dst.proto_ipv4": "10.66.201.252"
+        }
+      }
+    }
+  },
+  {
+    "_index": "packets-2025-08-05",
+    "_type": "doc",
+    "_score": null,
+    "_source": {
+      "layers": {
+        "frame": {
+          "frame.encap_type": "1",
+          "frame.time": "Aug  5, 2025 13:35:29.788507000 PKT",
+          "frame.offset_shift": "0.000000000",
+          "frame.time_epoch": "1754382929.788507000",
+          "frame.time_delta": "2.150341000",
+          "frame.time_delta_displayed": "2.150341000",
+          "frame.time_relative": "64.620299000",
+          "frame.number": "32",
+          "frame.len": "42",
+          "frame.cap_len": "42",
+          "frame.marked": "0",
+          "frame.ignored": "0",
+          "frame.protocols": "eth:ethertype:arp"
+        },
+        "eth": {
+          "eth.dst": "f0:d5:bf:24:3b:19",
+          "eth.dst_tree": {
+            "eth.dst_resolved": "IntelCor_24:3b:19",
+            "eth.dst.oui": "15783359",
+            "eth.dst.oui_resolved": "Intel Corporate",
+            "eth.addr": "f0:d5:bf:24:3b:19",
+            "eth.addr_resolved": "IntelCor_24:3b:19",
+            "eth.addr.oui": "15783359",
+            "eth.addr.oui_resolved": "Intel Corporate",
+            "eth.dst.lg": "0",
+            "eth.lg": "0",
+            "eth.dst.ig": "0",
+            "eth.ig": "0"
+          },
+          "eth.src": "08:71:90:49:f6:79",
+          "eth.src_tree": {
+            "eth.src_resolved": "IntelCor_49:f6:79",
+            "eth.src.oui": "553360",
+            "eth.src.oui_resolved": "Intel Corporate",
+            "eth.addr": "08:71:90:49:f6:79",
+            "eth.addr_resolved": "IntelCor_49:f6:79",
+            "eth.addr.oui": "553360",
+            "eth.addr.oui_resolved": "Intel Corporate",
+            "eth.src.lg": "0",
+            "eth.lg": "0",
+            "eth.src.ig": "0",
+            "eth.ig": "0"
+          },
+          "eth.type": "0x0806"
+        },
+        "arp": {
+          "arp.hw.type": "1",
+          "arp.proto.type": "0x0800",
+          "arp.hw.size": "6",
+          "arp.proto.size": "4",
+          "arp.opcode": "2",
+          "arp.src.hw_mac": "08:71:90:49:f6:79",
+          "arp.src.proto_ipv4": "10.66.201.232",
+          "arp.dst.hw_mac": "f0:d5:bf:24:3b:19",
+          "arp.dst.proto_ipv4": "10.66.201.252"
+        }
+      }
+    }
+  },
+  {
+    "_index": "packets-2025-08-05",
+    "_type": "doc",
+    "_score": null,
+    "_source": {
+      "layers": {
+        "frame": {
+          "frame.encap_type": "1",
+          "frame.time": "Aug  5, 2025 13:35:31.527682000 PKT",
+          "frame.offset_shift": "0.000000000",
+          "frame.time_epoch": "1754382931.527682000",
+          "frame.time_delta": "1.739175000",
+          "frame.time_delta_displayed": "1.739175000",
+          "frame.time_relative": "66.359474000",
+          "frame.number": "33",
+          "frame.len": "42",
+          "frame.cap_len": "42",
+          "frame.marked": "0",
+          "frame.ignored": "0",
+          "frame.protocols": "eth:ethertype:arp"
+        },
+        "eth": {
+          "eth.dst": "f0:d5:bf:24:3b:19",
+          "eth.dst_tree": {
+            "eth.dst_resolved": "IntelCor_24:3b:19",
+            "eth.dst.oui": "15783359",
+            "eth.dst.oui_resolved": "Intel Corporate",
+            "eth.addr": "f0:d5:bf:24:3b:19",
+            "eth.addr_resolved": "IntelCor_24:3b:19",
+            "eth.addr.oui": "15783359",
+            "eth.addr.oui_resolved": "Intel Corporate",
+            "eth.dst.lg": "0",
+            "eth.lg": "0",
+            "eth.dst.ig": "0",
+            "eth.ig": "0"
+          },
+          "eth.src": "08:71:90:49:f6:79",
+          "eth.src_tree": {
+            "eth.src_resolved": "IntelCor_49:f6:79",
+            "eth.src.oui": "553360",
+            "eth.src.oui_resolved": "Intel Corporate",
+            "eth.addr": "08:71:90:49:f6:79",
+            "eth.addr_resolved": "IntelCor_49:f6:79",
+            "eth.addr.oui": "553360",
+            "eth.addr.oui_resolved": "Intel Corporate",
+            "eth.src.lg": "0",
+            "eth.lg": "0",
+            "eth.src.ig": "0",
+            "eth.ig": "0"
+          },
+          "eth.type": "0x0806"
+        },
+        "arp": {
+          "arp.hw.type": "1",
+          "arp.proto.type": "0x0800",
+          "arp.hw.size": "6",
+          "arp.proto.size": "4",
+          "arp.opcode": "2",
+          "arp.src.hw_mac": "36:30:2a:ea:7c:ab",
+          "arp.src.proto_ipv4": "10.66.201.232",
+          "arp.dst.hw_mac": "f0:d5:bf:24:3b:19",
+          "arp.dst.proto_ipv4": "10.66.201.252"
+        },
+        "Duplicate IP address detected for 10.66.201.232 (36:30:2a:ea:7c:ab) - also in use by 08:71:90:49:f6:79 (frame 32)": {
+          "arp.duplicate-address-frame": "32",
+          "arp.duplicate-address-frame_tree": {
+            "_ws.expert": {
+              "arp.duplicate-address-detected": "",
+              "_ws.expert.message": "Duplicate IP address configured (10.66.201.232)",
+              "_ws.expert.severity": "6291456",
+              "_ws.expert.group": "33554432"
+            }
+          },
+          "arp.seconds-since-duplicate-address-frame": "2"
+        }
+      }
+    }
+  },
+  {
+    "_index": "packets-2025-08-05",
+    "_type": "doc",
+    "_score": null,
+    "_source": {
+      "layers": {
+        "frame": {
+          "frame.encap_type": "1",
+          "frame.time": "Aug  5, 2025 13:35:32.553645000 PKT",
+          "frame.offset_shift": "0.000000000",
+          "frame.time_epoch": "1754382932.553645000",
+          "frame.time_delta": "1.025963000",
+          "frame.time_delta_displayed": "1.025963000",
+          "frame.time_relative": "67.385437000",
+          "frame.number": "34",
+          "frame.len": "42",
+          "frame.cap_len": "42",
+          "frame.marked": "0",
+          "frame.ignored": "0",
+          "frame.protocols": "eth:ethertype:arp"
+        },
+        "eth": {
+          "eth.dst": "f0:d5:bf:24:3b:19",
+          "eth.dst_tree": {
+            "eth.dst_resolved": "IntelCor_24:3b:19",
+            "eth.dst.oui": "15783359",
+            "eth.dst.oui_resolved": "Intel Corporate",
+            "eth.addr": "f0:d5:bf:24:3b:19",
+            "eth.addr_resolved": "IntelCor_24:3b:19",
+            "eth.addr.oui": "15783359",
+            "eth.addr.oui_resolved": "Intel Corporate",
+            "eth.dst.lg": "0",
+            "eth.lg": "0",
+            "eth.dst.ig": "0",
+            "eth.ig": "0"
+          },
+          "eth.src": "08:71:90:49:f6:79",
+          "eth.src_tree": {
+            "eth.src_resolved": "IntelCor_49:f6:79",
+            "eth.src.oui": "553360",
+            "eth.src.oui_resolved": "Intel Corporate",
+            "eth.addr": "08:71:90:49:f6:79",
+            "eth.addr_resolved": "IntelCor_49:f6:79",
+            "eth.addr.oui": "553360",
+            "eth.addr.oui_resolved": "Intel Corporate",
+            "eth.src.lg": "0",
+            "eth.lg": "0",
+            "eth.src.ig": "0",
+            "eth.ig": "0"
+          },
+          "eth.type": "0x0806"
+        },
+        "arp": {
+          "arp.hw.type": "1",
+          "arp.proto.type": "0x0800",
+          "arp.hw.size": "6",
+          "arp.proto.size": "4",
+          "arp.opcode": "2",
+          "arp.src.hw_mac": "36:30:2a:ea:7c:ab",
+          "arp.src.proto_ipv4": "10.66.201.232",
+          "arp.dst.hw_mac": "f0:d5:bf:24:3b:19",
+          "arp.dst.proto_ipv4": "10.66.201.252"
+        },
+        "Duplicate IP address detected for 10.66.201.232 (36:30:2a:ea:7c:ab) - also in use by 08:71:90:49:f6:79 (frame 32)": {
+          "arp.duplicate-address-frame": "32",
+          "arp.duplicate-address-frame_tree": {
+            "_ws.expert": {
+              "arp.duplicate-address-detected": "",
+              "_ws.expert.message": "Duplicate IP address configured (10.66.201.232)",
+              "_ws.expert.severity": "6291456",
+              "_ws.expert.group": "33554432"
+            }
+          },
+          "arp.seconds-since-duplicate-address-frame": "3"
+        }
+      }
+    }
+  },
+  {
+    "_index": "packets-2025-08-05",
+    "_type": "doc",
+    "_score": null,
+    "_source": {
+      "layers": {
+        "frame": {
+          "frame.encap_type": "1",
+          "frame.time": "Aug  5, 2025 13:35:33.577761000 PKT",
+          "frame.offset_shift": "0.000000000",
+          "frame.time_epoch": "1754382933.577761000",
+          "frame.time_delta": "1.024116000",
+          "frame.time_delta_displayed": "1.024116000",
+          "frame.time_relative": "68.409553000",
+          "frame.number": "35",
+          "frame.len": "42",
+          "frame.cap_len": "42",
+          "frame.marked": "0",
+          "frame.ignored": "0",
+          "frame.protocols": "eth:ethertype:arp"
+        },
+        "eth": {
+          "eth.dst": "f0:d5:bf:24:3b:19",
+          "eth.dst_tree": {
+            "eth.dst_resolved": "IntelCor_24:3b:19",
+            "eth.dst.oui": "15783359",
+            "eth.dst.oui_resolved": "Intel Corporate",
+            "eth.addr": "f0:d5:bf:24:3b:19",
+            "eth.addr_resolved": "IntelCor_24:3b:19",
+            "eth.addr.oui": "15783359",
+            "eth.addr.oui_resolved": "Intel Corporate",
+            "eth.dst.lg": "0",
+            "eth.lg": "0",
+            "eth.dst.ig": "0",
+            "eth.ig": "0"
+          },
+          "eth.src": "08:71:90:49:f6:79",
+          "eth.src_tree": {
+            "eth.src_resolved": "IntelCor_49:f6:79",
+            "eth.src.oui": "553360",
+            "eth.src.oui_resolved": "Intel Corporate",
+            "eth.addr": "08:71:90:49:f6:79",
+            "eth.addr_resolved": "IntelCor_49:f6:79",
+            "eth.addr.oui": "553360",
+            "eth.addr.oui_resolved": "Intel Corporate",
+            "eth.src.lg": "0",
+            "eth.lg": "0",
+            "eth.src.ig": "0",
+            "eth.ig": "0"
+          },
+          "eth.type": "0x0806"
+        },
+        "arp": {
+          "arp.hw.type": "1",
+          "arp.proto.type": "0x0800",
+          "arp.hw.size": "6",
+          "arp.proto.size": "4",
+          "arp.opcode": "2",
+          "arp.src.hw_mac": "36:30:2a:ea:7c:ab",
+          "arp.src.proto_ipv4": "10.66.201.232",
+          "arp.dst.hw_mac": "f0:d5:bf:24:3b:19",
+          "arp.dst.proto_ipv4": "10.66.201.252"
+        },
+        "Duplicate IP address detected for 10.66.201.232 (36:30:2a:ea:7c:ab) - also in use by 08:71:90:49:f6:79 (frame 32)": {
+          "arp.duplicate-address-frame": "32",
+          "arp.duplicate-address-frame_tree": {
+            "_ws.expert": {
+              "arp.duplicate-address-detected": "",
+              "_ws.expert.message": "Duplicate IP address configured (10.66.201.232)",
+              "_ws.expert.severity": "6291456",
+              "_ws.expert.group": "33554432"
+            }
+          },
+          "arp.seconds-since-duplicate-address-frame": "4"
+        }
+      }
+    }
+  },
+  {
+    "_index": "packets-2025-08-05",
+    "_type": "doc",
+    "_score": null,
+    "_source": {
+      "layers": {
+        "frame": {
+          "frame.encap_type": "1",
+          "frame.time": "Aug  5, 2025 13:35:34.601828000 PKT",
+          "frame.offset_shift": "0.000000000",
+          "frame.time_epoch": "1754382934.601828000",
+          "frame.time_delta": "1.024067000",
+          "frame.time_delta_displayed": "1.024067000",
+          "frame.time_relative": "69.433620000",
+          "frame.number": "36",
+          "frame.len": "42",
+          "frame.cap_len": "42",
+          "frame.marked": "0",
+          "frame.ignored": "0",
+          "frame.protocols": "eth:ethertype:arp"
+        },
+        "eth": {
+          "eth.dst": "f0:d5:bf:24:3b:19",
+          "eth.dst_tree": {
+            "eth.dst_resolved": "IntelCor_24:3b:19",
+            "eth.dst.oui": "15783359",
+            "eth.dst.oui_resolved": "Intel Corporate",
+            "eth.addr": "f0:d5:bf:24:3b:19",
+            "eth.addr_resolved": "IntelCor_24:3b:19",
+            "eth.addr.oui": "15783359",
+            "eth.addr.oui_resolved": "Intel Corporate",
+            "eth.dst.lg": "0",
+            "eth.lg": "0",
+            "eth.dst.ig": "0",
+            "eth.ig": "0"
+          },
+          "eth.src": "08:71:90:49:f6:79",
+          "eth.src_tree": {
+            "eth.src_resolved": "IntelCor_49:f6:79",
+            "eth.src.oui": "553360",
+            "eth.src.oui_resolved": "Intel Corporate",
+            "eth.addr": "08:71:90:49:f6:79",
+            "eth.addr_resolved": "IntelCor_49:f6:79",
+            "eth.addr.oui": "553360",
+            "eth.addr.oui_resolved": "Intel Corporate",
+            "eth.src.lg": "0",
+            "eth.lg": "0",
+            "eth.src.ig": "0",
+            "eth.ig": "0"
+          },
+          "eth.type": "0x0806"
+        },
+        "arp": {
+          "arp.hw.type": "1",
+          "arp.proto.type": "0x0800",
+          "arp.hw.size": "6",
+          "arp.proto.size": "4",
+          "arp.opcode": "2",
+          "arp.src.hw_mac": "36:30:2a:ea:7c:ab",
+          "arp.src.proto_ipv4": "10.66.201.232",
+          "arp.dst.hw_mac": "f0:d5:bf:24:3b:19",
+          "arp.dst.proto_ipv4": "10.66.201.252"
+        },
+        "Duplicate IP address detected for 10.66.201.232 (36:30:2a:ea:7c:ab) - also in use by 08:71:90:49:f6:79 (frame 32)": {
+          "arp.duplicate-address-frame": "32",
+          "arp.duplicate-address-frame_tree": {
+            "_ws.expert": {
+              "arp.duplicate-address-detected": "",
+              "_ws.expert.message": "Duplicate IP address configured (10.66.201.232)",
+              "_ws.expert.severity": "6291456",
+              "_ws.expert.group": "33554432"
+            }
+          },
+          "arp.seconds-since-duplicate-address-frame": "5"
+        }
+      }
+    }
+  },
+  {
+    "_index": "packets-2025-08-05",
+    "_type": "doc",
+    "_score": null,
+    "_source": {
+      "layers": {
+        "frame": {
+          "frame.encap_type": "1",
+          "frame.time": "Aug  5, 2025 13:35:35.625835000 PKT",
+          "frame.offset_shift": "0.000000000",
+          "frame.time_epoch": "1754382935.625835000",
+          "frame.time_delta": "1.024007000",
+          "frame.time_delta_displayed": "1.024007000",
+          "frame.time_relative": "70.457627000",
+          "frame.number": "37",
+          "frame.len": "42",
+          "frame.cap_len": "42",
+          "frame.marked": "0",
+          "frame.ignored": "0",
+          "frame.protocols": "eth:ethertype:arp"
+        },
+        "eth": {
+          "eth.dst": "f0:d5:bf:24:3b:19",
+          "eth.dst_tree": {
+            "eth.dst_resolved": "IntelCor_24:3b:19",
+            "eth.dst.oui": "15783359",
+            "eth.dst.oui_resolved": "Intel Corporate",
+            "eth.addr": "f0:d5:bf:24:3b:19",
+            "eth.addr_resolved": "IntelCor_24:3b:19",
+            "eth.addr.oui": "15783359",
+            "eth.addr.oui_resolved": "Intel Corporate",
+            "eth.dst.lg": "0",
+            "eth.lg": "0",
+            "eth.dst.ig": "0",
+            "eth.ig": "0"
+          },
+          "eth.src": "08:71:90:49:f6:79",
+          "eth.src_tree": {
+            "eth.src_resolved": "IntelCor_49:f6:79",
+            "eth.src.oui": "553360",
+            "eth.src.oui_resolved": "Intel Corporate",
+            "eth.addr": "08:71:90:49:f6:79",
+            "eth.addr_resolved": "IntelCor_49:f6:79",
+            "eth.addr.oui": "553360",
+            "eth.addr.oui_resolved": "Intel Corporate",
+            "eth.src.lg": "0",
+            "eth.lg": "0",
+            "eth.src.ig": "0",
+            "eth.ig": "0"
+          },
+          "eth.type": "0x0806"
+        },
+        "arp": {
+          "arp.hw.type": "1",
+          "arp.proto.type": "0x0800",
+          "arp.hw.size": "6",
+          "arp.proto.size": "4",
+          "arp.opcode": "2",
+          "arp.src.hw_mac": "36:30:2a:ea:7c:ab",
+          "arp.src.proto_ipv4": "10.66.201.232",
+          "arp.dst.hw_mac": "f0:d5:bf:24:3b:19",
+          "arp.dst.proto_ipv4": "10.66.201.252"
+        },
+        "Duplicate IP address detected for 10.66.201.232 (36:30:2a:ea:7c:ab) - also in use by 08:71:90:49:f6:79 (frame 32)": {
+          "arp.duplicate-address-frame": "32",
+          "arp.duplicate-address-frame_tree": {
+            "_ws.expert": {
+              "arp.duplicate-address-detected": "",
+              "_ws.expert.message": "Duplicate IP address configured (10.66.201.232)",
+              "_ws.expert.severity": "6291456",
+              "_ws.expert.group": "33554432"
+            }
+          },
+          "arp.seconds-since-duplicate-address-frame": "6"
+        }
+      }
+    }
+  },
+  {
+    "_index": "packets-2025-08-05",
+    "_type": "doc",
+    "_score": null,
+    "_source": {
+      "layers": {
+        "frame": {
+          "frame.encap_type": "1",
+          "frame.time": "Aug  5, 2025 13:35:38.087305000 PKT",
+          "frame.offset_shift": "0.000000000",
+          "frame.time_epoch": "1754382938.087305000",
+          "frame.time_delta": "2.461470000",
+          "frame.time_delta_displayed": "2.461470000",
+          "frame.time_relative": "72.919097000",
+          "frame.number": "38",
+          "frame.len": "100",
+          "frame.cap_len": "100",
+          "frame.marked": "0",
+          "frame.ignored": "0",
+          "frame.protocols": "eth:ethertype:ip:udp:dns"
+        },
+        "eth": {
+          "eth.dst": "36:30:2a:ea:7c:ab",
+          "eth.dst_tree": {
+            "eth.dst_resolved": "36:30:2a:ea:7c:ab",
+            "eth.dst.oui": "3551274",
+            "eth.addr": "36:30:2a:ea:7c:ab",
+            "eth.addr_resolved": "36:30:2a:ea:7c:ab",
+            "eth.addr.oui": "3551274",
+            "eth.dst.lg": "1",
+            "eth.lg": "1",
+            "eth.dst.ig": "0",
+            "eth.ig": "0"
+          },
+          "eth.src": "f0:d5:bf:24:3b:19",
+          "eth.src_tree": {
+            "eth.src_resolved": "IntelCor_24:3b:19",
+            "eth.src.oui": "15783359",
+            "eth.src.oui_resolved": "Intel Corporate",
+            "eth.addr": "f0:d5:bf:24:3b:19",
+            "eth.addr_resolved": "IntelCor_24:3b:19",
+            "eth.addr.oui": "15783359",
+            "eth.addr.oui_resolved": "Intel Corporate",
+            "eth.src.lg": "0",
+            "eth.lg": "0",
+            "eth.src.ig": "0",
+            "eth.ig": "0"
+          },
+          "eth.type": "0x0800"
+        },
+        "ip": {
+          "ip.version": "4",
+          "ip.hdr_len": "20",
+          "ip.dsfield": "0x00",
+          "ip.dsfield_tree": {
+            "ip.dsfield.dscp": "0",
+            "ip.dsfield.ecn": "0"
+          },
+          "ip.len": "86",
+          "ip.id": "0x1407",
+          "ip.flags": "0x00",
+          "ip.flags_tree": {
+            "ip.flags.rb": "0",
+            "ip.flags.df": "0",
+            "ip.flags.mf": "0"
+          },
+          "ip.frag_offset": "0",
+          "ip.ttl": "64",
+          "ip.proto": "17",
+          "ip.checksum": "0xbe27",
+          "ip.checksum.status": "2",
+          "ip.src": "10.66.201.252",
+          "ip.addr": "10.66.201.252",
+          "ip.src_host": "10.66.201.252",
+          "ip.host": "10.66.201.252",
+          "ip.dst": "10.66.201.232",
+          "ip.addr": "10.66.201.232",
+          "ip.dst_host": "10.66.201.232",
+          "ip.host": "10.66.201.232"
+        },
+        "udp": {
+          "udp.srcport": "50907",
+          "udp.dstport": "53",
+          "udp.port": "50907",
+          "udp.port": "53",
+          "udp.length": "66",
+          "udp.checksum": "0x5506",
+          "udp.checksum.status": "2",
+          "udp.stream": "2",
+          "Timestamps": {
+            "udp.time_relative": "0.000000000",
+            "udp.time_delta": "0.000000000"
+          },
+          "udp.payload": "71:52:01:00:00:01:00:00:00:00:00:01:12:63:6f:6e:6e:65:63:74:69:76:69:74:79:2d:63:68:65:63:6b:06:75:62:75:6e:74:75:03:63:6f:6d:00:00:1c:00:01:00:00:29:05:c0:00:00:00:00:00:00"
+        },
+        "dns": {
+          "dns.id": "0x7152",
+          "dns.flags": "0x0100",
+          "dns.flags_tree": {
+            "dns.flags.response": "0",
+            "dns.flags.opcode": "0",
+            "dns.flags.truncated": "0",
+            "dns.flags.recdesired": "1",
+            "dns.flags.z": "0",
+            "dns.flags.checkdisable": "0"
+          },
+          "dns.count.queries": "1",
+          "dns.count.answers": "0",
+          "dns.count.auth_rr": "0",
+          "dns.count.add_rr": "1",
+          "Queries": {
+            "connectivity-check.ubuntu.com: type AAAA, class IN": {
+              "dns.qry.name": "connectivity-check.ubuntu.com",
+              "dns.qry.name.len": "29",
+              "dns.count.labels": "3",
+              "dns.qry.type": "28",
+              "dns.qry.class": "0x0001"
+            }
+          },
+          "Additional records": {
+            "<Root>: type OPT": {
+              "dns.resp.name": "<Root>",
+              "dns.resp.type": "41",
+              "dns.rr.udp_payload_size": "1472",
+              "dns.resp.ext_rcode": "0x00",
+              "dns.resp.edns0_version": "0",
+              "dns.resp.z": "0x0000",
+              "dns.resp.z_tree": {
+                "dns.resp.z.do": "0",
+                "dns.resp.z.reserved": "0x0000"
+              },
+              "dns.resp.len": "0"
+            }
+          }
+        }
+      }
+    }
+  },
+  {
+    "_index": "packets-2025-08-05",
+    "_type": "doc",
+    "_score": null,
+    "_source": {
+      "layers": {
+        "frame": {
+          "frame.encap_type": "1",
+          "frame.time": "Aug  5, 2025 13:35:38.088719000 PKT",
+          "frame.offset_shift": "0.000000000",
+          "frame.time_epoch": "1754382938.088719000",
+          "frame.time_delta": "0.001414000",
+          "frame.time_delta_displayed": "0.001414000",
+          "frame.time_relative": "72.920511000",
+          "frame.number": "39",
+          "frame.len": "100",
+          "frame.cap_len": "100",
+          "frame.marked": "0",
+          "frame.ignored": "0",
+          "frame.protocols": "eth:ethertype:ip:udp:dns"
+        },
+        "eth": {
+          "eth.dst": "36:30:2a:ea:7c:ab",
+          "eth.dst_tree": {
+            "eth.dst_resolved": "36:30:2a:ea:7c:ab",
+            "eth.dst.oui": "3551274",
+            "eth.addr": "36:30:2a:ea:7c:ab",
+            "eth.addr_resolved": "36:30:2a:ea:7c:ab",
+            "eth.addr.oui": "3551274",
+            "eth.dst.lg": "1",
+            "eth.lg": "1",
+            "eth.dst.ig": "0",
+            "eth.ig": "0"
+          },
+          "eth.src": "f0:d5:bf:24:3b:19",
+          "eth.src_tree": {
+            "eth.src_resolved": "IntelCor_24:3b:19",
+            "eth.src.oui": "15783359",
+            "eth.src.oui_resolved": "Intel Corporate",
+            "eth.addr": "f0:d5:bf:24:3b:19",
+            "eth.addr_resolved": "IntelCor_24:3b:19",
+            "eth.addr.oui": "15783359",
+            "eth.addr.oui_resolved": "Intel Corporate",
+            "eth.src.lg": "0",
+            "eth.lg": "0",
+            "eth.src.ig": "0",
+            "eth.ig": "0"
+          },
+          "eth.type": "0x0800"
+        },
+        "ip": {
+          "ip.version": "4",
+          "ip.hdr_len": "20",
+          "ip.dsfield": "0x00",
+          "ip.dsfield_tree": {
+            "ip.dsfield.dscp": "0",
+            "ip.dsfield.ecn": "0"
+          },
+          "ip.len": "86",
+          "ip.id": "0x88b8",
+          "ip.flags": "0x00",
+          "ip.flags_tree": {
+            "ip.flags.rb": "0",
+            "ip.flags.df": "0",
+            "ip.flags.mf": "0"
+          },
+          "ip.frag_offset": "0",
+          "ip.ttl": "64",
+          "ip.proto": "17",
+          "ip.checksum": "0x4976",
+          "ip.checksum.status": "2",
+          "ip.src": "10.66.201.252",
+          "ip.addr": "10.66.201.252",
+          "ip.src_host": "10.66.201.252",
+          "ip.host": "10.66.201.252",
+          "ip.dst": "10.66.201.232",
+          "ip.addr": "10.66.201.232",
+          "ip.dst_host": "10.66.201.232",
+          "ip.host": "10.66.201.232"
+        },
+        "udp": {
+          "udp.srcport": "39394",
+          "udp.dstport": "53",
+          "udp.port": "39394",
+          "udp.port": "53",
+          "udp.length": "66",
+          "udp.checksum": "0xb602",
+          "udp.checksum.status": "2",
+          "udp.stream": "3",
+          "Timestamps": {
+            "udp.time_relative": "0.000000000",
+            "udp.time_delta": "0.000000000"
+          },
+          "udp.payload": "58:4f:01:00:00:01:00:00:00:00:00:01:12:63:6f:6e:6e:65:63:74:69:76:69:74:79:2d:63:68:65:63:6b:06:75:62:75:6e:74:75:03:63:6f:6d:00:00:01:00:01:00:00:29:05:c0:00:00:00:00:00:00"
+        },
+        "dns": {
+          "dns.id": "0x584f",
+          "dns.flags": "0x0100",
+          "dns.flags_tree": {
+            "dns.flags.response": "0",
+            "dns.flags.opcode": "0",
+            "dns.flags.truncated": "0",
+            "dns.flags.recdesired": "1",
+            "dns.flags.z": "0",
+            "dns.flags.checkdisable": "0"
+          },
+          "dns.count.queries": "1",
+          "dns.count.answers": "0",
+          "dns.count.auth_rr": "0",
+          "dns.count.add_rr": "1",
+          "Queries": {
+            "connectivity-check.ubuntu.com: type A, class IN": {
+              "dns.qry.name": "connectivity-check.ubuntu.com",
+              "dns.qry.name.len": "29",
+              "dns.count.labels": "3",
+              "dns.qry.type": "1",
+              "dns.qry.class": "0x0001"
+            }
+          },
+          "Additional records": {
+            "<Root>: type OPT": {
+              "dns.resp.name": "<Root>",
+              "dns.resp.type": "41",
+              "dns.rr.udp_payload_size": "1472",
+              "dns.resp.ext_rcode": "0x00",
+              "dns.resp.edns0_version": "0",
+              "dns.resp.z": "0x0000",
+              "dns.resp.z_tree": {
+                "dns.resp.z.do": "0",
+                "dns.resp.z.reserved": "0x0000"
+              },
+              "dns.resp.len": "0"
+            }
+          }
+        }
+      }
+    }
+  }
+]
