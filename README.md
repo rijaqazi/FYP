@@ -28,10 +28,12 @@ The system is composed of the following core modules:
 - **Reporting Module** — aggregates threat data, severity ratings, and actions into shareable/downloadable reports.
 
 ## System Diagram
-<img width="908" height="560" alt="image" src="https://github.com/user-attachments/assets/1ba13e66-69cf-41f0-8e3a-8a1bc88e6fc7" />
+<img width="1607" height="979" alt="ChatGPT Image Jul 30, 2026, 06_33_06 PM" src="https://github.com/user-attachments/assets/626037ed-3968-452f-a6a8-0828054571b3" />
+
 
 ## Deployment Diagram
-<img width="6608" height="4148" alt="image" src="https://github.com/user-attachments/assets/46081cba-c8b4-43cf-aa59-34eec5a62bee" />
+<img width="6608" height="4148" alt="image" src="https://github.com/user-attachments/assets/8a597861-06fe-4525-8397-b08eda06c359" />
+
 
 
 ## Tech Stack
