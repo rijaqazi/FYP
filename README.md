@@ -36,7 +36,10 @@ The system is composed of the following core modules:
 
 ## User Interface
 ### Dashboard
-<img width="1492" height="804" alt="WhatsApp Image 2026-07-30 at 7 40 10 PM (1)" src="https://github.com/user-attachments/assets/7b681964-e417-4a6a-9585-b1db28b74e08" />
+<img width="1664" height="945" alt="ChatGPT Image Jul 30, 2026, 07_48_50 PM" src="https://github.com/user-attachments/assets/28772fc1-03ce-412e-9c51-ef9ad59694ca" />
+
+### IOC List
+<img width="1561" height="841" alt="ChatGPT Image Jul 30, 2026, 07_47_12 PM" src="https://github.com/user-attachments/assets/9fc6581b-4767-4bb5-933e-57b38225b2cc" />
 
 ### Alerts
 <img width="1563" height="838" alt="ChatGPT Image Jul 30, 2026, 07_44_17 PM" src="https://github.com/user-attachments/assets/f1f9be95-f631-416a-8710-040f83351ea8" />
@@ -44,6 +47,8 @@ The system is composed of the following core modules:
 ### Alert Notification
 <img width="1706" height="922" alt="ChatGPT Image Jul 30, 2026, 06_43_03 PM" src="https://github.com/user-attachments/assets/33b6b369-2027-460f-a0fe-649358a564a5" />
 
+### Rule Report
+<img width="1605" height="829" alt="ChatGPT Image Jul 30, 2026, 07_55_45 PM" src="https://github.com/user-attachments/assets/95f4208d-cc75-424b-a34d-a9ad5670663d" />
 
 
 ## Tech Stack
