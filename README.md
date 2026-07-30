@@ -32,7 +32,7 @@ The system is composed of the following core modules:
 ## Component Diagram
 <img width="464" height="532" alt="image" src="https://github.com/user-attachments/assets/104708b2-edd0-472d-b90d-f154eea1b34e" />
 ## Deployment Diagram
-<img width="450" height="546" alt="image" src="https://github.com/user-attachments/assets/8bf4679b-d1b9-4f36-a845-de26e7fcbf7c" />
+<img width="6608" height="4148" alt="image" src="https://github.com/user-attachments/assets/46081cba-c8b4-43cf-aa59-34eec5a62bee" />
 
 
 ## Tech Stack
