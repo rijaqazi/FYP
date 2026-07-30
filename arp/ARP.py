@@ -61,7 +61,7 @@ def log_alert(alert_type, src_ip, src_mac=None, start_time="N/A", duration=0,
     timestamp = time.strftime("%Y-%m-%d %H:%M:%S")
 
     # Fixed order message
-    message = f"- {alert_type.upper()} ALERT from {src_ip}"
+    message = f"{alert_type.upper()} ALERT from {src_ip}"
     if target_ip:
         message += f" | Target_IP: {target_ip}"
     if src_mac:
@@ -74,7 +74,7 @@ def log_alert(alert_type, src_ip, src_mac=None, start_time="N/A", duration=0,
     message += f" | Ports: "
     message += f" | Ports Scanned: 0"
     message += f" | Start: {start_time}"
-    message += f" | Duration: {int(duration)}s"
+    message += f" | Duration: {float(duration)}s"
 
     # Console red
     print(f"\033[91m{message}\033[0m")
@@ -84,7 +84,7 @@ def log_alert(alert_type, src_ip, src_mac=None, start_time="N/A", duration=0,
 
     # Save JSON
     alerts.append({
-        
+        "timestamp": time.time(),
         "type": alert_type,
         "src_ip": src_ip,
         "details": {

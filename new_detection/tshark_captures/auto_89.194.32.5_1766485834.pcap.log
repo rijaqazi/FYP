@@ -1,0 +1,4 @@
+Capturing on 'wlp2s0'
+ ** (tshark:13822) 15:30:37.045485 [Main MESSAGE] -- Capture started.
+ ** (tshark:13822) 15:30:37.045637 [Main MESSAGE] -- File: "/home/defender/Desktop/new_detection/tshark_captures/auto_89.194.32.5_1766485834.pcap"
+200 packets captured

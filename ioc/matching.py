@@ -6,7 +6,7 @@ import uuid
 import re
 from collections import defaultdict
 
-# --- Load whitelist if available ---
+
 def load_whitelist(file="whitelist.json"):
     if os.path.exists(file):
         with open(file, "r") as f:
@@ -14,138 +14,190 @@ def load_whitelist(file="whitelist.json"):
     return {"ip_addresses": [], "mac_addresses": []}
 
 
-# --- Extract IOCs from .log files ---
-def extract_iocs_from_logs(folder="."):
-    ip_regex = r"\b(?:\d{1,3}\.){3}\d{1,3}\b"
-    mac_regex = r"(?:[0-9a-fA-F]{2}:){5}[0-9a-fA-F]{2}"
-
-    iocs = {"ip_addresses": set(), "mac_addresses": set()}
-    log_files = [f for f in os.listdir(folder) if f.endswith(".log")]
-
-    for log_file in log_files:
-        with open(os.path.join(folder, log_file), "r") as f:
-            text = f.read()
-            iocs["ip_addresses"].update(re.findall(ip_regex, text))
-            iocs["mac_addresses"].update(re.findall(mac_regex, text))
-
-    return {k: list(v) for k, v in iocs.items()}
+def load_latest_iocs(iocs_file="extracted_iocs/latest_iocs.json"):
+    if os.path.exists(iocs_file):
+        with open(iocs_file, "r") as f:
+            return json.load(f)
+    return {"ip_addresses": [], "mac_addresses": [], "domains": [], "urls": [], "hashes": []}
 
 
-# --- Parse Alerts from .log files ---
-def parse_alerts(folder="."):
+def parse_alerts(log_file):
     alerts = []
-    log_files = [f for f in os.listdir(folder) if f.endswith(".log")]
-
-    for log_file in log_files:
-        with open(os.path.join(folder, log_file), "r") as f:
+    try:
+        with open(log_file, "r") as f:
             for line in f:
                 line = line.strip()
-                if not line:
+                if not line.startswith("[ALERT]"):
                     continue
 
-                # Capture alert type correctly (e.g., ARP_MITM ALERT)
-                alert_type_match = re.search(r"-\s+(\w+)\s+ALERT", line)
-                alert_type = alert_type_match.group(1) if alert_type_match else "Unknown"
 
-                src_ip = re.search(r"from\s+([\d\.]+)", line)
-                ports = re.search(r"Ports:\s*([\d,\s]*)", line)
-                duration = re.search(r"Duration:\s+([\d\.]+)s", line)
+                alert_type_match = re.search(r"\[ALERT\]\s+([^\s]+)", line)
+                alert_type = alert_type_match.group(1) if alert_type_match else "Unknown"
+                
+                src_ip_match = re.search(r"from\s+([\d\.]+)", line)
+                src_ip = src_ip_match.group(1) if src_ip_match else None
+                
+                target_ip_match = re.search(r"Target_IP:\s*([^\s|]+)", line)
+                target_ip = target_ip_match.group(1) if target_ip_match else "N/A"
+                
+                ports_match = re.search(r"Ports:\s*([^\s|]+)", line)
+                ports = ports_match.group(1) if ports_match else ""
+                
+                duration_match = re.search(r"Duration:\s*([^\s|]+)", line)
+                duration = duration_match.group(1) if duration_match else "0"
+                
+
+                mac_match = re.search(r"SRC_MAC:\s*([^\s|]+)", line)
+                src_mac = mac_match.group(1) if mac_match else None
 
                 alerts.append({
                     "type": alert_type,
-                    "src_ip": src_ip.group(1) if src_ip else None,
+                    "src_ip": src_ip,
+                    "target_ip": target_ip,
+                    "src_mac": src_mac,
                     "details": {
-                        "ports": ports.group(1).strip() if ports else "",
-                        "duration": duration.group(1) if duration else "0",
-                        "raw_log": line  # 🟢 Raw log stored
+                        "ports": ports,
+                        "duration": duration,
+                        "raw_log": line
                     }
                 })
+    except Exception as e:
+        print(f"[x] Error parsing alerts: {e}")
+    
     return alerts
 
 
-# --- Load data ---
-whitelist = load_whitelist("whitelist.json")
-iocs = extract_iocs_from_logs(".")
-alerts = parse_alerts(".")
+def check_existing_bundle(ip, stix_folder="stix_output"):
 
-# --- Match IOCs and organize by IP ---
-matched = defaultdict(lambda: {"types": set(), "details": [], "macs": set()})
+    if not os.path.exists(stix_folder):
+        return False
+    
+    ip_pattern = ip.replace('.', '_')
+    for filename in os.listdir(stix_folder):
+        if ip_pattern in filename and filename.endswith('.json'):
+            return True
+    return False
 
-for alert in alerts:
-    ip = alert.get("src_ip", "")
-    macs = iocs.get("mac_addresses", [])
-    alert_type = alert.get("type", "Unknown")
-    details = alert.get("details", {})
 
-    # --- Whitelist check ---
-    if ip in whitelist.get("ip_addresses", []):
-        continue
+def generate_stix_bundles():
 
-    # Match by IP
-    if ip in iocs.get("ip_addresses", []):
-        matched[ip]["types"].add(alert_type)
-        matched[ip]["details"].append(details)
+    DETECTION_FOLDER = "/home/defender/Desktop/new_detection"
+    LOG_FILE = f"{DETECTION_FOLDER}/alerts.log"
+    IOC_FILE = "extracted_iocs/latest_iocs.json"
+    
 
-    # Match by MAC address
-    for mac in macs:
-        if mac in str(details) and mac not in whitelist.get("mac_addresses", []):
-            matched[ip]["macs"].add(mac)
+    whitelist = load_whitelist("whitelist.json")
+    iocs = load_latest_iocs(IOC_FILE)
+    alerts = parse_alerts(LOG_FILE)
+    
+    if not alerts:
+        print("[!] No alerts found to process")
+        return
+    
 
-# --- Create STIX bundles per IP ---
-timestamp = time.strftime("%Y-%m-%dT%H:%M:%S.000Z", time.gmtime())
-os.makedirs("stix_output", exist_ok=True)
+    matched = defaultdict(lambda: {"types": set(), "details": [], "macs": set()})
+    
+    for alert in alerts:
+        ip = alert.get("src_ip", "")
+        alert_type = alert.get("type", "Unknown")
+        details = alert.get("details", {})
+        src_mac = alert.get("src_mac")
+        
 
-for ip, info in matched.items():
-    ports = set()
-    total_duration = 0.0
-    raw_logs = set()  # 🟢 Dedup raw logs
+        if ip in whitelist.get("ip_addresses", []):
+            continue
+        if src_mac and src_mac in whitelist.get("mac_addresses", []):
+            continue
+        
 
-    for d in info["details"]:
-        if isinstance(d, dict):
-            if d.get("ports"):
-                ports.update([p.strip() for p in d.get("ports", "").split(",") if p.strip()])
-            try:
-                total_duration += float(d.get("duration", 0))
-            except ValueError:
-                pass
-            if d.get("raw_log"):
-                raw_logs.add(d["raw_log"])
+        if ip in iocs.get("ip_addresses", []):
+            matched[ip]["types"].add(alert_type)
+            matched[ip]["details"].append(details)
+            
 
-    pattern = f"[ipv4-addr:value = '{ip}']"
-    for mac in info["macs"]:
-        pattern += f" AND [mac-addr:value = '{mac}']"
+        if src_mac and src_mac != "N/A":
+            matched[ip]["macs"].add(src_mac)
+    
+    # Create STIX bundles for new IPs only
+    timestamp = time.strftime("%Y-%m-%dT%H:%M:%S.000Z", time.gmtime())
+    os.makedirs("stix_output", exist_ok=True)
+    new_bundles = 0
+    
+    for ip, info in matched.items():
+        # Skip if bundle already exists
+        if check_existing_bundle(ip):
+            print(f"[>] Skipping existing STIX bundle for IP: {ip}")
+            continue
+        
+        ports = set()
+        total_duration = 0.0
+        raw_logs = set()
 
-    indicator = {
-        "type": "indicator",
-        "id": "indicator--" + str(uuid.uuid4()),
-        "created": timestamp,
-        "modified": timestamp,
-        "name": f"Malicious IP",   # 🟢 Name is now malicious IP
-        "ip_address": ip,              # 🟢 New field for IP address
-        "description": (
-            f"Threats from {ip} | Ports: {', '.join(sorted(ports)) if ports else 'None'} "
-            f"| Duration: {total_duration:.1f}s  "
-            f"| Raw Logs: {len(raw_logs)} entries attached"
-        ),
-        "pattern": pattern,
-        "pattern_type": "stix",
-        "valid_from": timestamp,
-        # 🔥 YAHAN IMPORTANT CHANGE HAI - labels field add kiya
-        "labels": ["malicious-activity"],  # 🟢 REQUIRED FIELD for STIX indicators
-        "x_raw_logs": list(raw_logs)  # 🟢 Custom field with raw log evidence
-    }
+        for d in info["details"]:
+            if isinstance(d, dict):
+                if d.get("ports"):
+                    ports.update([p.strip() for p in d.get("ports", "").split(",") if p.strip()])
+                try:
+                    total_duration += float(d.get("duration", 0))
+                except ValueError:
+                    pass
+                if d.get("raw_log"):
+                    raw_logs.add(d["raw_log"])
 
-    bundle = {
-        "type": "bundle",
-        "id": "bundle--" + str(uuid.uuid4()),
-        "objects": [indicator]
-    }
+        # Build pattern
+        pattern = f"[ipv4-addr:value = '{ip}']"
+        for mac in info["macs"]:
+            pattern += f" AND [mac-addr:value = '{mac}']"
 
-    # --- Make filename unique by adding timestamp ---
-    run_time = time.strftime("%Y%m%d_%H%M%S", time.gmtime())
-    outname = f"stix_output/stix_bundle_{ip.replace('.', '_')}_{run_time}.json"
+        # Create indicator with IP address field
+        indicator = {
+            "type": "indicator",
+            "id": "indicator--" + str(uuid.uuid4()),
+            "created": timestamp,
+            "modified": timestamp,
+            "name": "Malicious IP",
+            "ip_address": ip,  
+            "description": (
+                f"Threats from {ip} | Ports: {', '.join(sorted(ports)) if ports else 'None'} | "
+                f"Duration: {total_duration:.1f}s | "
+                f"Raw Logs: {len(raw_logs)} entries attached"
+            ),
+            "pattern": pattern,
+            "pattern_type": "stix",
+            "valid_from": timestamp,
+            "labels": ["malicious-activity"],
+            "x_raw_logs": list(raw_logs)
+        }
 
-    with open(outname, "w") as f:
-        json.dump(bundle, f, indent=4)
+        # Create bundle
+        bundle_id = "bundle--" + str(uuid.uuid4())
+        bundle = {
+            "type": "bundle",
+            "id": bundle_id,
+            "bundle_id": bundle_id,  
+            "objects": [indicator]
+        }
 
-print("✅ STIX Bundles generated per IP in: stix_output/ (Unique files each run)")
+        # Create unique filename
+        run_time = time.strftime("%Y%m%d_%H%M%S", time.gmtime())
+        outname = f"stix_output/stix_bundle_{ip.replace('.', '_')}_{run_time}.json"
+
+        with open(outname, "w") as f:
+            json.dump(bundle, f, indent=4)
+        
+        new_bundles += 1
+        print(f"[+] Created new STIX bundle for IP: {ip} → {outname}")
+    
+    if new_bundles == 0:
+        print("[-] No new STIX bundles needed (all IPs already processed)")
+
+def monitor_and_generate():
+    """Continuously monitor for new alerts and generate STIX bundles"""
+    print(" Monitoring for new alerts to generate STIX bundles every 30 seconds...")
+    
+    while True:
+        generate_stix_bundles()
+        time.sleep(30)
+
+if __name__ == "__main__":
+    monitor_and_generate()

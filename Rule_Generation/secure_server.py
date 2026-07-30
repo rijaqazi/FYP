@@ -16,7 +16,7 @@ import hashlib
 import time
 import getpass
 from functools import wraps
-from flask import Flask, request, jsonify, send_from_directory, abort
+from flask import Flask, request, jsonify, send_from_directory, abort, redirect, url_for
 
 # CONFIG
 UPLOAD_DIR = os.path.abspath("uploads")
@@ -64,7 +64,7 @@ def ensure_creds():
     print(f"Credentials saved to {CREDS_FILE} (file permission restricted).")
     return load_creds()
 
-# decorator for basic auth
+
 def check_auth(username, password):
     creds = load_creds()
     if not creds:
@@ -112,38 +112,43 @@ def list_uploaded_files():
         })
     return out
 
-# ----- endpoints -----
+
+@app.route("/")
+@requires_auth
+def root():
+    return redirect(url_for("discover"))
+
 @app.route("/health", methods=["GET"])
 def health():
-    return jsonify({"status":"ok", "uploads_dir": UPLOAD_DIR})
+    return jsonify({"status": "ok", "uploads_dir": UPLOAD_DIR})
 
 @app.route("/discover", methods=["GET"])
 @requires_auth
 def discover():
     files = list_uploaded_files()
-    return jsonify({"status":"ok", "files": files})
+    return jsonify({"status": "ok", "files": files})
 
 @app.route("/upload", methods=["POST"])
 @requires_auth
 def upload():
     if "file" not in request.files:
-        return jsonify({"status":"error","message":"no file part"}), 400
+        return jsonify({"status": "error", "message": "no file part"}), 400
     f = request.files["file"]
     if f.filename == "":
-        return jsonify({"status":"error","message":"empty filename"}), 400
+        return jsonify({"status": "error", "message": "empty filename"}), 400
     filename = os.path.basename(f.filename)
     dest_path = os.path.join(UPLOAD_DIR, filename)
 
-    # read into memory temporarily to compute hash (small zip files expected)
+    
     data = f.read()
     sha = hashlib.sha256(data).hexdigest()
 
-    # if file exists and hash matches -> duplicate
+    
     if os.path.exists(dest_path):
         existing_sha = file_sha256(dest_path)
         if existing_sha == sha:
-            return jsonify({"status":"duplicate","message":"file already exists with same content","filename":filename,"sha256":sha}), 200
-        # same name but different content -> save with suffix to avoid overwrite
+            return jsonify({"status": "duplicate", "message": "file already exists with same content", "filename": filename, "sha256": sha}), 200
+       
         base, ext = os.path.splitext(filename)
         i = 1
         while True:
@@ -159,7 +164,7 @@ def upload():
     with open(dest_path, "wb") as out:
         out.write(data)
     os.chmod(dest_path, 0o640)
-    return jsonify({"status":"ok","filename":filename,"sha256":sha}), 201
+    return jsonify({"status": "ok", "filename": filename, "sha256": sha}), 201
 
 @app.route("/download/<path:filename>", methods=["GET"])
 @requires_auth
@@ -174,5 +179,5 @@ if __name__ == "__main__":
         print("Credential creation aborted.")
         raise
 
-    print("Starting secure Flask upload server on http://127.0.0.1:5000")
-    app.run(host="0.0.0.0", port=5000, debug=False)
+    print("Starting secure Flask upload server on http://127.0.0.1:5005")
+    app.run(host="0.0.0.0", port=5005, debug=False)

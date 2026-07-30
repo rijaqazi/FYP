@@ -31,8 +31,7 @@ alerted_ips = set()
 all_alerts = []  # store alerts for JSON
 
 # === ALERT FUNCTION ===
-
-def log_icmp_alert(alert_type, src_ip, description, times, dst_ip, src_mac):
+def log_alert(alert_type, src_ip, msg, times, dst_ip="N/A", src_mac="N/A"):
     key = (alert_type, src_ip)
     if key in alerted_ips:
         return  # already alerted
@@ -40,19 +39,18 @@ def log_icmp_alert(alert_type, src_ip, description, times, dst_ip, src_mac):
 
     start_time = time.ctime(min(times)) if times else "N/A"
     duration = max(times) - min(times) if len(times) > 1 else 0.0
-    timestamp = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime())  # <-- FIX
 
-    # --- Consistent ICMP alert format (same as ARP/Nmap style) ---
+    # --- Fixed Order Format with float seconds ---
     alert_str = (
-        f"{timestamp} - {alert_type.upper()} ALERT from {src_ip} | "
-        f"Target_IP: {dst_ip} | "
-        f"SRC_MAC: {src_mac if src_mac else 'N/A'} | "
-        f"Claimed_MAC: N/A | "
-        f"Previous_MAC: N/A | "
-        f"Ports:  | "
-        f"Ports Scanned: 0 | "
-        f"Start: {start_time} | "
-        f"Duration: {duration:.1f}s"
+        f"[ALERT] {alert_type.upper()} from {src_ip}"
+        f" | Target_IP: {dst_ip}"
+        f" | SRC_MAC: {src_mac}"
+        f" | Claimed_MAC: N/A"
+        f" | Previous_MAC: N/A"
+        f" | Ports: "
+        f" | Ports Scanned: 0"
+        f" | Start: {start_time}"
+        f" | Duration: {duration:.1f}s"
     )
 
     # Console (red)
@@ -62,20 +60,19 @@ def log_icmp_alert(alert_type, src_ip, description, times, dst_ip, src_mac):
     with open(LOG_FILE, "a") as log_f:
         log_f.write(alert_str + "\n")
 
-    # Save JSON (for structured analysis)
+    # Save JSON
     all_alerts.append({
-        "timestamp": timestamp,
+    	"timestamp": time.time(),
         "type": alert_type,
         "source_ip": src_ip,
         "target_ip": dst_ip,
-        "src_mac": src_mac if src_mac else "N/A",
+        "src_mac": src_mac,
         "claimed_mac": "N/A",
         "previous_mac": "N/A",
         "ports": "",
         "ports_scanned": 0,
         "start_time": start_time,
-        "duration_seconds": round(duration, 1),
-        "description": description
+        "duration_seconds": round(duration, 1)
     })
 
 
@@ -122,7 +119,7 @@ for pkt in packets:
         times['echo_flood'][src_ip].append(ts)
         times['echo_flood'][src_ip] = [t for t in times['echo_flood'][src_ip] if ts - t <= FLOOD_WINDOW]
         if len(times['echo_flood'][src_ip]) >= THRESHOLDS['echo_flood']:
-             log_icmp_alert("ICMP Echo Request Flood", src_ip,
+            log_alert("ICMP Echo Request Flood", src_ip,
                       f"{len(times['echo_flood'][src_ip])} pings in {FLOOD_WINDOW}s",
                       times['echo_flood'][src_ip], dst_ip, src_mac)
 
@@ -131,7 +128,7 @@ for pkt in packets:
         times['smurf'][src_ip].append(ts)
         times['smurf'][src_ip] = [t for t in times['smurf'][src_ip] if ts - t <= FLOOD_WINDOW]
         if len(times['smurf'][src_ip]) >= THRESHOLDS['smurf']:
-             log_icmp_alert("Smurf Attack", src_ip,
+            log_alert("Smurf Attack", src_ip,
                       f"{len(times['smurf'][src_ip])} broadcasts in {FLOOD_WINDOW}s to {dst_ip}",
                       times['smurf'][src_ip], dst_ip, src_mac)
 
@@ -140,7 +137,7 @@ for pkt in packets:
         times['timestamp_flood'][src_ip].append(ts)
         times['timestamp_flood'][src_ip] = [t for t in times['timestamp_flood'][src_ip] if ts - t <= FLOOD_WINDOW]
         if len(times['timestamp_flood'][src_ip]) >= THRESHOLDS['timestamp_flood']:
-             log_icmp_alert("ICMP Timestamp Request Flood", src_ip,
+            log_alert("ICMP Timestamp Request Flood", src_ip,
                       f"{len(times['timestamp_flood'][src_ip])} in {FLOOD_WINDOW}s",
                       times['timestamp_flood'][src_ip], dst_ip, src_mac)
 
@@ -149,7 +146,7 @@ for pkt in packets:
         times['mask_flood'][src_ip].append(ts)
         times['mask_flood'][src_ip] = [t for t in times['mask_flood'][src_ip] if ts - t <= FLOOD_WINDOW]
         if len(times['mask_flood'][src_ip]) >= THRESHOLDS['mask_flood']:
-          log_icmp_alert("ICMP Address Mask Request Flood", src_ip,
+            log_alert("ICMP Address Mask Request Flood", src_ip,
                       f"{len(times['mask_flood'][src_ip])} in {FLOOD_WINDOW}s",
                       times['mask_flood'][src_ip], dst_ip, src_mac)
 
@@ -163,7 +160,7 @@ for pkt in packets:
         times['fragment_flood'][key].append(ts)
         times['fragment_flood'][key] = [t for t in times['fragment_flood'][key] if ts - t <= FLOOD_WINDOW]
         if len(times['fragment_flood'][key]) >= THRESHOLDS['fragment_flood']:
-             log_icmp_alert("ICMP Fragmentation Flood", src_ip,
+            log_alert("ICMP Fragmentation Flood", src_ip,
                       f"{len(times['fragment_flood'][key])} fragments to {dst_ip} in {FLOOD_WINDOW}s",
                       times['fragment_flood'][key], dst_ip, src_mac)
 

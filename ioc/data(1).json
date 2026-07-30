@@ -1,0 +1,26 @@
+{
+  "backend": {
+    "module": "medallion.backends.memory_backend",
+    "module_class": "MemoryBackend"
+  },
+  "users": {
+    "admin": "password123"
+  },
+  "api_roots": {
+    "api1": {
+      "title": "IOC API Root",
+      "description": "Primary IOC API Root",
+      "collections": {
+        "91a7b528-80eb-42ed-a74d-c6fbd5a26116": {
+          "title": "IOC Collection",
+          "description": "STIX IOC Collection",
+          "can_read": true,
+          "can_write": true,
+          "media_types": ["application/stix+json; version=2.1"],
+          "objects": []
+        }
+      }
+    }
+  }
+}
+

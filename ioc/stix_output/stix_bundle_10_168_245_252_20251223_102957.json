@@ -1,0 +1,23 @@
+{
+    "type": "bundle",
+    "id": "bundle--9edc6357-3336-48d0-bda2-bd6a35e4da7a",
+    "bundle_id": "bundle--9edc6357-3336-48d0-bda2-bd6a35e4da7a",
+    "objects": [
+        {
+            "type": "indicator",
+            "id": "indicator--66577c38-d35c-4b58-8102-20cb9f9a3911",
+            "created": "2025-12-23T10:29:57.000Z",
+            "modified": "2025-12-23T10:29:57.000Z",
+            "name": "Malicious IP",
+            "ip_address": "10.168.245.252",
+            "description": "Threats from 10.168.245.252 | Ports: None | Duration: 0.0s | Raw Logs: 0 entries attached",
+            "pattern": "[ipv4-addr:value = '10.168.245.252'] AND [mac-addr:value = 'fa:08:32:21:1f:f8']",
+            "pattern_type": "stix",
+            "valid_from": "2025-12-23T10:29:57.000Z",
+            "labels": [
+                "malicious-activity"
+            ],
+            "x_raw_logs": []
+        }
+    ]
+}

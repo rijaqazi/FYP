@@ -1,0 +1,23 @@
+{
+    "type": "bundle",
+    "id": "bundle--88b274ab-e9e1-4e05-9be5-5653a1587708",
+    "bundle_id": "bundle--88b274ab-e9e1-4e05-9be5-5653a1587708",
+    "objects": [
+        {
+            "type": "indicator",
+            "id": "indicator--cf3e4b40-1aaa-4028-ac3e-e381f6c58014",
+            "created": "2025-10-28T04:52:20.000Z",
+            "modified": "2025-10-28T04:52:20.000Z",
+            "name": "Malicious IP",
+            "ip_address": "142.251.37.78",
+            "description": "Threats from 142.251.37.78 | Ports: None | Duration: 0.0s | Raw Logs: 0 entries attached",
+            "pattern": "[ipv4-addr:value = '142.251.37.78'] AND [mac-addr:value = '52:7f:3c:a8:0c:17']",
+            "pattern_type": "stix",
+            "valid_from": "2025-10-28T04:52:20.000Z",
+            "labels": [
+                "malicious-activity"
+            ],
+            "x_raw_logs": []
+        }
+    ]
+}

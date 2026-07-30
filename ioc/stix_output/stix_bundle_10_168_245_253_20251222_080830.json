@@ -1,0 +1,26 @@
+{
+    "type": "bundle",
+    "id": "bundle--52790b3e-321c-4e06-84ce-c92e15df2cd5",
+    "bundle_id": "bundle--52790b3e-321c-4e06-84ce-c92e15df2cd5",
+    "objects": [
+        {
+            "type": "indicator",
+            "id": "indicator--201f10f1-2d99-494a-a322-6f0406b80ade",
+            "created": "2025-12-22T08:08:30.000Z",
+            "modified": "2025-12-22T08:08:30.000Z",
+            "name": "Malicious IP",
+            "ip_address": "10.168.245.253",
+            "description": "Threats from 10.168.245.253 | Ports: None | Duration: 0.0s | Raw Logs: 2 entries attached",
+            "pattern": "[ipv4-addr:value = '10.168.245.253'] AND [mac-addr:value = 'f0:d5:bf:24:3b:19']",
+            "pattern_type": "stix",
+            "valid_from": "2025-12-22T08:08:30.000Z",
+            "labels": [
+                "malicious-activity"
+            ],
+            "x_raw_logs": [
+                "[ALERT] OS_FINGERPRINT from 10.168.245.253 | Target_IP: 89.192.55.176 | SRC_MAC: f0:d5:bf:24:3b:19 | Claimed_MAC: N/A | Previous_MAC: N/A | Ports:  | Ports Scanned: 0 | Count: 42 | Start: Mon Dec 22 13:04:47 2025 | Duration: 9.982340s",
+                "[ALERT] OS_FINGERPRINT from 10.168.245.253 | Target_IP: 89.194.32.5 | SRC_MAC: f0:d5:bf:24:3b:19 | Claimed_MAC: N/A | Previous_MAC: N/A | Ports:  | Ports Scanned: 0 | Count: 77 | Start: Mon Dec 22 13:04:56 2025 | Duration: 9.929051s"
+            ]
+        }
+    ]
+}

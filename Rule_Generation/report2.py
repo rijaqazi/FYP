@@ -1,11 +1,11 @@
 #!/usr/bin/env python3
 """
 Usage:
-    python3 report.py --json rules_repository/rule-xxxx.json \
-        --out reports --hours 24 --ipinfo TOKEN
+    One-time: python3 report.py --hours 24 --ipinfo TOKEN
+    Monitor: python3 report.py --monitor --hours 24 --ipinfo TOKEN
 """
 
-import os, io, json, zipfile, base64, argparse, hashlib, requests, math
+import os, io, json, zipfile, base64, argparse, hashlib, requests, math, time
 from datetime import datetime, timedelta
 from collections import Counter
 from shutil import copy2
@@ -22,13 +22,48 @@ from dateutil import parser as dtparser
 # --------------------
 # CONFIG
 # --------------------
-MONGO_URI = "mongodb://localhost:27017"
+MONGO_URI = "mongodb+srv://fatimazareen889_db_user:ccicCyFyFELe6mEt@threatsentinel.0cfaybg.mongodb.net/?appName=threatsentinel"
 ALERTS_DB = "Alerts"
 ALERTS_COLLECTION = "Alerts"
+RULES_DIR = "rules_repository"
+
+# Reports aur zip ke alag folders
+REPORTS_BASE_DIR = "/home/defender/Desktop/ThreatSentinel/Bootstrap"
+REPORTS_FOLDER = f"{REPORTS_BASE_DIR}"
+ZIP_FOLDER = f"{REPORTS_BASE_DIR}/zip"
+
+CHECK_INTERVAL = 30  # Check every 30 seconds
 
 # --------------------
-# Helpers
+# Track processed rules
 # --------------------
+processed_rules = set()
+
+def load_processed_rules():
+    """Load already processed rule IDs from existing reports"""
+    global processed_rules
+    try:
+        # Check zip directory for existing reports
+        zip_dir = os.path.join(REPORTS_BASE_DIR, "zip")
+        if os.path.exists(zip_dir):
+            for filename in os.listdir(zip_dir):
+                if filename.endswith('.zip'):
+                    rule_id = filename.replace('.zip', '')
+                    processed_rules.add(rule_id)
+        
+        # Also check REPORT directory
+        report_dir = os.path.join(REPORTS_BASE_DIR, "REPORT")
+        if os.path.exists(report_dir):
+            for filename in os.listdir(report_dir):
+                if filename.endswith('-report.pdf'):
+                    rule_id = filename.replace('-report.pdf', '')
+                    processed_rules.add(rule_id)
+        
+        print(f"[!] Loaded {len(processed_rules)} previously processed rules")
+    except Exception as e:
+        print(f"[x]  Error loading processed rules: {e}")
+        processed_rules = set()
+
 def load_rule_json(path):
     with open(path, "r", encoding="utf-8") as fh:
         return json.load(fh)
@@ -54,7 +89,6 @@ def get_related_alerts(client, src_ip, hours=24):
             timestamps.append(parsed)
         type_counts[atk] += 1
     return len(docs), ids, dict(type_counts), timestamps
-
 
 def get_raw_alert(client, alert_id):
     db = client[ALERTS_DB]
@@ -215,101 +249,176 @@ HTML_TEMPLATE = """
 </html>
 """
 
-def generate_report(rule_json_path, outdir="reports", hours=24, ipinfo_token=None):
-    rule = load_rule_json(rule_json_path)
-    rule_id = rule.get("rule_id") or os.path.splitext(os.path.basename(rule_json_path))[0]
+def generate_report_for_rule(rule_json_path, outdir="reports", hours=24, ipinfo_token=None):
+    """Generate report for a single rule file"""
+    try:
+        rule = load_rule_json(rule_json_path)
+        rule_id = rule.get("rule_id") or os.path.splitext(os.path.basename(rule_json_path))[0]
 
-    rule.setdefault("target_ip", None)
-    rule.setdefault("duration", rule.get("duration_sec", 0))
-    rule.setdefault("ports", [])
-    rule.setdefault("ports_scanned_count", 0)
-    rule.setdefault("start_time", None)
-    rule.setdefault("decision", {"action": "N/A", "reason": "N/A"})
+        # Skip if already processed
+        if rule_id in processed_rules:
+            print(f"[>] Skipping already processed rule: {rule_id}")
+            return None
 
-    # Create REPORTS and zip folders
-    reports_dir = os.path.join(outdir, "REPORT")
-    zip_dir = os.path.join(outdir, "zip")
-    os.makedirs(reports_dir, exist_ok=True)
-    os.makedirs(zip_dir, exist_ok=True)
+        rule.setdefault("target_ip", None)
+        rule.setdefault("duration", rule.get("duration_sec", 0))
+        rule.setdefault("ports", [])
+        rule.setdefault("ports_scanned_count", 0)
+        rule.setdefault("start_time", None)
+        rule.setdefault("decision", {"action": "N/A", "reason": "N/A"})
 
-    client = MongoClient(MONGO_URI)
-    related_count, related_ids, type_counts, timestamps = get_related_alerts(
-        client, rule.get("src_ip"), hours=hours)
+        # Create REPORTS and zip folders
+        reports_dir = os.path.join(outdir, "REPORT")
+        zip_dir = os.path.join(outdir, "zip")
+        os.makedirs(reports_dir, exist_ok=True)
+        os.makedirs(zip_dir, exist_ok=True)
 
-    if rule.get("source_alert_id"):
-        raw_alert = get_raw_alert(client, rule["source_alert_id"])
-        if raw_alert:
-            compact = {k: raw_alert.get(k) for k in ["alert_type", "src_ip", "target_ip", "ports", "start_time", "duration"]}
-            rule["raw_alert"] = ", ".join(f"{k}: {v if v is not None else 'null'}" for k,v in compact.items())
+        client = MongoClient(MONGO_URI)
+        related_count, related_ids, type_counts, timestamps = get_related_alerts(
+            client, rule.get("src_ip"), hours=hours)
 
-            # Map missing fields from Mongo alert
-            rule["start_time"] = rule.get("start_time") or raw_alert.get("start_time")
-            rule["target_ip"] = rule.get("target_ip") or raw_alert.get("target_ip")
-            rule["ports"] = raw_alert.get("ports", []) if not rule.get("ports") else rule["ports"]
+        if rule.get("source_alert_id"):
+            raw_alert = get_raw_alert(client, rule["source_alert_id"])
+            if raw_alert:
+                compact = {k: raw_alert.get(k) for k in ["alert_type", "src_ip", "target_ip", "ports", "start_time", "duration"]}
+                rule["raw_alert"] = ", ".join(f"{k}: {v if v is not None else 'null'}" for k,v in compact.items())
 
-    ipinfo_data = None
-    ipinfo_simple = 'N/A'
-    if rule.get("src_ip"):
-        raw_ipinfo = fetch_ipinfo(rule.get("src_ip"), token=ipinfo_token)
-        ipinfo_data = normalize_ipinfo(raw_ipinfo)
-        if ipinfo_data and "raw" in ipinfo_data:
-            ipinfo_simple = ", ".join(f"{k}: {v if v is not None else 'null'}" for k,v in ipinfo_data["raw"].items())
+                # Map missing fields from Mongo alert
+                rule["start_time"] = rule.get("start_time") or raw_alert.get("start_time")
+                rule["target_ip"] = rule.get("target_ip") or raw_alert.get("target_ip")
+                rule["ports"] = raw_alert.get("ports", []) if not rule.get("ports") else rule["ports"]
 
-    cvss_score = float(rule.get("cvss_score") or 0)
-    reputation_score = 0.5
-    if ipinfo_data and ipinfo_data.get("org"):
-        org = ipinfo_data.get("org", "").lower()
-        reputation_score = 1.0 if any(x in org for x in ["bad","malware","spam","abuse"]) else 0.6
+        ipinfo_data = None
+        ipinfo_simple = 'N/A'
+        if rule.get("src_ip"):
+            raw_ipinfo = fetch_ipinfo(rule.get("src_ip"), token=ipinfo_token)
+            ipinfo_data = normalize_ipinfo(raw_ipinfo)
+            if ipinfo_data and "raw" in ipinfo_data:
+                ipinfo_simple = ", ".join(f"{k}: {v if v is not None else 'null'}" for k,v in ipinfo_data["raw"].items())
 
-    risk = compute_risk(cvss_score, related_count, reputation_score, 0.5)
-    rcat = risk_category(risk)
-    pie_b64 = make_pie_chart(type_counts)
-    signature = hashlib.sha256(json.dumps(rule, sort_keys=True).encode()).hexdigest()
-    executive_summary = f"Detected {rule.get('alert_type')} from {rule.get('src_ip')} targeting {rule.get('target_ip') or 'N/A'}."
-    color = "#f39c12" if rcat in ("Medium","High") else ("#e74c3c" if rcat=="Critical" else "#2ecc71")
-    created = datetime.utcnow().isoformat(timespec='seconds') + 'Z'
-    rule_ports = ", ".join(map(str, rule["ports"])) if rule["ports"] else 'None'
+        cvss_score = float(rule.get("cvss_score") or 0)
+        reputation_score = 0.5
+        if ipinfo_data and ipinfo_data.get("org"):
+            org = ipinfo_data.get("org", "").lower()
+            reputation_score = 1.0 if any(x in org for x in ["bad","malware","spam","abuse"]) else 0.6
 
-    tmpl = Template(HTML_TEMPLATE)
-    html = tmpl.render(
-        rule=rule, rule_id=rule_id,
-        risk_score=risk, risk_category=rcat,
-        related_count=related_count,
-        pie_b64=pie_b64, hours=hours,
-        ipinfo=ipinfo_data,
-        reputation_score=reputation_score,
-        created_by=rule.get("created_by","rule-generator"),
-        reviewed_by=rule.get("reviewed_by"),
-        signature_hash=signature,
-        executive_summary=executive_summary,
-        color=color,
-        created=created,
-        cvss_score=cvss_score,
-        ipinfo_simple=ipinfo_simple,
-        rule_ports=rule_ports
-    )
+        risk = compute_risk(cvss_score, related_count, reputation_score, 0.5)
+        rcat = risk_category(risk)
+        pie_b64 = make_pie_chart(type_counts)
+        signature = hashlib.sha256(json.dumps(rule, sort_keys=True).encode()).hexdigest()
+        executive_summary = f"Detected {rule.get('alert_type')} from {rule.get('src_ip')} targeting {rule.get('target_ip') or 'N/A'}."
+        color = "#f39c12" if rcat in ("Medium","High") else ("#e74c3c" if rcat=="Critical" else "#2ecc71")
+        created = datetime.utcnow().isoformat(timespec='seconds') + 'Z'
+        rule_ports = ", ".join(map(str, rule["ports"])) if rule["ports"] else 'None'
 
-    pdf_path = os.path.join(reports_dir, f"{rule_id}-report.pdf")
-    HTML(string=html).write_pdf(pdf_path)
+        tmpl = Template(HTML_TEMPLATE)
+        html = tmpl.render(
+            rule=rule, rule_id=rule_id,
+            risk_score=risk, risk_category=rcat,
+            related_count=related_count,
+            pie_b64=pie_b64, hours=hours,
+            ipinfo=ipinfo_data,
+            reputation_score=reputation_score,
+            created_by=rule.get("created_by","rule-generator"),
+            reviewed_by=rule.get("reviewed_by"),
+            signature_hash=signature,
+            executive_summary=executive_summary,
+            color=color,
+            created=created,
+            cvss_score=cvss_score,
+            ipinfo_simple=ipinfo_simple,
+            rule_ports=rule_ports
+        )
 
-    # Create zip file with RULE.json and REPORT.pdf
-    zip_path = os.path.join(zip_dir, f"{rule_id}.zip")
-    with zipfile.ZipFile(zip_path, "w", zipfile.ZIP_DEFLATED) as zf:
-        zf.write(rule_json_path, arcname=f"{rule_id}.json")
-        zf.write(pdf_path, arcname=f"{rule_id}-report.pdf")
+        pdf_path = os.path.join(reports_dir, f"{rule_id}-report.pdf")
+        HTML(string=html).write_pdf(pdf_path)
 
-    print(f"[+] PDF report created: {pdf_path}")
-    return {"pdf": pdf_path, "zip": zip_path}
+        # Create zip file with RULE.json and REPORT.pdf
+        zip_path = os.path.join(zip_dir, f"{rule_id}.zip")
+        with zipfile.ZipFile(zip_path, "w", zipfile.ZIP_DEFLATED) as zf:
+            zf.write(rule_json_path, arcname=f"{rule_id}.json")
+            zf.write(pdf_path, arcname=f"{rule_id}-report.pdf")
+
+        # Mark as processed
+        processed_rules.add(rule_id)
+        print(f"[+] New report generated: {pdf_path}")
+        return {"pdf": pdf_path, "zip": zip_path, "rule_id": rule_id}
+    
+    except Exception as e:
+        print(f"[x] Error generating report for {rule_json_path}: {e}")
+        return None
+
+def generate_reports_for_new_rules(hours=24, ipinfo_token=None):
+    """Generate reports for all new rule files in rules_repository"""
+    if not os.path.exists(RULES_DIR):
+        print(f"[!] Rules directory not found: {RULES_DIR}")
+        return []
+    
+    new_reports = []
+    rule_files = [f for f in os.listdir(RULES_DIR) if f.endswith('.json')]
+    
+    for rule_file in rule_files:
+        rule_path = os.path.join(RULES_DIR, rule_file)
+        result = generate_report_for_rule(rule_path, REPORTS_BASE_DIR, hours, ipinfo_token)
+        if result:
+            new_reports.append(result)
+    
+    return new_reports
+
+def monitor_and_generate_reports(hours=24, ipinfo_token=None):
+    """Continuously monitor for new rules and generate reports"""
+    print(" Starting rule monitoring for report generation...")
+    print(f" Watching: {RULES_DIR}")
+    print(f" Output: {REPORTS_BASE_DIR}")
+    print(f" Check interval: {CHECK_INTERVAL} seconds")
+    
+    # Load previously processed rules
+    load_processed_rules()
+    
+    while True:
+        try:
+            new_reports = generate_reports_for_new_rules(hours, ipinfo_token)
+            
+            if new_reports:
+                print(f" Generated {len(new_reports)} new reports")
+                for report in new_reports:
+                    print(f"    {report['rule_id']} → {report['pdf']}")
+            else:
+                print("[!] No new rules found for report generation")
+                
+        except Exception as e:
+            print(f"[x]Error in monitoring loop: {e}")
+        
+        # Wait before next check
+        print(f" Waiting {CHECK_INTERVAL} seconds for next check...")
+        time.sleep(CHECK_INTERVAL)
 
 def main():
-    parser = argparse.ArgumentParser(description="Generate compact PDF report from a rule JSON")
-    parser.add_argument("--json", required=True)
+    parser = argparse.ArgumentParser(description="Generate PDF reports from rule JSON files")
+    parser.add_argument("--json", help="Single rule JSON file (for one-time use)")
     parser.add_argument("--out", default="reports")
     parser.add_argument("--hours", type=int, default=24)
-    parser.add_argument("--ipinfo", help="ipinfo.io token (required)")
+    parser.add_argument("--ipinfo", required=True, help="ipinfo.io token (required)")
+    parser.add_argument("--monitor", action="store_true", help="Continuous monitoring mode")
+    
     args = parser.parse_args()
-    generate_report(args.json, outdir=args.out, hours=args.hours,
-                    ipinfo_token=args.ipinfo)
+    
+    # Set global output directory
+    global REPORTS_BASE_DIR
+    REPORTS_BASE_DIR = args.out
+    
+    if args.monitor:
+        # Continuous monitoring mode
+        monitor_and_generate_reports(hours=args.hours, ipinfo_token=args.ipinfo)
+    elif args.json:
+        # Single file mode (original functionality)
+        generate_report_for_rule(args.json, outdir=args.out, hours=args.hours, ipinfo_token=args.ipinfo)
+    else:
+        # One-time processing of all new rules
+        print("Processing all new rules in rules_repository...")
+        load_processed_rules()
+        new_reports = generate_reports_for_new_rules(hours=args.hours, ipinfo_token=args.ipinfo)
+        print(f" Generated {len(new_reports)} new reports")
 
 if __name__ == "__main__":
     main()

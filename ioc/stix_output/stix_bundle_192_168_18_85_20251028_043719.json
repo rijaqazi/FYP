@@ -1,0 +1,26 @@
+{
+    "type": "bundle",
+    "id": "bundle--2ee4728e-bd89-433d-89c1-cbf49d5e814a",
+    "bundle_id": "bundle--2ee4728e-bd89-433d-89c1-cbf49d5e814a",
+    "objects": [
+        {
+            "type": "indicator",
+            "id": "indicator--6d88cd06-bd56-4e6b-918d-aec07a976c32",
+            "created": "2025-10-28T04:37:19.000Z",
+            "modified": "2025-10-28T04:37:19.000Z",
+            "name": "Malicious IP",
+            "ip_address": "192.168.18.85",
+            "description": "Threats from 192.168.18.85 | Ports: 20 | Duration: 0.0s | Raw Logs: 2 entries attached",
+            "pattern": "[ipv4-addr:value = '192.168.18.85'] AND [mac-addr:value = '52:f8:82:0a:7b:d5']",
+            "pattern_type": "stix",
+            "valid_from": "2025-10-28T04:37:19.000Z",
+            "labels": [
+                "malicious-activity"
+            ],
+            "x_raw_logs": [
+                "[ALERT] UDP_SCAN from 192.168.18.85 | Target_IP: 192.168.18.108 | SRC_MAC: 52:f8:82:0a:7b:d5 | Claimed_MAC: N/A | Previous_MAC: N/A | Ports: 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30 | Ports Scanned: 11 | Count: 22 | Start: Sun Oct 26 15:18:09 2025 | Duration: 2.500123s",
+                "[ALERT] UDP_SCAN from 192.168.18.85 | Target_IP: 192.168.18.108 | SRC_MAC: 52:f8:82:0a:7b:d5 | Claimed_MAC: N/A | Previous_MAC: N/A | Ports: 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30 | Ports Scanned: 11 | Count: 12 | Start: Sun Oct 26 15:18:11 2025 | Duration: 1.000935s"
+            ]
+        }
+    ]
+}

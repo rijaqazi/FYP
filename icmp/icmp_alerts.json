@@ -1,7 +1,7 @@
 [
     {
-        "timestamp": 1756988214.0068216,
-        "type": "ICMP Address Mask Request Flood",
+        "timestamp": 1755505073.7763515,
+        "type": "ICMP Timestamp Request Flood",
         "source_ip": "172.20.10.3",
         "target_ip": "172.20.10.4",
         "src_mac": "08:71:90:49:f6:79",
@@ -9,7 +9,7 @@
         "previous_mac": "N/A",
         "ports": "",
         "ports_scanned": 0,
-        "start_time": "Wed Jul 30 15:25:17 2025",
-        "duration_seconds": 0.5
+        "start_time": "Wed Jul 30 15:21:03 2025",
+        "duration_seconds": 1.1
     }
 ]

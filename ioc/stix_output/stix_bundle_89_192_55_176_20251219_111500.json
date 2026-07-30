@@ -1,0 +1,27 @@
+{
+    "type": "bundle",
+    "id": "bundle--49a0744c-e679-401a-b7c0-e5011bf22039",
+    "bundle_id": "bundle--49a0744c-e679-401a-b7c0-e5011bf22039",
+    "objects": [
+        {
+            "type": "indicator",
+            "id": "indicator--46f943a1-a587-432a-b9fb-14cbec41807c",
+            "created": "2025-12-19T11:15:00.000Z",
+            "modified": "2025-12-19T11:15:00.000Z",
+            "name": "Malicious IP",
+            "ip_address": "89.192.55.176",
+            "description": "Threats from 89.192.55.176 | Ports: 32880 | Duration: 0.0s | Raw Logs: 3 entries attached",
+            "pattern": "[ipv4-addr:value = '89.192.55.176'] AND [mac-addr:value = 'c0:f6:ec:65:c0:91']",
+            "pattern_type": "stix",
+            "valid_from": "2025-12-19T11:15:00.000Z",
+            "labels": [
+                "malicious-activity"
+            ],
+            "x_raw_logs": [
+                "[ALERT] OS_FINGERPRINT from 89.192.55.176 | Target_IP: 192.168.18.108 | SRC_MAC: c0:f6:ec:65:c0:91 | Claimed_MAC: N/A | Previous_MAC: N/A | Ports:  | Ports Scanned: 0 | Count: 29 | Start: Fri Dec 19 16:14:29 2025 | Duration: 8.481690s",
+                "[ALERT] ACK_SCAN from 89.192.55.176 | Target_IP: 192.168.18.108 | SRC_MAC: c0:f6:ec:65:c0:91 | Claimed_MAC: N/A | Previous_MAC: N/A | Ports: 32880, 32892, 32902, 37786, 37796, 37812, 41346, 41352, 41360, 55408, 59436, 59648, 59664, 59668 | Ports Scanned: 14 | Count: 29 | Start: Fri Dec 19 16:14:29 2025 | Duration: 8.481690s",
+                "[ALERT] OS_FINGERPRINT from 89.192.55.176 | Target_IP: 192.168.18.108 | SRC_MAC: c0:f6:ec:65:c0:91 | Claimed_MAC: N/A | Previous_MAC: N/A | Ports:  | Ports Scanned: 0 | Count: 31 | Start: Fri Dec 19 16:14:31 2025 | Duration: 6.271525s"
+            ]
+        }
+    ]
+}

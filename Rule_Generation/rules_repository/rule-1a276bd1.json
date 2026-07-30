@@ -1,0 +1,42 @@
+{
+    "rule_id": "rule-1a276bd1",
+    "created": "2025-12-03T08:43:54Z",
+    "source_alert_id": "692ff5abc818400ed587b551",
+    "alert_type": "UDP_SCAN",
+    "src_ip": "10.35.214.186",
+    "dst_ip": "10.35.214.252",
+    "protocol": "UDP",
+    "ports": [
+        "33704",
+        "34140",
+        "34557",
+        "35328",
+        "35464",
+        "35986",
+        "36159",
+        "36431",
+        "36676",
+        "37773",
+        "38472",
+        "38879",
+        "39209",
+        "40424",
+        "40965"
+    ],
+    "ports_scanned_count": 15,
+    "duration_": 6.818548,
+    "cvss_score": 5.3,
+    "priority": "Medium",
+    "decision": {
+        "normalized_attack": "UDP_SCAN",
+        "action": "block_ip",
+        "target": "10.35.214.186",
+        "reason": "UDP Scan detected",
+        "confidence": "medium",
+        "expiry_seconds": 14400
+    },
+    "suggested_commands": [
+        "iptables -I INPUT -s 10.35.214.186 -j DROP # temp block",
+        "netsh advfirewall firewall add rule name=\"Block_10.35.214.186\" dir=in action=block remoteip=10.35.214.186"
+    ]
+}

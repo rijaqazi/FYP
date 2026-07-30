@@ -1,0 +1,28 @@
+{
+    "type": "bundle",
+    "id": "bundle--c7bb272c-66af-425a-9325-99fdd3edc0f6",
+    "bundle_id": "bundle--c7bb272c-66af-425a-9325-99fdd3edc0f6",
+    "objects": [
+        {
+            "type": "indicator",
+            "id": "indicator--7a6c4097-7126-4ffb-8466-b60ac6a14a7f",
+            "created": "2025-12-19T11:15:30.000Z",
+            "modified": "2025-12-19T11:15:30.000Z",
+            "name": "Malicious IP",
+            "ip_address": "89.192.46.58",
+            "description": "Threats from 89.192.46.58 | Ports: 38984 | Duration: 0.0s | Raw Logs: 4 entries attached",
+            "pattern": "[ipv4-addr:value = '89.192.46.58'] AND [mac-addr:value = 'c0:f6:ec:65:c0:91']",
+            "pattern_type": "stix",
+            "valid_from": "2025-12-19T11:15:30.000Z",
+            "labels": [
+                "malicious-activity"
+            ],
+            "x_raw_logs": [
+                "[ALERT] ACK_SCAN from 89.192.46.58 | Target_IP: 192.168.18.108 | SRC_MAC: c0:f6:ec:65:c0:91 | Claimed_MAC: N/A | Previous_MAC: N/A | Ports: 38984, 38988, 39350, 39366, 40732, 40734, 43848, 43864, 43870, 44818, 44826, 49930 | Ports Scanned: 12 | Count: 22 | Start: Fri Dec 19 16:14:36 2025 | Duration: 4.207227s",
+                "[ALERT] ACK_SCAN from 89.192.46.58 | Target_IP: 192.168.18.108 | SRC_MAC: c0:f6:ec:65:c0:91 | Claimed_MAC: N/A | Previous_MAC: N/A | Ports: 38984, 38988, 39350, 39366, 40732, 40734, 43848, 43864, 43870, 44818, 44826, 49930 | Ports Scanned: 12 | Count: 25 | Start: Fri Dec 19 16:14:36 2025 | Duration: 4.415896s",
+                "[ALERT] OS_FINGERPRINT from 89.192.46.58 | Target_IP: 192.168.18.108 | SRC_MAC: c0:f6:ec:65:c0:91 | Claimed_MAC: N/A | Previous_MAC: N/A | Ports:  | Ports Scanned: 0 | Count: 24 | Start: Fri Dec 19 16:14:36 2025 | Duration: 4.207227s",
+                "[ALERT] OS_FINGERPRINT from 89.192.46.58 | Target_IP: 192.168.18.108 | SRC_MAC: c0:f6:ec:65:c0:91 | Claimed_MAC: N/A | Previous_MAC: N/A | Ports:  | Ports Scanned: 0 | Count: 27 | Start: Fri Dec 19 16:14:36 2025 | Duration: 4.415896s"
+            ]
+        }
+    ]
+}

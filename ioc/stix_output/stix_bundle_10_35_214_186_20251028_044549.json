@@ -1,0 +1,26 @@
+{
+    "type": "bundle",
+    "id": "bundle--07d36dd6-ba90-4560-8925-305b5e891da0",
+    "bundle_id": "bundle--07d36dd6-ba90-4560-8925-305b5e891da0",
+    "objects": [
+        {
+            "type": "indicator",
+            "id": "indicator--f67e81ec-5f59-43cf-841f-65fd70f6d341",
+            "created": "2025-10-28T04:45:49.000Z",
+            "modified": "2025-10-28T04:45:49.000Z",
+            "name": "Malicious IP",
+            "ip_address": "10.35.214.186",
+            "description": "Threats from 10.35.214.186 | Ports: 33044, 33740 | Duration: 0.0s | Raw Logs: 2 entries attached",
+            "pattern": "[ipv4-addr:value = '10.35.214.186'] AND [mac-addr:value = '52:7f:3c:a8:0c:17']",
+            "pattern_type": "stix",
+            "valid_from": "2025-10-28T04:45:49.000Z",
+            "labels": [
+                "malicious-activity"
+            ],
+            "x_raw_logs": [
+                "[ALERT] UDP_SCAN from 10.35.214.186 | Target_IP: 10.35.214.252 | SRC_MAC: 52:7f:3c:a8:0c:17 | Claimed_MAC: N/A | Previous_MAC: N/A | Ports: 33044, 33740, 35727, 37605, 39801, 41131, 44393, 47954, 48864, 49057, 50393, 51654, 53765, 56849 | Ports Scanned: 14 | Count: 14 | Start: Tue Oct 28 09:45:12 2025 | Duration: 6.768753s",
+                "[ALERT] UDP_SCAN from 10.35.214.186 | Target_IP: 10.35.214.252 | SRC_MAC: 52:7f:3c:a8:0c:17 | Claimed_MAC: N/A | Previous_MAC: N/A | Ports: 33740, 35727, 37605, 39801, 41131, 47954, 48864, 50393, 51654, 53765, 56849 | Ports Scanned: 11 | Count: 11 | Start: Tue Oct 28 09:45:15 2025 | Duration: 4.001423s"
+            ]
+        }
+    ]
+}

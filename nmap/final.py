@@ -43,27 +43,15 @@ MAX_PORTS_IN_ALERT = 15
 
 # Detection thresholds
 THRESHOLDS = {
-    'tcp': 15,
-    'udp': 10,
-    'syn': 5,
-    'fin': 5,
-    'xmas': 5,
-    'null': 5,
-    'ack': 10,
-    'os_fingerprint': 2,
-    'service_probe': 3,
-    'full_port': 50,
-    'icmp': 5
+    'tcp': 15, 'udp': 10, 'syn': 5, 'fin': 5, 'xmas': 5, 'null': 5,
+    'ack': 10, 'os_fingerprint': 2, 'service_probe': 3,
+    'full_port': 50, 'icmp': 5
 }
 
 # --- Detection structures ---
 detectors = {
-    'tcp': defaultdict(set),
-    'udp': defaultdict(set),
-    'syn': defaultdict(set),
-    'fin': defaultdict(set),
-    'xmas': defaultdict(set),
-    'null': defaultdict(set),
+    'tcp': defaultdict(set), 'udp': defaultdict(set), 'syn': defaultdict(set),
+    'fin': defaultdict(set), 'xmas': defaultdict(set), 'null': defaultdict(set),
     'ack': defaultdict(set),
     'service_probe': defaultdict(lambda: defaultdict(int)),
     'icmp': defaultdict(list),
@@ -71,73 +59,49 @@ detectors = {
 }
 
 timestamps = {scan_type: defaultdict(list) for scan_type in detectors.keys()}
-alerted_ips = defaultdict(set)  # Combined alert tracking
+mac_addresses = {} # To store the MAC address for each IP
+alerted_ips = defaultdict(set) # Combined alert tracking
 
 # --- Enhanced alert function ---
-# --- Enhanced alert function (standardized like ARP.py) ---
-def log_alert(scan_type, src_ip, src_mac=None, details=None):
-    timestamp = time.strftime("%Y-%m-%d %H:%M:%S")
+def log_alert(scan_type, src_ip, src_mac=None, target_ip="N/A", claimed_mac="N/A", previous_mac="N/A", details=None):
+    human_time = time.strftime("%Y-%m-%d %H:%M:%S")
+    epoch_time = time.time()
 
-    # --- Fixed Order Message ---
-    message = f"{timestamp} - {scan_type.upper()} ALERT from {src_ip}"
-
-    # Target IP (use dst_ip from details if available, else N/A)
-    target_ip = details.get("target_ip", "N/A") if details else "N/A"
+    # Fixed Order Message for logs
+    message = f"- {scan_type.upper()} ALERT from {src_ip}"
     message += f" | Target_IP: {target_ip}"
-
-    # Source MAC
-    src_mac = src_mac if src_mac else "N/A"
-    message += f" | SRC_MAC: {src_mac}"
-
-    # Claimed MAC (not applicable in Nmap, keep N/A)
-    claimed_mac = details.get("claimed_mac", "N/A") if details else "N/A"
+    message += f" | SRC_MAC: {src_mac if src_mac else 'N/A'}"
     message += f" | Claimed_MAC: {claimed_mac}"
-
-    # Previous MAC (not applicable, keep N/A)
-    previous_mac = details.get("previous_mac", "N/A") if details else "N/A"
     message += f" | Previous_MAC: {previous_mac}"
 
-    # Ports
-    ports = details.get("ports", "") if details else ""
-    message += f" | Ports: {ports}"
+    if details:
+        ports = details.get("ports", "")
+        message += f" | Ports: {ports}"
+        total_ports = details.get("total_ports", 0)
+        message += f" | Ports Scanned: {total_ports}"
+        start_time = details.get("start_time", "N/A")
+        message += f" | Start: {start_time}"
+        duration = float(details.get("duration", 0))
+        message += f" | Duration: {duration}s"
 
-    # Ports Scanned
-    total_ports = details.get("total_ports", 0) if details else 0
-    message += f" | Ports Scanned: {total_ports}"
-
-    # Start Time
-    start_time = details.get("start_time", "N/A") if details else "N/A"
-    message += f" | Start: {start_time}"
-
-    # Duration
-    duration = int(details.get("duration", 0)) if details else 0
-    message += f" | Duration: {duration}s"
-
-    # --- Console output (red) ---
     print(f"\033[91m{message}\033[0m")
-
-    # --- Log to file ---
     logger.info(message)
 
-    # --- Save JSON (with fixed keys) ---
     alerts.append({
-        "timestamp": time.time(),
-        "type": scan_type,
+        "timestamp": epoch_time,
+        "type": scan_type.upper(),
         "src_ip": src_ip,
         "src_mac": src_mac,
-        "details": {
-            "target_ip": target_ip,
-            "claimed_mac": claimed_mac,
-            "previous_mac": previous_mac,
-            "ports": ports,
-            "total_ports": total_ports,
-            "start_time": start_time,
-            "duration": duration
-        }
+        "target_ip": target_ip,
+        "claimed_mac": claimed_mac,
+        "previous_mac": previous_mac,
+        "ports": details.get("ports", "") if details else "",
+        "total_ports": details.get("total_ports", 0) if details else 0,
+        "start_time": details.get("start_time", "N/A") if details else "N/A",
+        "duration_sec": details.get("duration", 0) if details else 0
     })
+
     alerted_ips[src_ip].add(scan_type)
-
-
 
 # --- Packet Processing ---
 for packet in packets:
@@ -238,7 +202,7 @@ for src_ip in set(ip for detector in detectors.values() for ip in detector):
         port_list = sorted(syn_ports)[:MAX_PORTS_IN_ALERT]
         log_alert("STEALTH_SCAN", src_ip, src_mac=src_mac, details={
             "ports": ", ".join(port_list),
-            "total_ports": syn_count,
+            "total_ports": len(port_list),
             "start_time": start_time,
             "duration": syn_duration,
             "os_count": os_count,
@@ -250,7 +214,7 @@ for src_ip in set(ip for detector in detectors.values() for ip in detector):
         port_list = sorted(syn_ports)[:MAX_PORTS_IN_ALERT]
         log_alert("FULL_PORT_SCAN", src_ip, src_mac=src_mac, details={
             "ports": ", ".join(port_list),
-            "total_ports": syn_count,
+            "total_ports": len(port_list),
             "start_time": start_time,
             "duration": syn_duration
         })
@@ -261,7 +225,7 @@ for src_ip in set(ip for detector in detectors.values() for ip in detector):
         duration = max(syn_ts_list) - min(syn_ts_list) if len(syn_ts_list) > 1 else 0
         log_alert("SYN_SCAN", src_ip, src_mac=src_mac, details={
             "ports": ", ".join(port_list),
-            "total_ports": syn_count,
+            "total_ports": len(port_list),
             "start_time": start_time,
             "duration": duration
         })
@@ -274,7 +238,7 @@ for src_ip in set(ip for detector in detectors.values() for ip in detector):
         duration = max(ts_list) - min(ts_list) if len(ts_list) > 1 else 0
         log_alert("FIN_SCAN", src_ip, src_mac=src_mac, details={
             "ports": ", ".join(port_list),
-            "total_ports": len(fin_ports),
+            "total_ports": len(port_list),
             "start_time": start_time,
             "duration": duration
         })
@@ -287,7 +251,7 @@ for src_ip in set(ip for detector in detectors.values() for ip in detector):
         duration = max(ts_list) - min(ts_list) if len(ts_list) > 1 else 0
         log_alert("XMAS_SCAN", src_ip, src_mac=src_mac, details={
             "ports": ", ".join(port_list),
-            "total_ports": len(xmas_ports),
+            "total_ports": len(port_list),
             "start_time": start_time,
             "duration": duration
         })
@@ -300,7 +264,7 @@ for src_ip in set(ip for detector in detectors.values() for ip in detector):
         duration = max(ts_list) - min(ts_list) if len(ts_list) > 1 else 0
         log_alert("NULL_SCAN", src_ip, src_mac=src_mac, details={
             "ports": ", ".join(port_list),
-            "total_ports": len(null_ports),
+            "total_ports": len(port_list),
             "start_time": start_time,
             "duration": duration
         })
@@ -313,7 +277,7 @@ for src_ip in set(ip for detector in detectors.values() for ip in detector):
         duration = max(ts_list) - min(ts_list) if len(ts_list) > 1 else 0
         log_alert("ACK_SCAN", src_ip, src_mac=src_mac, details={
             "ports": ", ".join(port_list),
-            "total_ports": len(ack_ports),
+            "total_ports": len(port_list),
             "start_time": start_time,
             "duration": duration
         })
@@ -326,7 +290,7 @@ for src_ip in set(ip for detector in detectors.values() for ip in detector):
         duration = max(ts_list) - min(ts_list) if len(ts_list) > 1 else 0
         log_alert("UDP_SCAN", src_ip, src_mac=src_mac, details={
             "ports": ", ".join(port_list),
-            "total_ports": len(udp_ports),
+            "total_ports": len(port_list),
             "start_time": start_time,
             "duration": duration
         })
@@ -340,6 +304,7 @@ for src_ip in set(ip for detector in detectors.values() for ip in detector):
         duration = max(ts_list) - min(ts_list) if len(ts_list) > 1 else 0
         log_alert("SERVICE_PROBE", src_ip, src_mac=src_mac, details={
             "ports": ", ".join(port_list),
+            "total_ports": len(port_list),
             "probe_count": service_count,
             "start_time": start_time,
             "duration": duration
@@ -351,6 +316,8 @@ for src_ip in set(ip for detector in detectors.values() for ip in detector):
         duration = max(ts_list) - min(ts_list) if len(ts_list) > 1 else 0
         log_alert("OS_FINGERPRINT", src_ip, src_mac=src_mac, details={
             "probe_count": os_count,
+            "ports": ", ".join(port_list),
+            "total_ports": len(port_list),
             "start_time": start_time,
             "duration": duration
         })
@@ -362,6 +329,8 @@ for src_ip in set(ip for detector in detectors.values() for ip in detector):
         duration = max(ts_list) - min(ts_list) if len(ts_list) > 1 else 0
         log_alert("ICMP_PING_SCAN", src_ip, src_mac=src_mac, details={
             "ping_count": icmp_count,
+                        "ports": ", ".join(port_list),
+            "total_ports": len(port_list),
             "start_time": start_time,
             "duration": duration
         })

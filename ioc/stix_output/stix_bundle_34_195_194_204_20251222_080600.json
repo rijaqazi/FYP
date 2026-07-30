@@ -1,0 +1,25 @@
+{
+    "type": "bundle",
+    "id": "bundle--d4f8f0d5-0eaf-4152-813f-6ba08169a176",
+    "bundle_id": "bundle--d4f8f0d5-0eaf-4152-813f-6ba08169a176",
+    "objects": [
+        {
+            "type": "indicator",
+            "id": "indicator--328c8946-2ae9-4e2b-a74e-560e36c11200",
+            "created": "2025-12-22T08:06:00.000Z",
+            "modified": "2025-12-22T08:06:00.000Z",
+            "name": "Malicious IP",
+            "ip_address": "34.195.194.204",
+            "description": "Threats from 34.195.194.204 | Ports: None | Duration: 0.0s | Raw Logs: 1 entries attached",
+            "pattern": "[ipv4-addr:value = '34.195.194.204'] AND [mac-addr:value = 'c0:f6:ec:65:c0:91']",
+            "pattern_type": "stix",
+            "valid_from": "2025-12-22T08:06:00.000Z",
+            "labels": [
+                "malicious-activity"
+            ],
+            "x_raw_logs": [
+                "[ALERT] OS_FINGERPRINT from 34.195.194.204 | Target_IP: 192.168.18.108 | SRC_MAC: c0:f6:ec:65:c0:91 | Claimed_MAC: N/A | Previous_MAC: N/A | Ports:  | Ports Scanned: 0 | Count: 3 | Start: Fri Dec 19 16:35:14 2025 | Duration: 0.046605s"
+            ]
+        }
+    ]
+}
