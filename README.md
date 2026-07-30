@@ -28,9 +28,8 @@ The system is composed of the following core modules:
 - **Reporting Module** — aggregates threat data, severity ratings, and actions into shareable/downloadable reports.
 
 ## System Diagram
-<img width="581" height="358" alt="image" src="https://github.com/user-attachments/assets/e9c8b05d-818a-4170-a0f3-b0f40e213f87" />
-## Component Diagram
-<img width="464" height="532" alt="image" src="https://github.com/user-attachments/assets/104708b2-edd0-472d-b90d-f154eea1b34e" />
+<img width="908" height="560" alt="image" src="https://github.com/user-attachments/assets/1ba13e66-69cf-41f0-8e3a-8a1bc88e6fc7" />
+
 ## Deployment Diagram
 <img width="6608" height="4148" alt="image" src="https://github.com/user-attachments/assets/46081cba-c8b4-43cf-aa59-34eec5a62bee" />
 
