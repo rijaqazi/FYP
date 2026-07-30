@@ -35,12 +35,12 @@ The system is composed of the following core modules:
 <img width="1567" height="1004" alt="ChatGPT Image Jul 30, 2026, 06_39_38 PM" src="https://github.com/user-attachments/assets/0812f6f6-243e-45f4-a920-4ba0e3c09967" />
 
 ## User Interface
-# Dashboard
+### Dashboard
 
-# Alerts
+### Alerts
 <img width="1698" height="873" alt="ChatGPT Image Jul 30, 2026, 06_46_48 PM" src="https://github.com/user-attachments/assets/5e3facb8-61f6-4349-b73b-2d7245fe6a25" />
 
-# Alert Notification
+### Alert Notification
 <img width="1706" height="922" alt="ChatGPT Image Jul 30, 2026, 06_43_03 PM" src="https://github.com/user-attachments/assets/33b6b369-2027-460f-a0fe-649358a564a5" />
 
 
